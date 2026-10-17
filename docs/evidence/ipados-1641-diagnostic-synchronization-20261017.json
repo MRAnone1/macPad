@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-17",
+  "milestone": "partial diagnostic observation; not freeze repair or device acceptance",
+  "shared_files": [
+    {
+      "path": "misc/macos_cache_framework_inventory.py",
+      "sha256": "e25ff917ab42d17e36b757d3ed4b9aa51d184fdf1ce04c3a6156149ecdbffcd4"
+    },
+    {
+      "path": "misc/test_macos_cache_framework_inventory.py",
+      "sha256": "4fe4627c0a046749b4496545fac14211d12f35156df856c6813ceab2578623af"
+    },
+    {
+      "path": "misc/macos_producer_registration_probe.py",
+      "sha256": "cfbb696f87bf4d4a1a80e4deea4b3d1e5a8366073ebddd3c2b6a0d5da4dbb0de"
+    },
+    {
+      "path": "misc/test_macos_producer_registration_probe.py",
+      "sha256": "7ab5cbe5f66bb3e2c3986c1bbdca331575eb0163b480f03df0b6397de4b75147"
+    },
+    {
+      "path": "misc/test_macos_producer_registration_fullflow.py",
+      "sha256": "6f5a08d6b6cfa6a024037b4504f8f69755bbda02e5d4cf1f524fc32d4b55a31c"
+    },
+    {
+      "path": "misc/profiles/macos-producer-registration-m1-20e252-streamgate.json",
+      "sha256": "68f10434bf8f903c243b742b814e634919232812ec7181b0ed0f7762ce88d8bf"
+    },
+    {
+      "path": "misc/macos_producer_swap_routes.py",
+      "sha256": "6c68b0b2372b90dd75006e7954effc0edcb0709b8a589c09eaf8252c53c3f21a"
+    },
+    {
+      "path": "misc/test_macos_producer_swap_routes.py",
+      "sha256": "8862488a0ca60b3abee23ecdfcd82c0c9ebdc5e6bf1fc6f3728b46fd044ad1b4"
+    },
+    {
+      "path": "docs/evidence/ipados-1641-producer-swap-routes-runtime-20261017.md",
+      "sha256": "17f27fe60a2a56632d9f624591ebaea7f66e03d981a4c1d5abea1707b8893cf1"
+    },
+    {
+      "path": "docs/evidence/ipados-1641-cache-framework-identities-20261017.md",
+      "sha256": "bb92e0af405fe436fe40074a3866012aa605ff817fd5fadceaa56c5d8e6b17b0"
+    },
+    {
+      "path": "docs/evidence/macws-swap-routes-producer-2026-10-17.json",
+      "sha256": "0c9d788acfc0b15246eaaa1ba903d742931b29f691240c0810219b12d443e9d2"
+    },
+    {
+      "path": "docs/evidence/macws-cache-framework-identities-2026-10-17.json",
+      "sha256": "f53738bbeb99fea58bafd2e159446de0d56f1446aae86a732273abe58853c845"
+    },
+    {
+      "path": "docs/evidence/macws-port-inventory-2026-10-17.json",
+      "sha256": "2ef89f7b8c78755eced71b04b92306bf57125a16c233b32b0f975f2c6e77185b"
+    }
+  ],
+  "shared_file_count": 13,
+  "main_runtime_test_baseline": "b8eaed6223dc40374e16b20101b27055f69650d4",
+  "main_publication_baseline": "2e45bd79f054d460b4985dbd490d6fc1feffb375",
+  "companion_baseline": "a18da08455d8aac96d53b6fe2a00699c4b97f56c",
+  "focused_tests_each_checkout": 81,
+  "main_full_suite": {
+    "tests": 899,
+    "failures": 6,
+    "errors": 8,
+    "skipped": 12,
+    "passed": false
+  },
+  "companion_full_suite": {
+    "tests": 738,
+    "failures": 6,
+    "errors": 8,
+    "skipped": 12,
+    "passed": false,
+    "private_log_sha256": "0f0f7fafcc764f08866e3eec30a2735bdf65f09a5de561c145efbe3e18bdc4c1"
+  },
+  "same_fourteen_failed_case_identifiers_as_main_clean_HEAD_subset": true,
+  "production_sources_changed_by_milestone": false,
+  "commit_or_push_success_claimed_by_this_precommit_record": false
+}

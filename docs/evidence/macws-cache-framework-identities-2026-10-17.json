@@ -1,0 +1,170 @@
+{
+  "date": "2026-10-17",
+  "accepted_filesystem_metadata_inventory": true,
+  "port_accepted": false,
+  "device_model": "iPad13,6",
+  "iPadOS_build": "20E252",
+  "macOS_build": "22F66",
+  "same_boot_as_bounded_v46_observation": true,
+  "namespaces": [
+    {
+      "name": "native_iPadOS",
+      "cache_file_count": 45,
+      "main_and_subcache_UUID_association_verified": true,
+      "all_selected_headers_repeated_equal": true,
+      "all_cache_metadata_repeated_equal": true,
+      "images": [
+        {
+          "role": "Metal",
+          "UUID": "fc81787c-3d56-358e-8215-8495d583f6d4",
+          "architecture": "arm64e",
+          "header_range_bytes": 5288,
+          "header_range_sha256": "15d0dd878d79d351db3aebf75b7dc4fb5a11554560b1cf0f124fa3e6aa79a76f",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true
+        },
+        {
+          "role": "AGXMetal13_3",
+          "UUID": "e25d17ad-26a8-35d1-a400-8220edcd7d0c",
+          "architecture": "arm64e",
+          "header_range_bytes": 4832,
+          "header_range_sha256": "ba1515ae4653193c822ab468ffa687f9e0089dcb5298248b1c50180f7f470c0f",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true
+        },
+        {
+          "role": "QuartzCore",
+          "UUID": "0ae8ceb8-0dd6-363f-951d-16aac60a0951",
+          "architecture": "arm64e",
+          "header_range_bytes": 7112,
+          "header_range_sha256": "86324d130451fd802fe79935295ee54baa01dd712004915cb1f3150a8c100e4e",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true
+        },
+        {
+          "role": "IOMobileFramebuffer",
+          "UUID": "d2cce008-351e-3781-8774-0ed863d941e7",
+          "architecture": "arm64e",
+          "header_range_bytes": 2328,
+          "header_range_sha256": "8f0dab429140638071b867809c1dffac895cabfc7c8a3ab4c3521bbe160b215b",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true
+        },
+        {
+          "role": "IOGPU",
+          "UUID": "4a495b72-eeeb-3d74-a7b5-1088f0ea60d7",
+          "architecture": "arm64e",
+          "header_range_bytes": 4496,
+          "header_range_sha256": "3bcd3e8cdb50062e5732aa93ba124449d01a61d9170121f480ddcca27aeeba92",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true
+        },
+        {
+          "role": "SpringBoard_framework",
+          "UUID": "45ddeb5e-05b0-3bf3-bb8b-d78e6b95ebb3",
+          "architecture": "arm64e",
+          "header_range_bytes": 24632,
+          "header_range_sha256": "ed9034404bbdaf77cd27f5191c0903285ce76b84b33b62f6b631c0a06effcdda",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true
+        }
+      ]
+    },
+    {
+      "name": "macOS_rootfs",
+      "cache_file_count": 2,
+      "main_and_subcache_UUID_association_verified": true,
+      "all_selected_headers_repeated_equal": true,
+      "all_cache_metadata_repeated_equal": true,
+      "images": [
+        {
+          "role": "Metal",
+          "UUID": "2bab169c-42da-36e3-955a-f30b709ec2ad",
+          "architecture": "arm64e",
+          "header_range_bytes": 5112,
+          "header_range_sha256": "eaa27b432c4a0a42ebc4b71603a080f768f17c5d9f7073632ff712b791d66764",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true
+        },
+        {
+          "role": "AGXMetal13_3",
+          "UUID": "727c250e-554d-3921-a5b3-48dae6195b79",
+          "architecture": "arm64e",
+          "header_range_bytes": 4968,
+          "header_range_sha256": "4e5b6d5087a7052c551ea65547df145a6f48b5aeb030ffaa5678121829036627",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true
+        },
+        {
+          "role": "QuartzCore",
+          "UUID": "cf853bbd-01b6-3f46-ada1-ec70fd2dc9dc",
+          "architecture": "arm64e",
+          "header_range_bytes": 6280,
+          "header_range_sha256": "137bd6add935a98892f318a95520e2a497fba2715cfcdc4db0559ade395df02e",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true
+        },
+        {
+          "role": "IOMobileFramebuffer",
+          "UUID": "9485c742-b91f-3c6c-897c-ab2c8acf7625",
+          "architecture": "arm64e",
+          "header_range_bytes": 2384,
+          "header_range_sha256": "fe7917060267e9488c24628ab8d891293889fc8f903ab619769d4f0e4889eb22",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true
+        },
+        {
+          "role": "IOGPU",
+          "UUID": "ce2b5551-857f-3edd-9e4f-435215cc8c27",
+          "architecture": "arm64e",
+          "header_range_bytes": 4584,
+          "header_range_sha256": "cc40e072c8fc0edceaf2358405e67e2a077609586a87c2b8ebff96237b0d590e",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true
+        }
+      ]
+    }
+  ],
+  "bounds": {
+    "read_calls": 135,
+    "requested_file_bytes": 1251574,
+    "returned_file_bytes": 1251574,
+    "max_read_calls": 256,
+    "max_requested_file_bytes": 8388608,
+    "read_deadline_seconds": 8
+  },
+  "elapsed_seconds": 0.028239292000000003,
+  "mutations": 0,
+  "new_GPU_workloads": 0,
+  "framework_loads": 0,
+  "kernel_memory_reads": 0,
+  "rootfs_backing_observation": {
+    "df_device": "/dev/disk1s2",
+    "df_mountpoint": "/private/var",
+    "rootfs_is_separate_mountpoint": false,
+    "same_stat_device_as_Data": true,
+    "scope": "df and directory/stat observations, not an audit of every mount inside rootfs"
+  },
+  "tool_availability": {
+    "on_device_lldb_found": false,
+    "on_device_debugserver_found": false,
+    "on_device_tmux_found": false
+  },
+  "private_receipt_sha256": "746fcd87e121977a4b5d1640abb24e98a94f045cfa4d76dddb57f46b74a78c44",
+  "private_host_envelope_sha256": "a6672e24583def90e64851d4e61bba5469127c47e974eb86f44f7f330e30d496",
+  "worker_sha256": "e25ff917ab42d17e36b757d3ed4b9aa51d184fdf1ce04c3a6156149ecdbffcd4",
+  "limits": {
+    "full_framework_hashes_verified": false,
+    "runtime_loaded_native_images_verified": false,
+    "signed_code_pages_revalidated": false,
+    "freeze_cause_proven": false,
+    "device_acceptance_of_fix": false
+  },
+  "offline_controls": {
+    "v3_parser_negative_positive_tests_passed": 14,
+    "v2_refusal_receipt_preserved": true,
+    "v2_rejected_SpringBoard_load_command_bytes": 24600,
+    "v3_complete_SpringBoard_header_range_bytes": 24632,
+    "Ventura_unselected_prefix_file_count": 1
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "prepared_only": true,
+  "device_execution_performed": false,
+  "target": "exact isolated streamgate WindowServer candidate; future same-task observer",
+  "macOS_QuartzCore_UUID": "cf853bbd-01b6-3f46-ada1-ec70fd2dc9dc",
+  "macOS_framebuffer_UUID": "9485c742-b91f-3c6c-897c-ab2c8acf7625",
+  "registration_slots": 8,
+  "registration_stride_bytes": 40,
+  "registration_fields": {
+    "framebuffer_pointer_offset": 0,
+    "client_Mach_port_word_offset": 8,
+    "callback_pointer_offset": 16,
+    "context_pointer_offset": 24,
+    "last_presentation_clock_offset": 32
+  },
+  "handle_fields": {
+    "service_Mach_port_word_offset": 16,
+    "client_Mach_port_word_offset": 20,
+    "active_swap_ID_word_offset": 104,
+    "SwapBegin_method_pointer_offset": 1824,
+    "SwapEnd_method_pointer_offset": 1832,
+    "SwapCancel_method_pointer_offset": 1880
+  },
+  "task_namespace_required": true,
+  "same_observation_boot_session_and_process_generation_required": true,
+  "raw_Mach_port_names_or_keys_do_not_prove_cross_process_identity": true,
+  "raw_data_reads_do_not_pin_object_lifetimes": true,
+  "profiles": [
+    {
+      "image_basename": "libmachook_fullframe_streamgate_20261009_arm64.dylib",
+      "architecture": "arm64",
+      "UUID": "2552c7f2-0946-3525-9771-d6d48b44c0e9",
+      "file_sha256": "bcd544a537fc81cbc16ec3fb8de2c7677708d35ada10c0caf044ba83f005340b",
+      "data_anchors": {
+        "_g_macws_iomfb_frame_regs": {
+          "image_offset": "0x25cfef8",
+          "bytes": 320,
+          "section": "__bss"
+        },
+        "_g_macws_iomfb_frame_reg_count": {
+          "image_offset": "0x25cfef0",
+          "bytes": 4,
+          "section": "__bss"
+        }
+      },
+      "compiled_code_windows": [
+        {
+          "symbol": "_MacwsIOMobileFramebufferSwapEnd_new",
+          "image_offset": "0x9ba4",
+          "bytes_to_next_distinct_text_symbol": 588,
+          "sha256": "d27143453229cfc4bdc662715dd2b5f25d9d343b25bc1a0c36d2a7e7d15504f3",
+          "complete_function_extent_independently_proven": false
+        },
+        {
+          "symbol": "_macws_enable_frame_info_tag_list",
+          "image_offset": "0x367f8",
+          "bytes_to_next_distinct_text_symbol": 352,
+          "sha256": "a7454f3cbeac39928f14dc9d86d348a298f270a58659784fa57836156cb32159",
+          "complete_function_extent_independently_proven": false
+        },
+        {
+          "symbol": "_macws_iomfb_complete_cancelled_swap",
+          "image_offset": "0x2646c",
+          "bytes_to_next_distinct_text_symbol": 648,
+          "sha256": "1d84a6976cc67c0227f500f6555438f8bab86c7268bab223e3df45f84f68898a",
+          "complete_function_extent_independently_proven": false
+        },
+        {
+          "symbol": "_MacWSFinalCompositePublisherPublishSurface",
+          "image_offset": "0x60a94",
+          "bytes_to_next_distinct_text_symbol": 1040,
+          "sha256": "d13021fc35142d2827e18923416b100c2a5e18ea5d3585e6121a96e618edcece",
+          "complete_function_extent_independently_proven": false
+        }
+      ]
+    },
+    {
+      "image_basename": "libmachook_fullframe_streamgate_20261009.dylib",
+      "architecture": "arm64e",
+      "UUID": "8d9d059f-f308-3a07-be9e-bb23123ba997",
+      "file_sha256": "803bcccf8cb9afd8d3b96bdbe88ca13d79463e6a09f2c192d346bc5300541008",
+      "data_anchors": {
+        "_g_macws_iomfb_frame_regs": {
+          "image_offset": "0x25d2d38",
+          "bytes": 320,
+          "section": "__bss"
+        },
+        "_g_macws_iomfb_frame_reg_count": {
+          "image_offset": "0x25d2d30",
+          "bytes": 4,
+          "section": "__bss"
+        }
+      },
+      "compiled_code_windows": [
+        {
+          "symbol": "_MacwsIOMobileFramebufferSwapEnd_new",
+          "image_offset": "0x9e4c",
+          "bytes_to_next_distinct_text_symbol": 616,
+          "sha256": "d29892e5b3ad4f67b8ee71dff672b61c6e81c4c60933ae6cb4a241faec121562",
+          "complete_function_extent_independently_proven": false
+        },
+        {
+          "symbol": "_macws_enable_frame_info_tag_list",
+          "image_offset": "0x37278",
+          "bytes_to_next_distinct_text_symbol": 356,
+          "sha256": "9edbcd4a5381905842f18c6c66760bce4047476a64d8ac0f9ddc4d40f6a6c0c9",
+          "complete_function_extent_independently_proven": false
+        },
+        {
+          "symbol": "_macws_iomfb_complete_cancelled_swap",
+          "image_offset": "0x26730",
+          "bytes_to_next_distinct_text_symbol": 704,
+          "sha256": "69b97d3c03174f36490ab6a22f8028fc0df72ea73d345259928fc7709ed8555e",
+          "complete_function_extent_independently_proven": false
+        },
+        {
+          "symbol": "_MacWSFinalCompositePublisherPublishSurface",
+          "image_offset": "0x6202c",
+          "bytes_to_next_distinct_text_symbol": 1008,
+          "sha256": "50825779ffb204ed3dd4edd608e83562bd1ad88ae2d646e9b9dac8406208ab9f",
+          "complete_function_extent_independently_proven": false
+        }
+      ]
+    }
+  ],
+  "missing_before_execution": [
+    "live producer executable and loaded-image identity",
+    "read-only observer task/namespace contract and strict budget reviewed",
+    "provider/client registry join in the producer own task",
+    "original SwapBegin/Cancel status correlation without wrapping FrameInfo",
+    "finite reproduction health watchdog and cleanup review"
+  ],
+  "original_framework_windows": {
+    "IOMobileFramebuffer": [
+      {
+        "image_offset": "0x2a5c",
+        "bytes": 2352,
+        "sha256": "2072e7442d1ff32f81e98d82a0de7dcfac107db79594d16a193c9b44df7ddc5c"
+      },
+      {
+        "image_offset": "0x4334",
+        "bytes": 204,
+        "sha256": "af52bba4bec7112dcf5f411ed9839c2e416384fd15ceead800e61ac572e0da03"
+      },
+      {
+        "image_offset": "0x4714",
+        "bytes": 108,
+        "sha256": "a0d1ef2eaaa708d8509f9015cfca12ea5a5c1caf754b29e1a55c0d193e8151db"
+      }
+    ],
+    "QuartzCore": [
+      {
+        "image_offset": "0x10a88c",
+        "bytes": 1668,
+        "sha256": "5df45f7531fd08b274fd48f15adedf9947d138b51c21ba93b616fafe1884cc0d"
+      },
+      {
+        "image_offset": "0x2e5108",
+        "bytes": 216,
+        "sha256": "4885a3c45bdfb4d5f46586edd0f7f04e798e707a60b87c93d8c8a892767b6d58"
+      }
+    ]
+  },
+  "scope": "prepared strict original framework and candidate windows for a partial registration observer; not a physical binding"
+}

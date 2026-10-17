@@ -1,0 +1,142 @@
+{
+  "schema": "macws.swap-routes.producer.runtime.v46.1",
+  "date": "2026-10-17",
+  "actual_device_runtime": true,
+  "device_model": "iPad13,6",
+  "OS_build": "20E252",
+  "accepted_registry_first_parent_capture": true,
+  "accepted_bounded_capture": true,
+  "cleanup_verified": true,
+  "producer_job_attempts": 1,
+  "exact_owned_target_debug_admission_calls": 1,
+  "producer_resumes": 1,
+  "reader_launches": 1,
+  "registrations": 2,
+  "distinct_described_service_objects": 2,
+  "distinct_described_client_objects": 2,
+  "service_class": "AppleCLCD2",
+  "client_class": "IOMobileFramebufferUserClient",
+  "direct_child_and_first_parent_relations": 2,
+  "first_parents_equal_original_described_services": true,
+  "first_parent_IDs_and_classes_repeated_equal": true,
+  "descriptions_before_and_after_registry_equal": true,
+  "VM_read_calls": 944,
+  "requested_VM_read_bytes": 178428,
+  "process_birth_metadata_calls": 14,
+  "description_queries": 16,
+  "native_registry_query_method_calls": 84,
+  "native_registry_query_budget_charges": 85,
+  "native_registry_acquisitions": 28,
+  "successful_native_registry_release_attempts": 28,
+  "CF_dictionary_cleanup_calls": 0,
+  "native_ownership_uncertainty": false,
+  "native_query_exceptions": 0,
+  "native_registry_function_attempt_counts": {
+    "IOServiceMatching": 1,
+    "IOServiceGetMatchingServices": 1,
+    "IOIteratorNext": 24,
+    "IOIteratorIsValid": 6,
+    "IORegistryEntryGetRegistryEntryID": 33,
+    "IOObjectGetClass": 14,
+    "IORegistryEntryGetChildIterator": 2,
+    "IORegistryEntryGetParentEntry": 4,
+    "IOObjectRelease": 28,
+    "CFRelease": 0
+  },
+  "controller_seconds": 3.12452275,
+  "limits": {
+    "max_VM_read_calls": 2048,
+    "max_VM_read_bytes": 2097152,
+    "shared_reader_deadline_seconds": 5,
+    "max_native_query_budget_charges": 384,
+    "max_cleanup_calls": 144,
+    "max_children_per_provider": 32
+  },
+  "all_five_new_controls_within_300_seconds_and_same_boot": true,
+  "fresh_control_stages": {
+    "preflight": {
+      "age_at_producer_start_seconds": 5.006705045700073,
+      "private_receipt_SHA256": "2ed3dab7bf40a7d1dd6454ea20bbbcdc87aeb440c0755a4b0acffe80634fbe1f"
+    },
+    "native_registry": {
+      "age_at_producer_start_seconds": 3.3474059104919434,
+      "private_receipt_SHA256": "e48afd31f51d9d778617a4e963b25d3e82045f3153284581893dce4fd56577cb"
+    },
+    "description": {
+      "age_at_producer_start_seconds": 2.7917847633361816,
+      "private_receipt_SHA256": "94e62100d5172c8cf9bb4b49036b584469baefa3d104c87cfd7cb549e664957d"
+    },
+    "birth": {
+      "age_at_producer_start_seconds": 2.148432970046997,
+      "private_receipt_SHA256": "00c9e495c3f8bfaad339d2dec48682a46d9a3d15c69824f6d308ee92e5912596"
+    },
+    "watchdog": {
+      "age_at_producer_start_seconds": 1.5009238719940186,
+      "private_receipt_SHA256": "9838d67da56da2c5041fee94672dcf5879054432cf18be6492e8dc1c88b28067"
+    }
+  },
+  "preservation": {
+    "own_job_absent": true,
+    "own_producer_absent": true,
+    "own_files_removed": true,
+    "same_UI_processes": true,
+    "same_eight_apps_and_backups": true,
+    "same_seven_selected_files": true,
+    "same_two_cache_headers_and_signatures": true,
+    "same_boot_session": true,
+    "required_existing_CodeDirectories": 11,
+    "new_trustcache_entries": 0,
+    "new_runtime_installations": 0,
+    "full_cache_page_validation_scope": "historical 13 October; not rerun here",
+    "original_GPU_error_pattern_observed": false,
+    "bootout_exit": 0,
+    "bootout_identifier_advisory_warning_retained": true
+  },
+  "observer_only": {
+    "right_extraction_calls": 0,
+    "IOServiceOpen_calls": 0,
+    "IOServiceClose_calls": 0,
+    "GPU_selector_calls": 0,
+    "kernel_primitive_initializations": 0
+  },
+  "scope": "current producer registry first-parent edges and repeated swap dispatch low-address classification; no swap call induced by observer",
+  "unproved": {
+    "internal_client_provider_field": true,
+    "unique_parent_or_provider": true,
+    "physical_presentation": true,
+    "original_SwapBegin_or_Cancel_status": true,
+    "callback_PAC_authentication": true,
+    "atomic_snapshot": true,
+    "fully_pinned_object_lifetimes": true,
+    "new_visible_window_or_input": true,
+    "continuous_stability": true,
+    "freeze_cause": true,
+    "dispatch_PAC_authentication": true,
+    "function_callability": true,
+    "fresh_failure_reproduction": true
+  },
+  "private_controller_receipt_SHA256": "38312a9a813884b256744c87a4f5ae1f4e53730c50c4219bfdf0d5da9aac2071",
+  "private_controller_host_SHA256": "91c1535bc32902dc359dc7a02f6282fba7df386815cafba96c507c09b8618bc0",
+  "bound_source_SHA256": "b4e4c90fdead715ca1a3298eeedafea2c63cce0a9e3625e018892c7e8a9c2703",
+  "controller_body_SHA256": "6657fc6622290181fe1fcc70ccedc873c3838518cef156482c74884e309e299c",
+  "parent_helper_SHA256": "ac11a4d65863b709f4689e7b2caf3f542c2a49f52b85bd3679e5e8e54b500ff5",
+  "swap_dispatch": {
+    "registrations": 2,
+    "method_slots_per_registration": 3,
+    "all_six_method_low_addresses_match_expected": true,
+    "coexist_flag_exactly_one": true,
+    "public_SwapEnd_dispatch_shape": "64-bit LDR literal plus branch",
+    "public_dispatch_points_to_selected_hook_low_address": true,
+    "retained_route_guard_ranges": 14,
+    "repeated_route_bytes_equal": true,
+    "same_held_task_context": true,
+    "PAC_authenticated": false,
+    "callability_proven": false,
+    "original_call_status_observed": false,
+    "observer_explicit_memory_writes": 0,
+    "observer_GPU_selector_calls": 0
+  },
+  "route_helper_SHA256": "6c68b0b2372b90dd75006e7954effc0edcb0709b8a589c09eaf8252c53c3f21a",
+  "reader_variant_SHA256": "2b09f0b8bbf2c483af231ebe257b7c7308bc6f0d8a35c56341c916f76f0c1468",
+  "route_profile_SHA256": "cb2e5226cdfc7a40c9318b91bcc6a9902ff225b39c50f8d36fb162e992881795"
+}
