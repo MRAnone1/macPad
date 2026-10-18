@@ -3,6 +3,7 @@
 flag	/tmp/com.macwsguide.host.legacy-framebuffer	off	Host transport diagnostic	Explicit boot-local legacy framebuffer fallback experiment; production always uses its native IOSurface stream.
 env	MACWS_DEVICE	auto	developer deployment CLI	Explicit SSH device selection; never supplied to product processes.
 env	MACWS_DEVICE_PORT	auto	developer deployment CLI	Explicit SSH port selection; never supplied to product processes.
+env	MACWS_DIAGNOSTIC_SSH_OPTIONS_JSON	auto	isolated diagnostic deployment CLI	Explicit JSON SSH identity/known-host argument array for pinned own-probe delivery; never supplied to product processes.
 env	MACWS_DEVICE_USER	auto	developer deployment CLI	Explicit SSH account selection; never supplied to product processes.
 env	MACWS_DEVICE_THEOS	auto	developer deployment CLI	On-device build tool directory; not runtime feature state.
 env	MACWS_REMOTE_PROJECT	auto	developer deployment CLI	Explicit remote source checkout directory.

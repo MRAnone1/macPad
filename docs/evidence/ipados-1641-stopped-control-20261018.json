@@ -1,0 +1,203 @@
+{
+  "acceptance": {
+    "active_own_Begin_Cancel_accepted": false,
+    "device_acceptance": false,
+    "freeze_cause_proven": false,
+    "freeze_fix": false,
+    "genuine_native_watchdog_controls": [],
+    "original_WindowServer_swap_statuses_observed_this_pass": false,
+    "original_display_freeze_reproduced_this_pass": false
+  },
+  "baseline_failed_case_ids": [
+    "ERROR: setUpClass (test_texture_sampling_probe.TextureSamplingStockControl)",
+    "ERROR: setUpClass (test_texture_stride_probe_contract.TextureStrideStockControl)",
+    "ERROR: test_changed_dependency_rejected_even_same_boot (test_settings_verify.SettingsVerification.test_changed_dependency_rejected_even_same_boot)",
+    "ERROR: test_complete_real_signature_verification_passes (test_settings_verify.SettingsVerification.test_complete_real_signature_verification_passes)",
+    "ERROR: test_embedded_non_settings_plugin_is_untouched (test_settings_verify.SettingsVerification.test_embedded_non_settings_plugin_is_untouched)",
+    "ERROR: test_embedded_settings_pane_must_be_prepared (test_settings_verify.SettingsVerification.test_embedded_settings_pane_must_be_prepared)",
+    "ERROR: test_missing_executable_name_requires_unique_image (test_settings_verify.SettingsVerification.test_missing_executable_name_requires_unique_image)",
+    "ERROR: test_real_cpu_bitmap_original_method_arguments_errno_and_budgets (test_office_upload_observer.OfficeUploadObserver.test_real_cpu_bitmap_original_method_arguments_errno_and_budgets)",
+    "FAIL: test_current_registration_required (test_settings_verify.SettingsVerification.test_current_registration_required)",
+    "FAIL: test_marker_and_base_dependency_must_match (test_settings_verify.SettingsVerification.test_marker_and_base_dependency_must_match)",
+    "FAIL: test_stock_managed (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed)",
+    "FAIL: test_stock_managed_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed_allocation_only)",
+    "FAIL: test_stock_shared (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared)",
+    "FAIL: test_stock_shared_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared_allocation_only)"
+  ],
+  "date": "2026-10-18",
+  "delivery_pipeline": {
+    "builder_host_tests": 13,
+    "current_bundle_device_deployed": false,
+    "current_local_bundle_controller": "v6",
+    "current_manifest_sha256": "a4c52d5f9d01ac07e516f99f297444a0a7dfabf0dd0e496d8e6b8f7ad2c1283a",
+    "current_provenance_files": 34,
+    "default_device_commands": 0,
+    "delivered_and_cleaned_version": "v5",
+    "delivery_candidate_executions": 0,
+    "delivery_controller_executions": 0,
+    "delivery_trust_mutations": 0,
+    "explicit_install_payload_files": 5,
+    "focused_host_tests": 25,
+    "host_output_caps_apply_after_capture": true,
+    "host_timeout_seconds": 20,
+    "receiver_alarm_seconds": 12,
+    "receiver_deadline_seconds": 8
+  },
+  "device": {
+    "declared_cache_files": 47,
+    "fresh_cache_image_identities": 11,
+    "fresh_nine_file_hashes_unchanged": true,
+    "iPadOS": "16.4.1",
+    "iPadOS_build": "20E252",
+    "jailbreak": "Dopamine 3.0.10",
+    "macOS": "13.4",
+    "macOS_build": "22F66",
+    "model": "iPad13,6"
+  },
+  "facts": {
+    "cleanup": {
+      "UI_generations_unchanged": true,
+      "exact_owned_service_SIGKILL_calls": 1,
+      "exact_owned_service_bootout_calls": 1,
+      "fresh_final_candidate_missing_expected": true,
+      "job_labels_absent": true,
+      "known_generation_absent": true,
+      "operator_after_control_confirmation_pending": true,
+      "owned_filesystem_cleanup_verified": true,
+      "removed_scratch_directories": 1,
+      "removed_scratch_files": 2,
+      "removed_staged_payload_directories": 2,
+      "removed_staged_payload_files": 5,
+      "scratch_directories_absent": true,
+      "thermal_samples_nominal": true,
+      "trustcache_rollback_complete": false,
+      "visible_responsiveness_after_control": null
+    },
+    "clock": {
+      "crossprocess_native_counter_comparison_passed": true,
+      "native_public_domain": "mach_absolute_time.absolute_seconds.v1",
+      "stdlib_process_relative_epoch_rejected_for_crossprocess_freshness": true,
+      "timebase_denom": 3,
+      "timebase_numer": 125
+    },
+    "descriptor_fix": {
+      "device_accepted": false,
+      "device_deployed": false,
+      "exactly_once_pipe_ownership": true,
+      "finalization_errors_retained_and_refuse_acceptance": true,
+      "host_tests": 88,
+      "new_full_execute_tests": 14,
+      "old_v5_EBADF_reproduced_by_same_host_regression": true,
+      "retained_previous_tests": 74,
+      "runtime_source_sha256": {
+        "controller.py": "2402d9d5856dd456a3b8454593207d6fff83904990cbbc33a3877e2e2fb71ede",
+        "runtime_support.py": "d7c24bbb8c4dbd6a7a3b8cedd904f6da34d157df0e6cdecaab9eac8bb6dd5a4f",
+        "watchdog.py": "95d5804bfa9d79e128fc310db9eb166a223a9e2b9afc084b9ba992d509c88ffe"
+      },
+      "simulation_only": true,
+      "v6_regression_passed": true,
+      "version": "v6"
+    },
+    "initial_stopped_process": {
+      "copied_native_bytes": 136,
+      "native_block_sha256": "3ccf3f8a1e5f99234eaddfebb85d4c741b7fd913dd9c2922a3c8af7f057d863c",
+      "native_status": 4,
+      "status_name": "SSTOP"
+    },
+    "service_domain": {
+      "corrected_in_v6": false,
+      "explicit_queries_without_warning": [
+        "user/foreground",
+        "user/501"
+      ],
+      "observed_owned_domain": "user/501",
+      "redirected_from": "system"
+    },
+    "trust": {
+      "after_and_final_distinct_CDHashes": 167,
+      "before_selected_probe_admission": 166,
+      "explicit_selected_probe_CDHash_add_calls": 1,
+      "global_trustcache_cleared": false,
+      "retained_selected_probe_CDHash": "6665b5a54da06153a5940368788cdb9b6e9be3dc"
+    },
+    "v5_native_control": {
+      "C_ready_not_observed": true,
+      "accepted": false,
+      "control_source_cannot_reach_active_second_resume": true,
+      "full_report_returned": false,
+      "missing_report_fields_are_unknown": true,
+      "operation": "normal_ready_stop",
+      "outer_error": "OSError EBADF",
+      "owned_job_observed": true,
+      "reported_bootstraps": null,
+      "reported_resumes": null,
+      "reported_second_resumes": null,
+      "reported_watchdog_cleanup": null
+    }
+  },
+  "port_verified": false,
+  "private_witness_sha256": {
+    "cache-framework-inventory-20261018r2.json": "56b0397b78a99fdf0d177812fb76a3b6ecf7dd77829f51d5dfb10064fd1f2475",
+    "cydia-fat-dependency-20261018.raw.private.json": "6d7388dd094f08c18e128d671099b355deb95e36fa71b409558bcec895370175",
+    "explicit-owned-service-after-recovery-20261018.raw.private.json": "13c0f7b7395cde9d1e903450745fa18278968672c3dafc49668e134ba44a5b50",
+    "explicit-owned-service-readonly-20261018.raw.private.json": "4f52469a3331a0e59d9abe3c0c3eedfb4654b01936a6ab6b2fec84612944456e",
+    "macws-port-inventory-20261018r2.json": "80edb074c529aa16f586af5839a50a6086df0e2c44d8b419d59da9d8faf3c454",
+    "owned-control-after-v5-error-20261018.raw.private.json": "f3aa59d4fc1ed5918b07640d10e05999f09574faa49227b97e836320a561654f",
+    "owned-control-posttermination-cleanup-20261018.raw.private.json": "0db34cbe8c22fd298fec5564ef3e4750b046db8abe740656272a76a37f054faa",
+    "owned-stopped-control-recovery-20261018.raw.private.json": "35aa231324f671d7b0312149847217c35e116172c05a94339ad785eaed232749",
+    "shared-mach-clock-readonly-comparison-20261018.private.json": "61cf667ed97335b61f9445ec75896d155e067f25409ec670a12500dc7a17fc9c",
+    "swap-pair-controller-v6-independent-review-20261018.private.json": "9d51bbf2fe2cfb7a2c4e1d301122fe15bda88c34f41679c64da9eea54e099942",
+    "swap-pair-dependency-observation-prestage-20261018r2.raw.private.json": "434909d7eb079439b2bf34119500054250776d2022b5090d1916de0a66d2c91e",
+    "swap-pair-fresh-readonly-inventory-review-20261018.private.json": "46e0af49542540f4d916729cbf35df14bdb24ce72af9414163d4825267be6d00",
+    "swap-pair-live-controller-v6-20261018/execute-finalization-before-after.private.json": "d048c9fb59678808649a3b9d843af8acf0841bf76d623ae9e565608a6fec982a",
+    "swap-pair-live-controller-v6-20261018/offline-QA.canonical.private.json": "fb2bf8a0097e21ee671c2e3c7b277c45f6a509d588cc11a2344c2ea0b25c5cc2",
+    "swap-pair-live-controller-v6-20261018/offline-controls.private.json": "d2faddde315d9588d1237596cfb63a9fb2ee932eec2deffbcbb316fb80b2907a",
+    "swap-pair-owned-v5-cleanup-20261018.raw.private.json": "6e4a9294bfe3a4b7746b502756651d70e43a550f04191d23a2a58665894026e1",
+    "swap-pair-readonly-native-v3-20261018/final_removed.raw.private.json": "925f559574107b3905e17e50ad3c1dad7b18f50bbc4f09fdf31bea2840c278c7",
+    "swap-pair-trust-admission-20261018.raw.private.json": "3baf19cc170c073207408011fed259a16bfe85b49b3ec6953a74558f178ce3c8",
+    "swap-pair-v5-live-session-20261018/normal_ready_stop.raw.private.json": "82fa034b31b41309dae15312eb2100e3526d0fcd2698dd906f02e346544c7ba2",
+    "swap-pair-v5-pipeline-delivery-20261018.raw.private.json": "884a36f07bfd8f2d84ee688f2781aa2ef34a242ee4902bfbd77f372037c7671b",
+    "swap-pair-v6-final-local-delivery-plan-20261018.private.json": "ffe274017f387bc924ca4977a1737546c487014e1d3ffa8cb32a790c05b49cbf",
+    "v6-caller-report-retention-host-controls-20261018.private.json": "b850f56d1b2d3a975af10e60dcde0b23bc6309525a8b6bebf543a8985a15dda1"
+  },
+  "redaction": "No raw native blocks, PID/TID, process birth, boot UUID, runtime addresses, credentials or Apple binary bytes are exported.",
+  "remaining": [
+    "Correct and verify the observed service-domain invariant before another control job.",
+    "Collect actual normal/EOF/deadline native controls with report and generation cleanup.",
+    "Only then consider one owned Begin/Cancel pair; it would not establish original WindowServer behavior.",
+    "Reproduce and prove the original display failure before production repair."
+  ],
+  "repository_validation": {
+    "companion": {
+      "code_source_sha256": {
+        "misc/device_pipeline.sh": "056084157a2774f4d8f9fcadc8f3a97a9e2862b410f6342cd87c830e142c3f98",
+        "misc/macws_diagnostic_probe_pipeline.py": "d909961086ee2c2a2c253dbc74fe8c84f68715b72a41bfa614e4e28afb563a5f",
+        "misc/macws_diagnostic_probe_receiver.py": "9cab87bbc634b4db85fb40d93dc8302b74dcc698f0484d038bee2901d8263592",
+        "misc/test_macws_diagnostic_probe_pipeline.py": "e1a18d775c62aa4b779fcd3ec5579e0b18fdc3503fe6dfe0f38d50d39e4f8606"
+      },
+      "errors": 8,
+      "failures": 6,
+      "log_sha256": "39db5a93e4d4bbe566f391415318f722f3afd6194a8cd9bf5b9ebad15afcabf9",
+      "same_fourteen_baseline_case_ids": true,
+      "skipped": 12,
+      "test_seconds": 41.33,
+      "tests_run": 763
+    },
+    "publication": {
+      "code_source_sha256": {
+        "misc/device_pipeline.sh": "056084157a2774f4d8f9fcadc8f3a97a9e2862b410f6342cd87c830e142c3f98",
+        "misc/macws_diagnostic_probe_pipeline.py": "d909961086ee2c2a2c253dbc74fe8c84f68715b72a41bfa614e4e28afb563a5f",
+        "misc/macws_diagnostic_probe_receiver.py": "9cab87bbc634b4db85fb40d93dc8302b74dcc698f0484d038bee2901d8263592",
+        "misc/test_macws_diagnostic_probe_pipeline.py": "e1a18d775c62aa4b779fcd3ec5579e0b18fdc3503fe6dfe0f38d50d39e4f8606"
+      },
+      "errors": 8,
+      "failures": 6,
+      "log_sha256": "6aee001934dd1495fe9ed4ba6d9301f7ebd68ef9f9ab953a218ab7f5fdebe869",
+      "same_fourteen_baseline_case_ids": true,
+      "skipped": 12,
+      "test_seconds": 47.014,
+      "tests_run": 767
+    }
+  },
+  "schema": "macws.ipados-1641.stopped-control.redacted.v1"
+}

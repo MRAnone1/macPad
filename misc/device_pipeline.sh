@@ -19,6 +19,9 @@ COMPONENT=sync
 DO_SYNC=1
 RESTART_WORKSPACE=0
 REPAIR_DESKTOP=0
+PROBE_BUNDLE=
+PROBE_INSTALL=0
+PROBE_DEVICE=${MACWS_DEVICE:-}
 
 usage() {
     cat <<'EOF'
@@ -26,7 +29,9 @@ Usage: bash misc/device_pipeline.sh [options]
 
   --sync-only                  Sync source and prove no content drift (default)
   --verify-only                Do not copy; fail if local/device source differs
-  --component NAME             runtime | display | input | workspace | host | hostd | compiler | libmachook | metal | full
+  --component NAME             runtime | display | input | workspace | host | hostd | compiler | libmachook | metal | full | diagnostic-probe
+  --probe-bundle PATH          Frozen local diagnostic bundle (diagnostic-probe only)
+  --install                    Explicit isolated diagnostic delivery; default is local metadata only
   --no-sync                    Build current device tree without synchronizing
   --restart-workspace          Rebuild the live GUI session after deployment and verify it
   --repair-desktop             Run the in-place desktop repair after deployment
@@ -37,6 +42,10 @@ Usage: bash misc/device_pipeline.sh [options]
 Set MACWS_SUDO_PASSWORD for non-interactive deployment. If it is unset, the
 script asks sudo once through an interactive SSH session without storing it.
 Source sync is an overlay and deliberately never deletes device-only files.
+diagnostic-probe bypasses source sync, builds, postinstall and workspace actions.
+It accepts only the pinned own-probe bundle and arm64, with no execution/trust
+admission. Capture --install stdout privately. Supply existing SSH identity and
+known-host options as MACWS_DIAGNOSTIC_SSH_OPTIONS_JSON (a JSON argument array).
 EOF
 }
 
@@ -52,9 +61,16 @@ while [ "$#" -gt 0 ]; do
         --no-sync) DO_SYNC=0 ;;
         --restart-workspace) RESTART_WORKSPACE=1 ;;
         --repair-desktop) REPAIR_DESKTOP=1 ;;
+        --probe-bundle)
+            [ "$#" -ge 2 ] || { echo "Missing value for --probe-bundle" >&2; exit 2; }
+            PROBE_BUNDLE=$2
+            shift
+            ;;
+        --install) PROBE_INSTALL=1 ;;
         --device)
             [ "$#" -ge 2 ] || { echo "Missing value for --device" >&2; exit 2; }
             DEVICE=$2
+            PROBE_DEVICE=$2
             shift
             ;;
         --port)
@@ -69,9 +85,27 @@ while [ "$#" -gt 0 ]; do
 done
 
 case "$COMPONENT" in
-    sync|verify|runtime|display|input|workspace|host|hostd|compiler|libmachook|metal|full) ;;
+    sync|verify|runtime|display|input|workspace|host|hostd|compiler|libmachook|metal|full|diagnostic-probe) ;;
     *) echo "Unsupported component: $COMPONENT" >&2; exit 2 ;;
 esac
+
+# Dispatch before defining or invoking any whole-tree overlay/build/deployment.
+if [ "$COMPONENT" = diagnostic-probe ]; then
+    [ -n "$PROBE_BUNDLE" ] || { echo "diagnostic-probe requires --probe-bundle" >&2; exit 2; }
+    [ "$RESTART_WORKSPACE" -eq 0 ] && [ "$REPAIR_DESKTOP" -eq 0 ] || {
+        echo "diagnostic-probe refuses workspace restart/repair" >&2; exit 2;
+    }
+    PROBE_ARGS=(--probe-bundle "$PROBE_BUNDLE" --architecture arm64 --port "$DEVICE_PORT")
+    if [ "$PROBE_INSTALL" -eq 1 ]; then
+        [ -n "$PROBE_DEVICE" ] || { echo "diagnostic-probe install requires explicit --device or MACWS_DEVICE" >&2; exit 2; }
+        PROBE_ARGS+=(--install --device "$PROBE_DEVICE")
+    fi
+    exec python3 "$SCRIPT_DIR/macws_diagnostic_probe_pipeline.py" "${PROBE_ARGS[@]}"
+fi
+if [ -n "$PROBE_BUNDLE" ] || [ "$PROBE_INSTALL" -eq 1 ]; then
+    echo "--probe-bundle/--install require --component diagnostic-probe" >&2
+    exit 2
+fi
 
 SSH_ARGS=(-p "$DEVICE_PORT" -o ConnectTimeout=8)
 RSYNC_SHELL="ssh -p $DEVICE_PORT -o ConnectTimeout=8"
