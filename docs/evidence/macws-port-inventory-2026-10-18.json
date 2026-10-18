@@ -1,0 +1,260 @@
+{
+  "date": "2026-10-18",
+  "port_status": "unverified",
+  "scope": "fresh read-only filesystem and standard metadata snapshot",
+  "provenance": {
+    "private_receipt_sha256": "3eaa170a39db9099955e9dcdcab69d4772a1dbe5524ef62c4049fd732aec6bc1",
+    "private_host_envelope_sha256": "6f9e0a2ccf634334c269d3b62d09845b137b06ce26bd6dc38c43d5d4e82e4f76",
+    "executed_source_sha256": "fa9509ca091a6f9d44d8c42c76e1b7e9d2ba576c0a189237acbc72b3f7ab8a58",
+    "host_runner_sha256": "a06163503aa62624866b40be07e2abe8db64dbb7552807143c7f08e79f70f911",
+    "host_timeout_seconds": 38,
+    "exporter_sha256": "46124c8968b52df8043325a62a1a2b4b5c397f016b5dd7b0762381f27fa9e4ba"
+  },
+  "hardware": {
+    "model": "iPad13,6",
+    "RAM_bytes": 7896825856,
+    "physical_CPU_count": 8
+  },
+  "versions": {
+    "iPadOS": {
+      "ProductName": "iPhone OS",
+      "ProductVersion": "16.4.1",
+      "ProductBuildVersion": "20E252"
+    },
+    "macOS_rootfs": {
+      "ProductName": "macOS",
+      "ProductVersion": "13.4",
+      "ProductBuildVersion": "22F66"
+    }
+  },
+  "kernel_UUID": "d6b9e234-64f1-30ea-ae62-ed8f2dc6efdb",
+  "same_boot_within_inventory": true,
+  "same_boot_as_cache_inventory": true,
+  "same_nine_file_hashes_as_17_October": true,
+  "binaries": [
+    {
+      "name": "jbctl",
+      "bytes": 173152,
+      "sha256": "64701bf3968cc4f79fe39b7e581e4db0e3aefb10cefcaf24dfd1737a8c6e599c",
+      "slices": [
+        {
+          "architecture": "arm64",
+          "cpu_subtype": 0,
+          "filetype": 2,
+          "UUID": "c2466aa4-2f3e-374f-a78b-6c6d751999c5"
+        },
+        {
+          "architecture": "arm64e",
+          "cpu_subtype": 2147483650,
+          "filetype": 2,
+          "UUID": "092eb768-2a8a-3272-99b8-f19f22b34492"
+        }
+      ]
+    },
+    {
+      "name": "libjailbreak",
+      "bytes": 603296,
+      "sha256": "83e39815a5b0f55d076dc576222a9acfdaca76c0b83c99c465ac221c97d301e5",
+      "slices": [
+        {
+          "architecture": "arm64",
+          "cpu_subtype": 0,
+          "filetype": 6,
+          "UUID": "d56bb518-1723-3483-a244-2ddbabb19eb0"
+        },
+        {
+          "architecture": "arm64e",
+          "cpu_subtype": 2147483650,
+          "filetype": 6,
+          "UUID": "bf647578-b7dd-3f1c-898a-5cccb4b19c79"
+        }
+      ]
+    },
+    {
+      "name": "SpringBoard",
+      "bytes": 111616,
+      "sha256": "ecb29cfb8850f6c7cc64fae48b522adf54bd855216ee3ab673bce9b561197d24",
+      "slices": [
+        {
+          "architecture": "arm64e",
+          "cpu_subtype": 2147483650,
+          "filetype": 2,
+          "UUID": "44055250-e230-3c4a-9b04-e7756054cbe0"
+        }
+      ]
+    },
+    {
+      "name": "MTLCompilerService",
+      "bytes": 86224,
+      "sha256": "0c68763082c8c57c0ae87a64f05e331617285e413485561abae815dc802c1c2c",
+      "slices": [
+        {
+          "architecture": "arm64e",
+          "cpu_subtype": 2147483650,
+          "filetype": 2,
+          "UUID": "4d96b90f-8d89-309d-a29d-f836bd2aaade"
+        }
+      ]
+    },
+    {
+      "name": "iOS_Metal",
+      "error": "FileNotFoundError"
+    },
+    {
+      "name": "iOS_AGXMetal",
+      "error": "FileNotFoundError"
+    },
+    {
+      "name": "selected_WindowServer",
+      "bytes": 85312,
+      "sha256": "b8386dbd24ceedb70fc82eab9c74a315e83d19131282522a3fc55ca2a69be416",
+      "slices": [
+        {
+          "architecture": "arm64",
+          "cpu_subtype": 0,
+          "filetype": 2,
+          "UUID": "465422c7-3cfc-3e9f-9c04-813f3a265aa6"
+        }
+      ]
+    },
+    {
+      "name": "selected_arm64_hook",
+      "bytes": 1422432,
+      "sha256": "bcd544a537fc81cbc16ec3fb8de2c7677708d35ada10c0caf044ba83f005340b",
+      "slices": [
+        {
+          "architecture": "arm64",
+          "cpu_subtype": 0,
+          "filetype": 6,
+          "UUID": "2552c7f2-0946-3525-9771-d6d48b44c0e9"
+        }
+      ]
+    },
+    {
+      "name": "selected_arm64e_hook",
+      "bytes": 1431984,
+      "sha256": "803bcccf8cb9afd8d3b96bdbe88ca13d79463e6a09f2c192d346bc5300541008",
+      "slices": [
+        {
+          "architecture": "arm64e",
+          "cpu_subtype": 2147483650,
+          "filetype": 6,
+          "UUID": "8d9d059f-f308-3a07-be9e-bb23123ba997"
+        }
+      ]
+    },
+    {
+      "name": "selected_wrapper",
+      "bytes": 68560,
+      "sha256": "e7f1d9e9966826022372248a308c2e28126758a97057ada43551c1a206549d20",
+      "slices": [
+        {
+          "architecture": "arm64",
+          "cpu_subtype": 0,
+          "filetype": 2,
+          "UUID": "bf207849-42b2-3a26-b431-a04b0f42818d"
+        }
+      ]
+    },
+    {
+      "name": "macOS_dyld",
+      "bytes": 2957904,
+      "sha256": "79e8c49d20fd9504a254ccf5200d5af4044cfa170d1961591446b6d7973ebc1c",
+      "slices": [
+        {
+          "architecture": "x86_64",
+          "cpu_subtype": 3,
+          "filetype": 7,
+          "UUID": "9e98a840-a3ac-31c1-ab97-829af9bd6864"
+        },
+        {
+          "architecture": "arm64e",
+          "cpu_subtype": 2147483650,
+          "filetype": 7,
+          "UUID": "bd993f39-c902-37d6-8bd8-6d827c7f121e"
+        }
+      ]
+    },
+    {
+      "name": "macOS_Metal",
+      "error": "FileNotFoundError"
+    },
+    {
+      "name": "macOS_AGXMetal13_3",
+      "error": "FileNotFoundError"
+    },
+    {
+      "name": "macOS_IOMobileFramebuffer",
+      "error": "FileNotFoundError"
+    }
+  ],
+  "jailbreak": {
+    "version": "3.0.10",
+    "trustcache_info_succeeded": true,
+    "existing_distinct_CDHashes": 166,
+    "new_trust_admission_tested": false,
+    "mutation_calls": 0
+  },
+  "rootfs": {
+    "path_exists": true,
+    "free_space": {
+      "/private/var": {
+        "total_bytes": 255927603200,
+        "available_bytes": 96121630720,
+        "readonly": false
+      },
+      "/private/var/mnt/rootfs": {
+        "total_bytes": 255927603200,
+        "available_bytes": 96121630720,
+        "readonly": false
+      }
+    },
+    "exact_mount_source_freshly_attributed": false
+  },
+  "runtime_snapshot": {
+    "process_counts": {
+      "SpringBoard": 1,
+      "backboardd": 1,
+      "WindowServer": 0,
+      "launchdchrootexec": 0,
+      "macwshostd": 0,
+      "macwsdisplayd": 0,
+      "autosignd": 0,
+      "debugserver": 0,
+      "lldb": 0,
+      "oslog": 0,
+      "sample": 0,
+      "tail": 0,
+      "grep": 0
+    },
+    "MacWS_named_processes": 9,
+    "thermal": [
+      "nominal",
+      "nominal"
+    ],
+    "diagnostic_markers": {
+      "macws_runtime_diagnostics": false,
+      "macws_res_diag": false,
+      "macws_submit_diag": false,
+      "macws_submit_ring": false,
+      "macws_submit_fast_ring": false,
+      "macws_pipeline_diag": false,
+      "macws_iogpu_error_diag": false
+    },
+    "unlocked_or_responsive_UI_verified": false,
+    "stability_or_visible_output_proven": false
+  },
+  "bounds": {
+    "device_alarm_seconds": 28,
+    "host_timeout_seconds": 38,
+    "elapsed_seconds": 0.173500625,
+    "file_bytes_hashed": 6940480,
+    "device_mutations": 0,
+    "new_workloads": 0,
+    "kernel_memory_reads": 0
+  },
+  "fresh_failure_reproduction": false,
+  "freeze_cause_proven": false,
+  "fix_or_device_acceptance_claimed": false,
+  "same_boot_as_v46": true
+}

@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-18",
+  "port_status": "unverified",
+  "scope": "filesystem cache/image headers; not whole framework hashes or loaded-image proof",
+  "provenance": {
+    "private_receipt_sha256": "ef21d7c48daafef69e3726f63b9a9bfb7a2e4bec7e160e4388548eea1139fac6",
+    "private_host_envelope_sha256": "7da144ba24b43dde3ea6c2588a7fb6c035aa249aa0a6ac962fd9d581215869cb",
+    "executed_source_sha256": "e25ff917ab42d17e36b757d3ed4b9aa51d184fdf1ce04c3a6156149ecdbffcd4",
+    "host_runner_sha256": "6ce510b1f8dfd93b7625f0ec929b7866990f2818f994bbf70d14b8ff10939c3e",
+    "host_timeout_seconds": 20,
+    "exporter_sha256": "46124c8968b52df8043325a62a1a2b4b5c397f016b5dd7b0762381f27fa9e4ba"
+  },
+  "accepted_known_filesystem_identity_inventory": true,
+  "same_boot_within_and_between_today_inventories": true,
+  "namespaces": [
+    {
+      "name": "native_iPadOS",
+      "cache_files": 45,
+      "main_and_subcache_UUID_association_verified": true,
+      "images": [
+        {
+          "role": "Metal",
+          "architecture": "arm64e",
+          "UUID": "fc81787c-3d56-358e-8215-8495d583f6d4",
+          "header_range_bytes": 5288,
+          "header_range_sha256": "15d0dd878d79d351db3aebf75b7dc4fb5a11554560b1cf0f124fa3e6aa79a76f",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true,
+          "header_bytes_repeated_equal": true,
+          "complete_load_commands_within_hashed_range": true
+        },
+        {
+          "role": "AGXMetal13_3",
+          "architecture": "arm64e",
+          "UUID": "e25d17ad-26a8-35d1-a400-8220edcd7d0c",
+          "header_range_bytes": 4832,
+          "header_range_sha256": "ba1515ae4653193c822ab468ffa687f9e0089dcb5298248b1c50180f7f470c0f",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true,
+          "header_bytes_repeated_equal": true,
+          "complete_load_commands_within_hashed_range": true
+        },
+        {
+          "role": "QuartzCore",
+          "architecture": "arm64e",
+          "UUID": "0ae8ceb8-0dd6-363f-951d-16aac60a0951",
+          "header_range_bytes": 7112,
+          "header_range_sha256": "86324d130451fd802fe79935295ee54baa01dd712004915cb1f3150a8c100e4e",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true,
+          "header_bytes_repeated_equal": true,
+          "complete_load_commands_within_hashed_range": true
+        },
+        {
+          "role": "IOMobileFramebuffer",
+          "architecture": "arm64e",
+          "UUID": "d2cce008-351e-3781-8774-0ed863d941e7",
+          "header_range_bytes": 2328,
+          "header_range_sha256": "8f0dab429140638071b867809c1dffac895cabfc7c8a3ab4c3521bbe160b215b",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true,
+          "header_bytes_repeated_equal": true,
+          "complete_load_commands_within_hashed_range": true
+        },
+        {
+          "role": "IOGPU",
+          "architecture": "arm64e",
+          "UUID": "4a495b72-eeeb-3d74-a7b5-1088f0ea60d7",
+          "header_range_bytes": 4496,
+          "header_range_sha256": "3bcd3e8cdb50062e5732aa93ba124449d01a61d9170121f480ddcca27aeeba92",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true,
+          "header_bytes_repeated_equal": true,
+          "complete_load_commands_within_hashed_range": true
+        },
+        {
+          "role": "SpringBoard_framework",
+          "architecture": "arm64e",
+          "UUID": "45ddeb5e-05b0-3bf3-bb8b-d78e6b95ebb3",
+          "header_range_bytes": 24632,
+          "header_range_sha256": "ed9034404bbdaf77cd27f5191c0903285ce76b84b33b62f6b631c0a06effcdda",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true,
+          "header_bytes_repeated_equal": true,
+          "complete_load_commands_within_hashed_range": true
+        }
+      ]
+    },
+    {
+      "name": "macOS_rootfs",
+      "cache_files": 2,
+      "main_and_subcache_UUID_association_verified": true,
+      "images": [
+        {
+          "role": "Metal",
+          "architecture": "arm64e",
+          "UUID": "2bab169c-42da-36e3-955a-f30b709ec2ad",
+          "header_range_bytes": 5112,
+          "header_range_sha256": "eaa27b432c4a0a42ebc4b71603a080f768f17c5d9f7073632ff712b791d66764",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true,
+          "header_bytes_repeated_equal": true,
+          "complete_load_commands_within_hashed_range": true
+        },
+        {
+          "role": "AGXMetal13_3",
+          "architecture": "arm64e",
+          "UUID": "727c250e-554d-3921-a5b3-48dae6195b79",
+          "header_range_bytes": 4968,
+          "header_range_sha256": "4e5b6d5087a7052c551ea65547df145a6f48b5aeb030ffaa5678121829036627",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true,
+          "header_bytes_repeated_equal": true,
+          "complete_load_commands_within_hashed_range": true
+        },
+        {
+          "role": "QuartzCore",
+          "architecture": "arm64e",
+          "UUID": "cf853bbd-01b6-3f46-ada1-ec70fd2dc9dc",
+          "header_range_bytes": 6280,
+          "header_range_sha256": "137bd6add935a98892f318a95520e2a497fba2715cfcdc4db0559ade395df02e",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true,
+          "header_bytes_repeated_equal": true,
+          "complete_load_commands_within_hashed_range": true
+        },
+        {
+          "role": "IOMobileFramebuffer",
+          "architecture": "arm64e",
+          "UUID": "9485c742-b91f-3c6c-897c-ab2c8acf7625",
+          "header_range_bytes": 2384,
+          "header_range_sha256": "fe7917060267e9488c24628ab8d891293889fc8f903ab619769d4f0e4889eb22",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true,
+          "header_bytes_repeated_equal": true,
+          "complete_load_commands_within_hashed_range": true
+        },
+        {
+          "role": "IOGPU",
+          "architecture": "arm64e",
+          "UUID": "ce2b5551-857f-3edd-9e4f-435215cc8c27",
+          "header_range_bytes": 4584,
+          "header_range_sha256": "cc40e072c8fc0edceaf2358405e67e2a077609586a87c2b8ebff96237b0d590e",
+          "header_and_image_text_UUID_equal": true,
+          "matches_historical_selected_UUID": true,
+          "header_bytes_repeated_equal": true,
+          "complete_load_commands_within_hashed_range": true
+        }
+      ]
+    }
+  ],
+  "bounds": {
+    "read_calls": 135,
+    "requested_file_bytes": 1251574,
+    "returned_file_bytes": 1251574,
+    "max_read_calls": 256,
+    "max_requested_file_bytes": 8388608,
+    "read_deadline_seconds": 8
+  },
+  "device_alarm_seconds": 12,
+  "host_timeout_seconds": 20,
+  "elapsed_seconds": 0.04574866599999999,
+  "device_mutations": 0,
+  "framework_loads": 0,
+  "new_workloads": 0,
+  "runtime_loaded_images_verified": false,
+  "whole_framework_hashes_verified": false,
+  "fresh_failure_reproduction": false,
+  "freeze_cause_proven": false,
+  "fix_or_device_acceptance_claimed": false
+}
