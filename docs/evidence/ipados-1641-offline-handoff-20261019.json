@@ -1,0 +1,249 @@
+{
+  "acceptance": {
+    "active_Begin_Cancel": false,
+    "device_acceptance": false,
+    "freeze_cause_proven": false,
+    "freeze_fix": false,
+    "fresh_native_prerequisites": false,
+    "native_controller_v7": false,
+    "native_observer_v4": false,
+    "native_stopped_controls": [],
+    "original_failure_reproduced_this_pass": false,
+    "port_verified": false
+  },
+  "caller": {
+    "active_pair_payload_supported": false,
+    "current_freshness_verified_by_decoder": false,
+    "exact_execute_code_frame_partial_report": true,
+    "explicit_portable_source_and_QA_paths": true,
+    "host_checks_structure_only": true,
+    "live_native_clock_revalidation_required_before_jobs": true,
+    "lossless_bounded_transport_bytes": true,
+    "native_evidence_authenticated_by_decoder": false,
+    "positive_internal_interpretation_requires_expected_config": true,
+    "receipt_projection_full_report_binding": true,
+    "synthetic_before_after_witness_sha256": "2c07b7eb1c8457c7023ef57bdeda509fc7dbd3fa7a92d038361f8eaa80fcbead",
+    "synthetic_forged_success_before_after": {
+      "copied_native_evidence": false,
+      "current_device_freshness_claimed": false,
+      "device_commands": 0,
+      "native_acceptance": false,
+      "new_v2_accepted_scoped_capture": false,
+      "new_v2_error": "ValueError: typed full capture flag: control_capture_accepted",
+      "new_v2_source_sha256": "b50084a3150027f0388af0a7fdac8389652bd8acdfacd271e9b8d10098a455ae",
+      "old_v1_accepted_scoped_capture": true,
+      "old_v1_source_sha256": "c2756cd5d1158f6800081ea450d0b41d2558a0dd1788d23a264cb3579bf74fea",
+      "schema": "macws.swap-pair.synthetic-forged-success-regression.v1",
+      "simulation_only": true,
+      "synthetic_input_sha256": "372ba54199001de231e814a1d53bf58bfe5b540ef088afb4ffb9f351be69b0a8"
+    },
+    "transport_provided": false,
+    "unknown_counters_remain_null": true,
+    "version": "v7r2"
+  },
+  "cleanup": {
+    "new_device_cleanup_needed": false,
+    "previous_device_cleanup_is_historical_only": true,
+    "retained_own_trust_entry_not_modified_or_read_this_pass": true
+  },
+  "date": "2026-10-19",
+  "device_activity_this_pass": {
+    "SSH_commands": 0,
+    "deployments": 0,
+    "device_artifacts_created": 0,
+    "device_cleanup_required": false,
+    "device_commands": 0,
+    "fresh_inventory_acquired": false,
+    "job_dispatches": 0,
+    "native_observer_runs": 0,
+    "resumes": 0,
+    "sessions_or_prerequisites_generated": false,
+    "signals": 0,
+    "trust_mutations": 0
+  },
+  "host_validation": {
+    "caller_private_tests": 42,
+    "diff_check_passed": true,
+    "existing_portable_controller_tests": 7,
+    "independent_reviews": [
+      {
+        "no_scoped_blocking_findings": true,
+        "sha256": "6304b39ccc338a9c9cc49b4741bf37cd23c4e89d731151d9e4b4fd4131b2c8c9"
+      },
+      {
+        "no_scoped_blocking_findings": true,
+        "sha256": "96b448310a48d9b1fcc97fca64df552e71fed7871e78b6cda27492f0a0a794e4"
+      }
+    ],
+    "libmachook_or_display_runtime_changed": false,
+    "observer_private_tests": 70,
+    "portable_caller_tests": 41,
+    "portable_observer_tests": 25,
+    "portable_total": 73,
+    "private_caller_QA_sha256": "5b8050ee89afe7fc7d6edafc9572d955e1f780610dbbf5add9e91933b6507b5d",
+    "private_observer_QA_sha256": "aecd0cad7e8e90c9b68f1dd5485c1c2ae11a081a3fa5d919fb154c270db4075e",
+    "public_copies_byte_identical": true,
+    "public_fixtures_synthetic_only": true,
+    "repository_suites": {
+      "companion": {
+        "complete_suite_passing": false,
+        "errors": 8,
+        "failed_case_ids": [
+          "ERROR: setUpClass (test_texture_sampling_probe.TextureSamplingStockControl)",
+          "ERROR: setUpClass (test_texture_stride_probe_contract.TextureStrideStockControl)",
+          "ERROR: test_changed_dependency_rejected_even_same_boot (test_settings_verify.SettingsVerification.test_changed_dependency_rejected_even_same_boot)",
+          "ERROR: test_complete_real_signature_verification_passes (test_settings_verify.SettingsVerification.test_complete_real_signature_verification_passes)",
+          "ERROR: test_embedded_non_settings_plugin_is_untouched (test_settings_verify.SettingsVerification.test_embedded_non_settings_plugin_is_untouched)",
+          "ERROR: test_embedded_settings_pane_must_be_prepared (test_settings_verify.SettingsVerification.test_embedded_settings_pane_must_be_prepared)",
+          "ERROR: test_missing_executable_name_requires_unique_image (test_settings_verify.SettingsVerification.test_missing_executable_name_requires_unique_image)",
+          "ERROR: test_real_cpu_bitmap_original_method_arguments_errno_and_budgets (test_office_upload_observer.OfficeUploadObserver.test_real_cpu_bitmap_original_method_arguments_errno_and_budgets)",
+          "FAIL: test_current_registration_required (test_settings_verify.SettingsVerification.test_current_registration_required)",
+          "FAIL: test_marker_and_base_dependency_must_match (test_settings_verify.SettingsVerification.test_marker_and_base_dependency_must_match)",
+          "FAIL: test_stock_managed (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed)",
+          "FAIL: test_stock_managed_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed_allocation_only)",
+          "FAIL: test_stock_shared (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared)",
+          "FAIL: test_stock_shared_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared_allocation_only)"
+        ],
+        "failures": 6,
+        "log_sha256": "a5dc582c3158595769b8306eb48bcb31247cbc4c9d121e313077af475876cab0",
+        "same_fourteen_baseline_case_ids": true,
+        "skipped": 12,
+        "source_sha256": {
+          "misc/device_pipeline.sh": "056084157a2774f4d8f9fcadc8f3a97a9e2862b410f6342cd87c830e142c3f98",
+          "misc/macws_diagnostic_probe_pipeline.py": "0d310c1c733807c810d867ccb04def8467f26fada6fcdf27b299f1ea6df9848e",
+          "misc/macws_diagnostic_probe_receiver.py": "1d4a9f515b7884ead3326f39d35cc639e1e2972048e2f26a1f73033af3100463",
+          "misc/macws_swap_pair/controller.py": "955c50b5cb2b30b8f0aefd69720675d04c91126dec17c802fb09be8c42197977",
+          "misc/macws_swap_pair/observer_inputs.json": "f7261fcf3e6c47493e92f8b04396316acf9d3f66b229d77a85cc0f95ffa6f280",
+          "misc/macws_swap_pair/offline_qa.json": "ebee0b881b5f589c4ca100c5dbcd4c72faa946b0bf741511a7396138139ae29c",
+          "misc/macws_swap_pair/prepare_control_payload.py": "b50084a3150027f0388af0a7fdac8389652bd8acdfacd271e9b8d10098a455ae",
+          "misc/macws_swap_pair/readonly_observer.py": "717de31eb1d7a05ed363eca7c3dce0dbd7f4ff500bb8cb65377bd340babf1c7a",
+          "misc/macws_swap_pair/runtime_support.py": "5d09cf9380afaa2409661a58909d1bfee41d81943f1b2306facb0cd94ee10fe0",
+          "misc/macws_swap_pair/watchdog.py": "c28ec9edd30bf86613c7cb29693697901228b579100b8b181a4dc47915f00e0a",
+          "misc/test_macws_diagnostic_probe_pipeline.py": "d1d3433fb9420e71b7cdae1d59b0ac16709eaa5435e606213acf20832dfda2d4",
+          "misc/test_macws_swap_pair.py": "e9364a4a407285cdc94d321c2eaee013c779e49f4395628de5bb020ed4789461",
+          "misc/test_macws_swap_pair_observer.py": "5e8a846f84b26b39326b9850e3970ebe3251e289d6930ff4f33567a10c7d11bd",
+          "misc/test_macws_swap_pair_preparation.py": "0f6e206387792f2e9fadb075bf1aa7b0af9e3cbc592fcc7ba0d52e6e9b6b4674"
+        },
+        "test_seconds": 44.131,
+        "tests_run": 836
+      },
+      "publication": {
+        "complete_suite_passing": false,
+        "errors": 8,
+        "failed_case_ids": [
+          "ERROR: setUpClass (test_texture_sampling_probe.TextureSamplingStockControl)",
+          "ERROR: setUpClass (test_texture_stride_probe_contract.TextureStrideStockControl)",
+          "ERROR: test_changed_dependency_rejected_even_same_boot (test_settings_verify.SettingsVerification.test_changed_dependency_rejected_even_same_boot)",
+          "ERROR: test_complete_real_signature_verification_passes (test_settings_verify.SettingsVerification.test_complete_real_signature_verification_passes)",
+          "ERROR: test_embedded_non_settings_plugin_is_untouched (test_settings_verify.SettingsVerification.test_embedded_non_settings_plugin_is_untouched)",
+          "ERROR: test_embedded_settings_pane_must_be_prepared (test_settings_verify.SettingsVerification.test_embedded_settings_pane_must_be_prepared)",
+          "ERROR: test_missing_executable_name_requires_unique_image (test_settings_verify.SettingsVerification.test_missing_executable_name_requires_unique_image)",
+          "ERROR: test_real_cpu_bitmap_original_method_arguments_errno_and_budgets (test_office_upload_observer.OfficeUploadObserver.test_real_cpu_bitmap_original_method_arguments_errno_and_budgets)",
+          "FAIL: test_current_registration_required (test_settings_verify.SettingsVerification.test_current_registration_required)",
+          "FAIL: test_marker_and_base_dependency_must_match (test_settings_verify.SettingsVerification.test_marker_and_base_dependency_must_match)",
+          "FAIL: test_stock_managed (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed)",
+          "FAIL: test_stock_managed_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed_allocation_only)",
+          "FAIL: test_stock_shared (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared)",
+          "FAIL: test_stock_shared_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared_allocation_only)"
+        ],
+        "failures": 6,
+        "log_sha256": "6f9f04b3bdc445aec32db6f6d545b06c8418ce0405cc763748275c25157d78f8",
+        "same_fourteen_baseline_case_ids": true,
+        "skipped": 12,
+        "source_sha256": {
+          "misc/device_pipeline.sh": "056084157a2774f4d8f9fcadc8f3a97a9e2862b410f6342cd87c830e142c3f98",
+          "misc/macws_diagnostic_probe_pipeline.py": "0d310c1c733807c810d867ccb04def8467f26fada6fcdf27b299f1ea6df9848e",
+          "misc/macws_diagnostic_probe_receiver.py": "1d4a9f515b7884ead3326f39d35cc639e1e2972048e2f26a1f73033af3100463",
+          "misc/macws_swap_pair/controller.py": "955c50b5cb2b30b8f0aefd69720675d04c91126dec17c802fb09be8c42197977",
+          "misc/macws_swap_pair/observer_inputs.json": "f7261fcf3e6c47493e92f8b04396316acf9d3f66b229d77a85cc0f95ffa6f280",
+          "misc/macws_swap_pair/offline_qa.json": "ebee0b881b5f589c4ca100c5dbcd4c72faa946b0bf741511a7396138139ae29c",
+          "misc/macws_swap_pair/prepare_control_payload.py": "b50084a3150027f0388af0a7fdac8389652bd8acdfacd271e9b8d10098a455ae",
+          "misc/macws_swap_pair/readonly_observer.py": "717de31eb1d7a05ed363eca7c3dce0dbd7f4ff500bb8cb65377bd340babf1c7a",
+          "misc/macws_swap_pair/runtime_support.py": "5d09cf9380afaa2409661a58909d1bfee41d81943f1b2306facb0cd94ee10fe0",
+          "misc/macws_swap_pair/watchdog.py": "c28ec9edd30bf86613c7cb29693697901228b579100b8b181a4dc47915f00e0a",
+          "misc/test_macws_diagnostic_probe_pipeline.py": "d1d3433fb9420e71b7cdae1d59b0ac16709eaa5435e606213acf20832dfda2d4",
+          "misc/test_macws_swap_pair.py": "e9364a4a407285cdc94d321c2eaee013c779e49f4395628de5bb020ed4789461",
+          "misc/test_macws_swap_pair_observer.py": "5e8a846f84b26b39326b9850e3970ebe3251e289d6930ff4f33567a10c7d11bd",
+          "misc/test_macws_swap_pair_preparation.py": "0f6e206387792f2e9fadb075bf1aa7b0af9e3cbc592fcc7ba0d52e6e9b6b4674"
+        },
+        "test_seconds": 54.362,
+        "tests_run": 840
+      }
+    },
+    "runtime_switch_audit": {
+      "passed": true,
+      "recorded_entries": 444,
+      "source_flag_files": 85,
+      "source_plist_env_names": 286
+    },
+    "shell_syntax": {
+      "passed": true,
+      "tracked_scripts_per_repository": 41
+    },
+    "simulation_only": true
+  },
+  "observer": {
+    "baseline_private_is_null": true,
+    "deadline_or_budget_reset": false,
+    "exact_v7_absence_branch": true,
+    "finalization_partial_report_retained": true,
+    "fixed_launchd_domain": "user/501",
+    "limits": {
+      "alarm_seconds": 12,
+      "command_seconds": 1,
+      "read_bytes": 16777216,
+      "readonly_commands": 16,
+      "seconds": 8
+    },
+    "old_v3_fake_exception_witness_sha256": "420c56a93216ea12aa29e62fde601d86291253adf5f98fd5a118ad9d14d41469",
+    "old_v3_source_sha256": "f7e61662db92c3f99d7e1297552825cc9bdbec3df8123f8f4350535bc8baed58",
+    "prestage_missing_and_poststage_identity_trust_distinct": true,
+    "readonly_native_methods_and_shared_clock_unchanged_from_v3": true,
+    "unavailable_final_fields_null": true,
+    "version": "v4"
+  },
+  "privacy": {
+    "copied_raw_runtime_fixture_published": false,
+    "credentials_or_Apple_payload_published": false,
+    "historical_evidence_digests_only": true,
+    "runtime_session_or_receipt_published": false
+  },
+  "remaining": [
+    "Fresh read-only complete port inventory and exact binary/runtime identity",
+    "Validate fresh v7 session/receipt collection and independently bounded transport",
+    "One normal stopped control with complete report, exact generation and file cleanup, then EOF/deadline controls",
+    "Three genuine accepted stopped controls before considering active own-client Begin/Cancel"
+  ],
+  "runtime": {
+    "canonical_synthetic_QA_unchanged": true,
+    "delivery_manifest_sha256": "d2c843dc9930b28342c9b57d11bbee2bbe12202b1147dec11137106646d13263",
+    "delivery_provenance_files": 41,
+    "new_handoff_tools_added_to_delivery_payload": false,
+    "selected_device_payload_files": 5,
+    "stale_v6_caller_unchanged_sha256": "d2869f2aed2937b693322f9d9aa681fc7085d632e5a88903d9d7e9b46801f9c3",
+    "three_runtime_sources_unchanged": true,
+    "version": "v7"
+  },
+  "schema": "macws.swap-pair.offline-handoff.v1",
+  "scope": "Offline diagnostic infrastructure only; iPad unavailable; unverified port",
+  "source_sha256": {
+    "misc/macws_swap_pair/controller.py": "955c50b5cb2b30b8f0aefd69720675d04c91126dec17c802fb09be8c42197977",
+    "misc/macws_swap_pair/observer_inputs.json": "f7261fcf3e6c47493e92f8b04396316acf9d3f66b229d77a85cc0f95ffa6f280",
+    "misc/macws_swap_pair/offline_qa.json": "ebee0b881b5f589c4ca100c5dbcd4c72faa946b0bf741511a7396138139ae29c",
+    "misc/macws_swap_pair/prepare_control_payload.py": "b50084a3150027f0388af0a7fdac8389652bd8acdfacd271e9b8d10098a455ae",
+    "misc/macws_swap_pair/readonly_observer.py": "717de31eb1d7a05ed363eca7c3dce0dbd7f4ff500bb8cb65377bd340babf1c7a",
+    "misc/macws_swap_pair/runtime_support.py": "5d09cf9380afaa2409661a58909d1bfee41d81943f1b2306facb0cd94ee10fe0",
+    "misc/macws_swap_pair/watchdog.py": "c28ec9edd30bf86613c7cb29693697901228b579100b8b181a4dc47915f00e0a",
+    "misc/test_macws_swap_pair.py": "e9364a4a407285cdc94d321c2eaee013c779e49f4395628de5bb020ed4789461",
+    "misc/test_macws_swap_pair_observer.py": "5e8a846f84b26b39326b9850e3970ebe3251e289d6930ff4f33567a10c7d11bd",
+    "misc/test_macws_swap_pair_preparation.py": "0f6e206387792f2e9fadb075bf1aa7b0af9e3cbc592fcc7ba0d52e6e9b6b4674"
+  },
+  "target": {
+    "hardware": "iPad13,6",
+    "iPadOS": "16.4.1",
+    "iPadOS_build": "20E252",
+    "identity_fresh_this_pass": false,
+    "macOS": "13.4",
+    "macOS_build": "22F66"
+  }
+}
