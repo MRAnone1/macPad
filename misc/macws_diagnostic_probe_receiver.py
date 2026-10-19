@@ -17,7 +17,7 @@ import struct
 import time
 import uuid
 
-MANIFEST_SHA256 = "a4c52d5f9d01ac07e516f99f297444a0a7dfabf0dd0e496d8e6b8f7ad2c1283a"
+MANIFEST_SHA256 = "d2c843dc9930b28342c9b57d11bbee2bbe12202b1147dec11137106646d13263"
 MAX_PAYLOAD = 1024 * 1024
 DEADLINE_SECONDS = 8.0
 PROBE_PARENT = "/private/var/mnt/rootfs/usr/local/libexec"

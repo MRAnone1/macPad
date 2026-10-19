@@ -37,7 +37,7 @@ class DeliveryFixture:
         self.bundle.mkdir()
         self.files = {name: (synthetic_probe() if name == "probe.arm64" else (name + " fake").encode())
                       for name in receiver.SELECTED}
-        self.files.update({"provenance-%02d" % i: b"local fake provenance" for i in range(29)})
+        self.files.update({"provenance-%02d" % i: b"local fake provenance" for i in range(36)})
         rows = []
         for name, raw in sorted(self.files.items()):
             selected = receiver.SELECTED.get(name)
@@ -103,7 +103,7 @@ class ProbeDeliveryTests(unittest.TestCase):
             self.assertEqual(host.main(["--probe-bundle", str(self.fixture.bundle)]), 0)
         result = json.loads(output.getvalue())
         self.assertEqual(result["device_commands"], 0)
-        self.assertEqual(result["provenance_files_verified"], 34)
+        self.assertEqual(result["provenance_files_verified"], 41)
         self.assertEqual(len(result["payload_files"]), 5)
         self.assertFalse(result["runtime_accepted"])
 

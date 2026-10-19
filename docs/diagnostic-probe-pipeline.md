@@ -15,8 +15,8 @@ bash misc/device_pipeline.sh --component diagnostic-probe \
 
 The bundle may also be specified by its `manifest.private.json` path. Only the
 frozen manifest SHA-256
-`a4c52d5f9d01ac07e516f99f297444a0a7dfabf0dd0e496d8e6b8f7ad2c1283a`
-is admitted. All 34 regular provenance files are hash checked, including the
+`d2c843dc9930b28342c9b57d11bbee2bbe12202b1147dec11137106646d13263`
+is admitted. All 41 regular provenance files are hash checked, including the
 unselected arm64e artifact and build/signing/controller QA sources. Bundle
 payloads and private provenance remain outside Git. The own arm64 Mach-O UUID,
 CodeDirectory CDHash and five signed code pages are checked against the pinned
@@ -75,11 +75,20 @@ or a native job. Run `python3 -m unittest discover -s misc -p
 'test_macws_diagnostic_probe_pipeline.py'`, `bash -n misc/device_pipeline.sh`,
 and `git diff --check` before delivery.
 
-The pinned bundle carries controller v6 (88 host controls). Its fourteen new
-full-execute controls cover exactly-once descriptor closure and retention of
-partial/error reports through finalization. The same normal-control regression
-fails frozen v5 with EBADF and passes v6. The five additional provenance files
-carry those tests, the comparison runner, receipt and before/after logs.
+The pinned bundle carries controller v7 (107 host controls, retaining all 88
+v6 controls). Nineteen domain/lifecycle controls verify the same explicit
+`user/501` domain for bootstrap, print, kickstart, kill and bootout. The parser
+checks exact domain/header, program/arguments, plist/log paths and the copied
+UID501 absence result. Warnings and unknown replies remain refusals; it never
+follows a redirect. Copied native strings reproduce the v6 refusal and pass
+the corrected v7 path. This is replay of historical replies, not a live test.
+
+The v6 descriptor repair is retained: fourteen full-execute controls cover
+exactly-once descriptor closure and preservation of partial/error reports.
+The same normal-control regression fails frozen v5 with EBADF and passes v7.
+The bundle includes both comparison runners, receipts, logs and the private
+copied-string fixture as host provenance. Only the five selected payloads can
+be delivered; the raw private fixture is never a device payload or Git artifact.
 
 The process-state gate uses native proc_bsdinfo status rather than the observed
 unknown ps output. A copied device witness now establishes initial SSTOP=4.
@@ -87,13 +96,13 @@ The clock uses public Mach absolute time and the observed 125/3 timebase across
 processes; this device's Python3.9.9 process-relative monotonic epoch is not
 used for cross-process freshness. These are narrow diagnostic observations.
 
-**Controller execution remains blocked.** The actual v5 stopped control refused
-a redirected system service query: the owned job exists in user/501. v6 fixes
-descriptor/report handling only and deliberately retains that domain refusal.
-It has not been deployed or device-accepted. Correct and review the separately
-witnessed service-domain invariant before any further control dispatch. No
-native control or active Begin/Cancel acceptance is established by this bundle.
-See the [dated control and cleanup evidence](evidence/ipados-1641-stopped-control-20261018.md).
+**Native execution is not yet admitted.** V7 has not been deployed or tested on
+the device. The iPad is currently unavailable; this pass performs no device
+commands. Fresh inventory and actual normal/EOF/deadline stopped controls are
+still required before an active pair can be considered. Historical receipts
+cannot serve as fresh prerequisites. See the
+[offline domain correction](evidence/ipados-1641-launchd-domain-offline-20261019.md)
+and [previous control/cleanup evidence](evidence/ipados-1641-stopped-control-20261018.md).
 
 SSH options allow only explicit identity/cipher/known-host and bounded
 connection settings. TTY, background, stdin redirection, forwarding and caller

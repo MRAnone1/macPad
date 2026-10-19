@@ -64,7 +64,7 @@ def prepare_bundle(bundle):
     receiver.require(receiver.sha(raw) == MANIFEST_SHA256, "unreviewed bundle manifest")
     manifest = receiver.decode_json(raw)
     rows = manifest["files"]
-    receiver.require(len(rows) == 34 and len({row["name"] for row in rows}) == len(rows),
+    receiver.require(len(rows) == 41 and len({row["name"] for row in rows}) == len(rows),
                      "bundle file inventory differs")
     receiver.require(set(os.listdir(bundle)) == {"manifest.private.json"} | {row["name"] for row in rows},
                      "bundle has missing or unexpected files")
