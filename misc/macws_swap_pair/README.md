@@ -111,3 +111,28 @@ Neither tool is an automatic dispatch, recovery or active-pair command. The
 records the synthetic tests and private normal-control transport review.
 All 19 October native inventories remain historical; the unavailable iPad was
 not accessed in the 23 October pass.
+
+## Shared offline workflow rehearsal — 2026-10-23
+
+The [workflow tests](../test_macws_swap_pair_workflow.py) connect projection,
+normal-control preparation/decoding and cleanup preparation using one invented
+in-memory observer/delivery context and the exact reviewed static plan. Five
+file records, both directory records, candidate/source tokens and preserved raw
+digests must agree across these boundaries. The generated control and cleanup
+payloads are compiled only; neither is executed. The invented normal report is
+rebound to that same configuration and proves decoder consistency only.
+
+The six tests also record an important contract boundary: projection accepts
+root UID without requiring group zero or the two cleanup directory records.
+Cleanup requires both directory records and UID/GID zero. Its refusal remains
+in place. A successful receiver normally records both directories, so the old
+session test's empty directory array is incomplete test data, not evidence of
+a receiver failure. No current device failure or policy fix is established.
+When fresh delivery bytes become available, check the complete cleanup contract
+before dispatching a control. An incompatible receipt must not be rewritten
+to make cleanup preparation accept it.
+
+See the [dated rehearsal evidence](../../docs/evidence/ipados-1641-offline-workflow-20261023.md).
+The complete suite of portable swap-pair controls now contains 127 tests.
+Freshness, authenticity, cleanup verification and device acceptance remain
+unverified by this rehearsal.

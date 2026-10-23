@@ -1,0 +1,152 @@
+{
+  "FACT": "One complete invented context composes the four preparation/interpretation boundaries and rejects mismatched identity/session inputs",
+  "SSH_executions": 0,
+  "THEORY": "This may reduce preparation mistakes during a future bounded device attempt; it supplies no cause or fix for the original display freeze",
+  "actual_session_or_prerequisite_or_native_receipt_created": false,
+  "current_device_freshness_claimed": false,
+  "date": "2026-10-23",
+  "deferred": [
+    "fresh read-only hardware/build/rootfs/space/trust/binary/runtime inventory",
+    "exclusive pipeline delivery and actual complete receipt including ownership and directory tokens",
+    "fresh observer and native-clock admission",
+    "one normal stopped control, retained output and scoped job/process/file cleanup",
+    "three genuine stopped controls before any active pair",
+    "visible device acceptance"
+  ],
+  "device_acceptance": false,
+  "device_commands": 0,
+  "focused_and_portable_tests_pass_both_repositories": true,
+  "full_suites": {
+    "companion": {
+      "complete_suite_pass": false,
+      "errors": 8,
+      "exit": 1,
+      "failed_case_ids": [
+        "ERROR: setUpClass (test_texture_sampling_probe.TextureSamplingStockControl)",
+        "ERROR: setUpClass (test_texture_stride_probe_contract.TextureStrideStockControl)",
+        "ERROR: test_changed_dependency_rejected_even_same_boot (test_settings_verify.SettingsVerification.test_changed_dependency_rejected_even_same_boot)",
+        "ERROR: test_complete_real_signature_verification_passes (test_settings_verify.SettingsVerification.test_complete_real_signature_verification_passes)",
+        "ERROR: test_embedded_non_settings_plugin_is_untouched (test_settings_verify.SettingsVerification.test_embedded_non_settings_plugin_is_untouched)",
+        "ERROR: test_embedded_settings_pane_must_be_prepared (test_settings_verify.SettingsVerification.test_embedded_settings_pane_must_be_prepared)",
+        "ERROR: test_missing_executable_name_requires_unique_image (test_settings_verify.SettingsVerification.test_missing_executable_name_requires_unique_image)",
+        "ERROR: test_real_cpu_bitmap_original_method_arguments_errno_and_budgets (test_office_upload_observer.OfficeUploadObserver.test_real_cpu_bitmap_original_method_arguments_errno_and_budgets)",
+        "FAIL: test_current_registration_required (test_settings_verify.SettingsVerification.test_current_registration_required)",
+        "FAIL: test_marker_and_base_dependency_must_match (test_settings_verify.SettingsVerification.test_marker_and_base_dependency_must_match)",
+        "FAIL: test_stock_managed (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed)",
+        "FAIL: test_stock_managed_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed_allocation_only)",
+        "FAIL: test_stock_shared (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared)",
+        "FAIL: test_stock_shared_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared_allocation_only)"
+      ],
+      "failures": 6,
+      "log_sha256": "c7224bd043125d2ed27c46b24851b01106974115c032d003c31609dc1449b5b3",
+      "private_receipt_sha256": "d0717b7e55270263204773d2ca8f11bd8f63ea22e2aacf4da4412cf227d8851a",
+      "same_fourteen_baseline_case_ids": true,
+      "skipped": 12,
+      "sources_unchanged_during_tests": true,
+      "test_seconds": 51.011,
+      "tests_run": 890
+    },
+    "publication": {
+      "complete_suite_pass": false,
+      "errors": 8,
+      "exit": 1,
+      "failed_case_ids": [
+        "ERROR: setUpClass (test_texture_sampling_probe.TextureSamplingStockControl)",
+        "ERROR: setUpClass (test_texture_stride_probe_contract.TextureStrideStockControl)",
+        "ERROR: test_changed_dependency_rejected_even_same_boot (test_settings_verify.SettingsVerification.test_changed_dependency_rejected_even_same_boot)",
+        "ERROR: test_complete_real_signature_verification_passes (test_settings_verify.SettingsVerification.test_complete_real_signature_verification_passes)",
+        "ERROR: test_embedded_non_settings_plugin_is_untouched (test_settings_verify.SettingsVerification.test_embedded_non_settings_plugin_is_untouched)",
+        "ERROR: test_embedded_settings_pane_must_be_prepared (test_settings_verify.SettingsVerification.test_embedded_settings_pane_must_be_prepared)",
+        "ERROR: test_missing_executable_name_requires_unique_image (test_settings_verify.SettingsVerification.test_missing_executable_name_requires_unique_image)",
+        "ERROR: test_real_cpu_bitmap_original_method_arguments_errno_and_budgets (test_office_upload_observer.OfficeUploadObserver.test_real_cpu_bitmap_original_method_arguments_errno_and_budgets)",
+        "FAIL: test_current_registration_required (test_settings_verify.SettingsVerification.test_current_registration_required)",
+        "FAIL: test_marker_and_base_dependency_must_match (test_settings_verify.SettingsVerification.test_marker_and_base_dependency_must_match)",
+        "FAIL: test_stock_managed (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed)",
+        "FAIL: test_stock_managed_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed_allocation_only)",
+        "FAIL: test_stock_shared (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared)",
+        "FAIL: test_stock_shared_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared_allocation_only)"
+      ],
+      "failures": 6,
+      "log_sha256": "97b2d5131cd0c29014e053b8f0552af6088ef75d54ccfcd1af9edd82acc42b5b",
+      "private_receipt_sha256": "5e78129cf672b22b283c3905f2f92895bbcc1b0a87f3494d55119058e294e3bc",
+      "same_fourteen_baseline_case_ids": true,
+      "skipped": 12,
+      "sources_unchanged_during_tests": true,
+      "test_seconds": 52.603,
+      "tests_run": 894
+    }
+  },
+  "iPad_available": false,
+  "independent_review_private_receipt_sha256": "7ef7e41c321736b3b8f224e5910f7243bfb68c9e76e3857878864fcb4c363028",
+  "local_gates_private_receipt_sha256": "de363b2200ca298af31505dd0ae34efb8efbe1209ce4b523fdba539d6e1a3e86",
+  "native_cleanup_verified": false,
+  "native_evidence_authenticity_verified": false,
+  "native_observer_executions": 0,
+  "new_portable_workflow_tests": 6,
+  "original_freeze_reproduced_or_fixed": false,
+  "payload_executions": 0,
+  "private_interface_audit_sha256": "f3eec6ea13719ce5c8c08b5843eaa477c29c51721b75261bffa4b6120d0cd2e7",
+  "production_or_runtime_source_changed": false,
+  "protocol_and_runtime_switch_audit_and_shell_and_diff_checks_pass_both_repositories": true,
+  "public_source_sha256": {
+    "misc/device_pipeline.sh": "056084157a2774f4d8f9fcadc8f3a97a9e2862b410f6342cd87c830e142c3f98",
+    "misc/macws_diagnostic_probe_pipeline.py": "0d310c1c733807c810d867ccb04def8467f26fada6fcdf27b299f1ea6df9848e",
+    "misc/macws_diagnostic_probe_receiver.py": "1d4a9f515b7884ead3326f39d35cc639e1e2972048e2f26a1f73033af3100463",
+    "misc/macws_swap_pair/README.md": "bd01630afcd184d3976128bb0a4999984ca64b4aed85e0dac19d1ec2ff14cd2c",
+    "misc/macws_swap_pair/cleanup_payload.py": "163a222759d985c1ada68366584a003b95578e877a60ec3a4f51437e62fb7e90",
+    "misc/macws_swap_pair/controller.py": "955c50b5cb2b30b8f0aefd69720675d04c91126dec17c802fb09be8c42197977",
+    "misc/macws_swap_pair/observer_inputs.json": "f7261fcf3e6c47493e92f8b04396316acf9d3f66b229d77a85cc0f95ffa6f280",
+    "misc/macws_swap_pair/offline_qa.json": "ebee0b881b5f589c4ca100c5dbcd4c72faa946b0bf741511a7396138139ae29c",
+    "misc/macws_swap_pair/prepare_control_payload.py": "b50084a3150027f0388af0a7fdac8389652bd8acdfacd271e9b8d10098a455ae",
+    "misc/macws_swap_pair/project_session.py": "bb8118c78a99540709cb965a8fc6a25e77855e6c3f9d1797323c407727ae264d",
+    "misc/macws_swap_pair/readonly_observer.py": "717de31eb1d7a05ed363eca7c3dce0dbd7f4ff500bb8cb65377bd340babf1c7a",
+    "misc/macws_swap_pair/reviewed_delivery_plan.json": "d287798e366823c1394b7c6e57f0902daf6881fd9c198f116a8400464177bd76",
+    "misc/macws_swap_pair/runtime_support.py": "5d09cf9380afaa2409661a58909d1bfee41d81943f1b2306facb0cd94ee10fe0",
+    "misc/macws_swap_pair/watchdog.py": "c28ec9edd30bf86613c7cb29693697901228b579100b8b181a4dc47915f00e0a",
+    "misc/test_macws_swap_pair_preparation.py": "0f6e206387792f2e9fadb075bf1aa7b0af9e3cbc592fcc7ba0d52e6e9b6b4674",
+    "misc/test_macws_swap_pair_session.py": "f8f45d867b254688bcdb490d043169072edae71bd73e22a08e325d11fc3279f6",
+    "misc/test_macws_swap_pair_workflow.py": "e257e1efef5f5f8bd5f6dd9cebd7a7b58be54a586de3272dcf0be8a2a461dcdc"
+  },
+  "schema": "macws.swap-pair.offline-shared-workflow-evidence.v1",
+  "shared_fixture": {
+    "all_dynamic_tokens_invented": true,
+    "control_and_cleanup_sources_compiled_only": true,
+    "directories": 2,
+    "files": 5,
+    "kind": "invented in-memory data; existing public helper fixtures completed for one pinned plan",
+    "nonce": "fixed invented test input; never a generated actual admission nonce",
+    "plan_sha256": "d287798e366823c1394b7c6e57f0902daf6881fd9c198f116a8400464177bd76",
+    "positive_decode_is_internal_consistency_only": true,
+    "shared_bytes_tokens_and_digests_checked": true,
+    "synthetic_report_rebound_to_projected_config": true
+  },
+  "simulation_only": true,
+  "source_and_synthetic_findings": [
+    {
+      "finding": "An incomplete synthetic delivery can project and prepare a control but cannot prepare cleanup",
+      "real_receiver_failure_proven": false,
+      "refusal": "exact two delivery directories",
+      "source_refs": [
+        "misc/test_macws_swap_pair_session.py:fixture",
+        "misc/macws_diagnostic_probe_receiver.py:292",
+        "misc/macws_diagnostic_probe_receiver.py:336",
+        "misc/macws_swap_pair/cleanup_payload.py:121"
+      ]
+    },
+    {
+      "current_device_mismatch_proven": false,
+      "finding": "Cleanup requires UID and GID zero; receiver/pipeline/projector require root UID without the same GID gate",
+      "policy_relaxed_or_patched": false,
+      "refusal": "root-owned delivery stat",
+      "source_refs": [
+        "misc/macws_diagnostic_probe_receiver.py:309",
+        "misc/macws_diagnostic_probe_pipeline.py:163",
+        "misc/macws_swap_pair/project_session.py:154",
+        "misc/macws_swap_pair/cleanup_payload.py:103"
+      ]
+    }
+  ],
+  "total_portable_swap_pair_tests": 127,
+  "tracked_shell_files_per_repository": 41,
+  "trust_mutations": 0
+}
