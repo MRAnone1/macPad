@@ -1,0 +1,126 @@
+{
+  "active_pair_executed": false,
+  "actual_new_control_or_admission_receipts_created": false,
+  "cache_device_alarm_seconds": 12,
+  "cache_host_deadline_seconds": 20,
+  "cache_inventory": {
+    "bounds": {
+      "max_read_calls": 256,
+      "max_requested_file_bytes": 8388608,
+      "read_calls": 135,
+      "read_deadline_seconds": 8,
+      "requested_file_bytes": 1251574,
+      "returned_file_bytes": 1251574
+    },
+    "cache_files": 47,
+    "date": "2026-10-23",
+    "device_acceptance": false,
+    "device_mutations": 0,
+    "elapsed_seconds": 0.037847124999999995,
+    "framework_loads": 0,
+    "freeze_cause_proven": false,
+    "new_workloads": 0,
+    "raw_sha256": "86277c29d24c3163b2669d6a56953e8bc50d233707fb72ade8e86663440dd5df",
+    "runtime_loaded_images_verified": false,
+    "same_boot_as_port_inventory": true,
+    "same_boot_within_inventory": true,
+    "schema": "macws.cache-inventory.comparison.v1",
+    "selected_frameworks": 11,
+    "selected_header_hashes_and_UUIDs_same_as_19_october": true,
+    "whole_framework_hashes_verified": false
+  },
+  "cache_strict_read_budget": {
+    "max_read_calls": 256,
+    "max_requested_file_bytes": 8388608,
+    "read_calls": 135,
+    "read_deadline_seconds": 8,
+    "requested_file_bytes": 1251574,
+    "returned_file_bytes": 1251574
+  },
+  "candidate_executions": 0,
+  "date": "2026-10-23",
+  "device_acceptance": false,
+  "device_payload_installations": 0,
+  "inventory": {
+    "available_GiB": {
+      "/private/var": 87.16,
+      "/private/var/mnt/rootfs": 87.16
+    },
+    "cache_only_paths_not_directly_hashed": 5,
+    "date": "2026-10-23",
+    "device_acceptance": false,
+    "device_mutations": 0,
+    "hw.machine": "iPad13,6",
+    "iPadOS": {
+      "ProductBuildVersion": "20E252",
+      "ProductName": "iPhone OS",
+      "ProductVersion": "16.4.1"
+    },
+    "jailbreak_version": "3.0.10",
+    "macOS_rootfs": {
+      "ProductBuildVersion": "22F66",
+      "ProductName": "macOS",
+      "ProductVersion": "13.4"
+    },
+    "nine_direct_macho_hashes_and_slices_match": true,
+    "own_probe_hash_present": true,
+    "raw_sha256": "75b7f22f8ff0c93c6d735273dab4bb020d5757159ceae0b3c40f7b684a9ddba3",
+    "same_boot_as_19_october": true,
+    "same_boot_within_inventory": true,
+    "schema": "macws.port-inventory.comparison.v1",
+    "thermal_samples": [
+      0,
+      0
+    ],
+    "trust_entries": 167,
+    "worker_elapsed_seconds": 0.16175625,
+    "workloads_launched": 0
+  },
+  "launchd_mutations": 0,
+  "native_observer_device_alarm_seconds": 12,
+  "native_observer_host_deadline_seconds": 20,
+  "native_runtime_controls_accepted": false,
+  "next_gate": "Review private inventory/session persistence/cleanup transport and exact owned-state recovery, then exclusive pinned delivery before fresh poststage observation; no control is admitted by these inventories",
+  "original_freeze_reproduced_or_fixed": false,
+  "port_device_alarm_seconds": 28,
+  "port_host_deadline_seconds": 35,
+  "port_worker_internal_byte_caps_are_post_read_accounting": true,
+  "prestage_observer": {
+    "admission_authority": false,
+    "baseline_checks_passed": false,
+    "candidate_observation": "candidate-missing-prestage",
+    "checks": {
+      "both_job_labels_absent": true,
+      "both_scratch_absent": true,
+      "candidate_present_identity_trusted": false,
+      "exact_device_build": true,
+      "frozen_dependencies_present_identity_trusted": true,
+      "no_blocked_workloads": true,
+      "nominal_thermal": true,
+      "same_UI_generations": true,
+      "same_boot": true,
+      "same_trust_membership_set": true,
+      "stable_file_observations": true
+    },
+    "device_acceptance": false,
+    "finalization_refusals": [],
+    "inputs_sha256": "f7261fcf3e6c47493e92f8b04396316acf9d3f66b229d77a85cc0f95ffa6f280",
+    "observation_completed": true,
+    "raw_sha256": "8e2c0e33619be1a6862acb47c4cfdc6737b7fafca659e282b31cac139603726d",
+    "refusals": [
+      "candidate_present_identity_trusted"
+    ],
+    "source_sha256": "717de31eb1d7a05ed363eca7c3dce0dbd7f4ff500bb8cb65377bd340babf1c7a",
+    "transport_sha256": "712986f50ccd2d13f5a77e50147c7c2488dff0ebd650b6addf9bedf750d4464b"
+  },
+  "private_inventory_wrapper_default_guard_verified": true,
+  "private_inventory_wrapper_sha256": "81db74cca7252dff5cafe7daadd669ef7c443794709c21d5cd44ebbb4e7c2efd",
+  "read_only_worker_executions": 3,
+  "schema": "macws.ipados-1641.readonly-resume.v1",
+  "strict_host_stream_limits": {
+    "stderr": 16384,
+    "stdout": 4194304
+  },
+  "trust_mutations": 0,
+  "user_reports_available_unlocked_charging_responsive": true
+}
