@@ -84,3 +84,30 @@ The five-file delivery bundle and runtime controller sources are unchanged.
 Neither historical v5/v6 session files nor the read-only observer output may
 be reused as new control prerequisites. Device tests remain deferred while the
 iPad is unavailable.
+
+## Explicit session and cleanup preparation — 2026-10-23
+
+`project_session.py` has a metadata-only CLI and one explicit Python API. It
+requires original observer-v4, validated delivery/plan and canonical QA bytes,
+an external nonce and exact source paths. It returns v7 structures and original
+raw provenance in memory. It writes no session files, generates no nonce and
+reads no current clock. Native execute must still check actual age and state.
+The output contains private runtime data when real inputs are supplied; retain
+it only in exclusive private storage. Arbitrary consistent JSON is not
+authenticated device evidence.
+
+`cleanup_payload.py` also defaults to metadata and provides no transport. Its
+explicit builder requires the exact own observer/input bytes,
+`reviewed_delivery_plan.json` and an actual validated delivery receipt. The
+static plan contains own paths/signature hashes, not a native installation
+receipt. The generated source repeats a live read-only baseline and can remove
+only the five pinned payloads and their two verified directories. Full
+identity/content checks precede every unlink; partial failures stay negative.
+Final absence distinguishes FileNotFoundError from I/O/access failures. This
+does not prove atomic namespace ownership or native cleanup acceptance.
+
+Neither tool is an automatic dispatch, recovery or active-pair command. The
+[dated evidence](../../docs/evidence/ipados-1641-offline-session-20261023.md)
+records the synthetic tests and private normal-control transport review.
+All 19 October native inventories remain historical; the unavailable iPad was
+not accessed in the 23 October pass.

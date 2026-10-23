@@ -1,0 +1,64 @@
+{
+  "schema": "macws.diagnostic-probe.delivery-plan.v1",
+  "bundle_manifest_sha256": "d2c843dc9930b28342c9b57d11bbee2bbe12202b1147dec11137106646d13263",
+  "pipeline_source_sha256": "0d310c1c733807c810d867ccb04def8467f26fada6fcdf27b299f1ea6df9848e",
+  "receiver_source_sha256": "1d4a9f515b7884ead3326f39d35cc639e1e2972048e2f26a1f73033af3100463",
+  "envelope_sha256": "dfffb7d28ea6bc7a3aec52754be03e44c7c8f7968c5b9f05e2b44d671f4cb3b0",
+  "architecture": "arm64",
+  "provenance_files_verified": 41,
+  "payload_files": [
+    {
+      "name": "probe.arm64",
+      "path": "/private/var/mnt/rootfs/usr/local/libexec/macws-swap-pair-probe-20261017/probe.arm64",
+      "mode": "0755",
+      "sha256": "7e60e45736d93386f667b9009d0b2e8ea81ab38c0479294ec98019fd655af886"
+    },
+    {
+      "name": "controller.py",
+      "path": "/var/jb/usr/libexec/macws-swap-pair-controller-20261018/controller.py",
+      "mode": "0600",
+      "sha256": "955c50b5cb2b30b8f0aefd69720675d04c91126dec17c802fb09be8c42197977"
+    },
+    {
+      "name": "runtime_support.py",
+      "path": "/var/jb/usr/libexec/macws-swap-pair-controller-20261018/runtime_support.py",
+      "mode": "0600",
+      "sha256": "5d09cf9380afaa2409661a58909d1bfee41d81943f1b2306facb0cd94ee10fe0"
+    },
+    {
+      "name": "watchdog.py",
+      "path": "/var/jb/usr/libexec/macws-swap-pair-controller-20261018/watchdog.py",
+      "mode": "0600",
+      "sha256": "c28ec9edd30bf86613c7cb29693697901228b579100b8b181a4dc47915f00e0a"
+    },
+    {
+      "name": "offline-QA.canonical.private.json",
+      "path": "/var/jb/usr/libexec/macws-swap-pair-controller-20261018/offline-QA.canonical.private.json",
+      "mode": "0600",
+      "sha256": "ebee0b881b5f589c4ca100c5dbcd4c72faa946b0bf741511a7396138139ae29c"
+    }
+  ],
+  "probe_signature_host_verified": {
+    "architecture": "arm64",
+    "uuid": "9b8378ef-aab0-3e72-b8e3-8e1b56c9a647",
+    "cdhash": "6665b5a54da06153a5940368788cdb9b6e9be3dc",
+    "hash_type": 2,
+    "signed_pages_checked": 5,
+    "code_limit": 69584,
+    "page_hashes_valid": true
+  },
+  "transport_bytes": 284358,
+  "host_timeout_seconds": 20,
+  "receiver_alarm_seconds": 12,
+  "receiver_deadline_seconds": 8,
+  "device_commands": 0,
+  "deployments": 0,
+  "trust_mutations": 0,
+  "candidate_executions": 0,
+  "controller_executions": 0,
+  "native_dependency_closure_currently_verified": false,
+  "current_trust_verified": false,
+  "device_acceptance": false,
+  "runtime_accepted": false,
+  "freeze_cause_or_fix_proven": false
+}

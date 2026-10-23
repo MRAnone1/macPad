@@ -1,0 +1,473 @@
+{
+  "acceptance": {
+    "active_Begin_Cancel": false,
+    "device_acceptance": false,
+    "freeze_cause_proven": false,
+    "freeze_fix": false,
+    "native_controller_v7": false,
+    "native_observer_v4": false,
+    "native_stopped_controls": [],
+    "original_WindowServer_failure_reproduced_this_pass": false,
+    "port_verified": false
+  },
+  "cleanup": {
+    "EIO_EACCES_return_negative_with_partial_counts": true,
+    "all_objects_checked_before_any_unlink": true,
+    "complete_identity_and_hash_rechecked_before_each_unlink": true,
+    "final_lookup_deadline_rechecked": true,
+    "fixed_directories": 2,
+    "fixed_payload_files": 5,
+    "namespace_atomicity_proven": false,
+    "native_cleanup_executed": false,
+    "only_FileNotFoundError_proves_absence": true,
+    "partial_report_retained": true
+  },
+  "date": "2026-10-23",
+  "device_activity_this_pass": {
+    "SSH_commands": 0,
+    "actual_session_or_nonce_generated": false,
+    "deployments": 0,
+    "device_artifacts_created": 0,
+    "device_commands": 0,
+    "device_native_APIs": 0,
+    "fresh_native_prerequisites_created": false,
+    "job_dispatches": 0,
+    "resumes": 0,
+    "signals": 0,
+    "trust_mutations": 0
+  },
+  "historical_readonly_inventory": {
+    "available_var_bytes": 92243435520,
+    "cache_bounds": {
+      "max_read_calls": 256,
+      "max_requested_file_bytes": 8388608,
+      "read_calls": 135,
+      "read_deadline_seconds": 8,
+      "requested_file_bytes": 1251574,
+      "returned_file_bytes": 1251574
+    },
+    "cache_scope": "Filesystem/cache header ranges only; no whole-image digest or live load/code-page acceptance",
+    "coarse_thermal": [
+      "nominal",
+      "nominal"
+    ],
+    "direct_binaries": [
+      {
+        "bytes": 173152,
+        "name": "jbctl",
+        "sha256": "64701bf3968cc4f79fe39b7e581e4db0e3aefb10cefcaf24dfd1737a8c6e599c",
+        "slices": [
+          {
+            "UUID": "c2466aa4-2f3e-374f-a78b-6c6d751999c5",
+            "architecture": "arm64",
+            "cpu_subtype": 0,
+            "filetype": 2
+          },
+          {
+            "UUID": "092eb768-2a8a-3272-99b8-f19f22b34492",
+            "architecture": "arm64e",
+            "cpu_subtype": 2147483650,
+            "filetype": 2
+          }
+        ]
+      },
+      {
+        "bytes": 603296,
+        "name": "libjailbreak",
+        "sha256": "83e39815a5b0f55d076dc576222a9acfdaca76c0b83c99c465ac221c97d301e5",
+        "slices": [
+          {
+            "UUID": "d56bb518-1723-3483-a244-2ddbabb19eb0",
+            "architecture": "arm64",
+            "cpu_subtype": 0,
+            "filetype": 6
+          },
+          {
+            "UUID": "bf647578-b7dd-3f1c-898a-5cccb4b19c79",
+            "architecture": "arm64e",
+            "cpu_subtype": 2147483650,
+            "filetype": 6
+          }
+        ]
+      },
+      {
+        "bytes": 111616,
+        "name": "SpringBoard",
+        "sha256": "ecb29cfb8850f6c7cc64fae48b522adf54bd855216ee3ab673bce9b561197d24",
+        "slices": [
+          {
+            "UUID": "44055250-e230-3c4a-9b04-e7756054cbe0",
+            "architecture": "arm64e",
+            "cpu_subtype": 2147483650,
+            "filetype": 2
+          }
+        ]
+      },
+      {
+        "bytes": 86224,
+        "name": "MTLCompilerService",
+        "sha256": "0c68763082c8c57c0ae87a64f05e331617285e413485561abae815dc802c1c2c",
+        "slices": [
+          {
+            "UUID": "4d96b90f-8d89-309d-a29d-f836bd2aaade",
+            "architecture": "arm64e",
+            "cpu_subtype": 2147483650,
+            "filetype": 2
+          }
+        ]
+      },
+      {
+        "bytes": 85312,
+        "name": "selected_WindowServer",
+        "sha256": "b8386dbd24ceedb70fc82eab9c74a315e83d19131282522a3fc55ca2a69be416",
+        "slices": [
+          {
+            "UUID": "465422c7-3cfc-3e9f-9c04-813f3a265aa6",
+            "architecture": "arm64",
+            "cpu_subtype": 0,
+            "filetype": 2
+          }
+        ]
+      },
+      {
+        "bytes": 1422432,
+        "name": "selected_arm64_hook",
+        "sha256": "bcd544a537fc81cbc16ec3fb8de2c7677708d35ada10c0caf044ba83f005340b",
+        "slices": [
+          {
+            "UUID": "2552c7f2-0946-3525-9771-d6d48b44c0e9",
+            "architecture": "arm64",
+            "cpu_subtype": 0,
+            "filetype": 6
+          }
+        ]
+      },
+      {
+        "bytes": 1431984,
+        "name": "selected_arm64e_hook",
+        "sha256": "803bcccf8cb9afd8d3b96bdbe88ca13d79463e6a09f2c192d346bc5300541008",
+        "slices": [
+          {
+            "UUID": "8d9d059f-f308-3a07-be9e-bb23123ba997",
+            "architecture": "arm64e",
+            "cpu_subtype": 2147483650,
+            "filetype": 6
+          }
+        ]
+      },
+      {
+        "bytes": 68560,
+        "name": "selected_wrapper",
+        "sha256": "e7f1d9e9966826022372248a308c2e28126758a97057ada43551c1a206549d20",
+        "slices": [
+          {
+            "UUID": "bf207849-42b2-3a26-b431-a04b0f42818d",
+            "architecture": "arm64",
+            "cpu_subtype": 0,
+            "filetype": 2
+          }
+        ]
+      },
+      {
+        "bytes": 2957904,
+        "name": "macOS_dyld",
+        "sha256": "79e8c49d20fd9504a254ccf5200d5af4044cfa170d1961591446b6d7973ebc1c",
+        "slices": [
+          {
+            "UUID": "9e98a840-a3ac-31c1-ab97-829af9bd6864",
+            "architecture": "x86_64",
+            "cpu_subtype": 3,
+            "filetype": 7
+          },
+          {
+            "UUID": "bd993f39-c902-37d6-8bd8-6d827c7f121e",
+            "architecture": "arm64e",
+            "cpu_subtype": 2147483650,
+            "filetype": 7
+          }
+        ]
+      }
+    ],
+    "framework_header_identities": [
+      {
+        "cache_files": 45,
+        "images": [
+          {
+            "UUID": "fc81787c-3d56-358e-8215-8495d583f6d4",
+            "header_range_sha256": "15d0dd878d79d351db3aebf75b7dc4fb5a11554560b1cf0f124fa3e6aa79a76f",
+            "role": "Metal"
+          },
+          {
+            "UUID": "e25d17ad-26a8-35d1-a400-8220edcd7d0c",
+            "header_range_sha256": "ba1515ae4653193c822ab468ffa687f9e0089dcb5298248b1c50180f7f470c0f",
+            "role": "AGXMetal13_3"
+          },
+          {
+            "UUID": "0ae8ceb8-0dd6-363f-951d-16aac60a0951",
+            "header_range_sha256": "86324d130451fd802fe79935295ee54baa01dd712004915cb1f3150a8c100e4e",
+            "role": "QuartzCore"
+          },
+          {
+            "UUID": "d2cce008-351e-3781-8774-0ed863d941e7",
+            "header_range_sha256": "8f0dab429140638071b867809c1dffac895cabfc7c8a3ab4c3521bbe160b215b",
+            "role": "IOMobileFramebuffer"
+          },
+          {
+            "UUID": "4a495b72-eeeb-3d74-a7b5-1088f0ea60d7",
+            "header_range_sha256": "3bcd3e8cdb50062e5732aa93ba124449d01a61d9170121f480ddcca27aeeba92",
+            "role": "IOGPU"
+          },
+          {
+            "UUID": "45ddeb5e-05b0-3bf3-bb8b-d78e6b95ebb3",
+            "header_range_sha256": "ed9034404bbdaf77cd27f5191c0903285ce76b84b33b62f6b631c0a06effcdda",
+            "role": "SpringBoard_framework"
+          }
+        ],
+        "namespace": "native_iPadOS"
+      },
+      {
+        "cache_files": 2,
+        "images": [
+          {
+            "UUID": "2bab169c-42da-36e3-955a-f30b709ec2ad",
+            "header_range_sha256": "eaa27b432c4a0a42ebc4b71603a080f768f17c5d9f7073632ff712b791d66764",
+            "role": "Metal"
+          },
+          {
+            "UUID": "727c250e-554d-3921-a5b3-48dae6195b79",
+            "header_range_sha256": "4e5b6d5087a7052c551ea65547df145a6f48b5aeb030ffaa5678121829036627",
+            "role": "AGXMetal13_3"
+          },
+          {
+            "UUID": "cf853bbd-01b6-3f46-ada1-ec70fd2dc9dc",
+            "header_range_sha256": "137bd6add935a98892f318a95520e2a497fba2715cfcdc4db0559ade395df02e",
+            "role": "QuartzCore"
+          },
+          {
+            "UUID": "9485c742-b91f-3c6c-897c-ab2c8acf7625",
+            "header_range_sha256": "fe7917060267e9488c24628ab8d891293889fc8f903ab619769d4f0e4889eb22",
+            "role": "IOMobileFramebuffer"
+          },
+          {
+            "UUID": "ce2b5551-857f-3edd-9e4f-435215cc8c27",
+            "header_range_sha256": "cc40e072c8fc0edceaf2358405e67e2a077609586a87c2b8ebff96237b0d590e",
+            "role": "IOGPU"
+          }
+        ],
+        "namespace": "macOS_rootfs"
+      }
+    ],
+    "freshness_on_2026_10_23": false,
+    "hardware": "iPad13,6",
+    "historical_only": true,
+    "iPadOS": {
+      "ProductBuildVersion": "20E252",
+      "ProductName": "iPhone OS",
+      "ProductVersion": "16.4.1"
+    },
+    "jailbreak_version": "3.0.10",
+    "macOS_rootfs": {
+      "ProductBuildVersion": "22F66",
+      "ProductName": "macOS",
+      "ProductVersion": "13.4"
+    },
+    "native_observer_v4_followed": false,
+    "native_v7_control_followed": false,
+    "observation_date": "2026-10-19",
+    "port_host_timeout_seconds": 38,
+    "port_worker_alarm_seconds": 28,
+    "port_worker_hard_streaming_byte_cap_proven": false,
+    "raw_cache_inventory_sha256": "735f585db73cc94a544180c1db845faf3b7cbf7df2382ccf192936a9177edf8d",
+    "raw_port_inventory_sha256": "cd10a4cc791d77ebf6039b8cedaa488dcf0c822c66688f050ff691d14c8a4769",
+    "retained_own_signed_CDHash_observed": true,
+    "trustcache_entries": 167,
+    "v7_delivery_followed": false
+  },
+  "host_transport": {
+    "active_pair_route": false,
+    "automatic_retry": false,
+    "binary_prefix_preserved_after_read_and_finalizer_EIO": true,
+    "host_failure_proves_remote_cleanup": false,
+    "local_child_cleanup_seconds": 0.5,
+    "normal_adapter_private_source_sha256": "00a409220fbf68eeb2349e52cf3dd922edfe97debeb6cec779dd1da877474e8f",
+    "normal_control_host_seconds": 35,
+    "normal_control_only": true,
+    "observer_host_seconds": 20,
+    "overflow_prefix_bytes_above_limit": 1,
+    "private_source_sha256": "712986f50ccd2d13f5a77e50147c7c2488dff0ebd650b6addf9bedf750d4464b",
+    "private_transport_and_configuration_published": false,
+    "revision": "v4r3_20261023",
+    "selector_constructor_failure_owned_local_child_killed_reaped_and_three_pipes_closed": true,
+    "stderr_bytes": 16384,
+    "stdout_bytes": 4194304
+  },
+  "privacy": {
+    "actual_process_boot_address_or_stat_tokens_published": false,
+    "actual_raw_native_records_published": false,
+    "credentials_or_Apple_payload_published": false,
+    "public_fixtures": "Explicitly synthetic in-memory records and mapped host temporary files only"
+  },
+  "remaining_device_gates": [
+    "New read-only full hardware/build/rootfs/space/jailbreak/trust/binary/cache/runtime inventory",
+    "Fresh exact observer and exclusive pipeline delivery; explicit new session without copied-time substitution",
+    "One bounded normal stopped control, full/partial output preservation and exact job/process/file cleanup",
+    "Three genuine accepted controls before any active own-client Begin/Cancel"
+  ],
+  "schema": "macws.swap-pair.offline-session-cleanup.v1",
+  "scope": "Offline host diagnostic preparation; unverified device/build port",
+  "session_projection": {
+    "arbitrary_JSON_authenticated": false,
+    "current_clock_read": false,
+    "explicit_external_nonce_required": true,
+    "native_freshness_check_still_required": true,
+    "old_receipt_time_used_as_now": false,
+    "only_five_source_stat_fields_projected": true,
+    "original_input_bytes_preserved": true
+  },
+  "source_sha256": {
+    "misc/macws_swap_pair/cleanup_payload.py": "163a222759d985c1ada68366584a003b95578e877a60ec3a4f51437e62fb7e90",
+    "misc/macws_swap_pair/controller.py": "955c50b5cb2b30b8f0aefd69720675d04c91126dec17c802fb09be8c42197977",
+    "misc/macws_swap_pair/observer_inputs.json": "f7261fcf3e6c47493e92f8b04396316acf9d3f66b229d77a85cc0f95ffa6f280",
+    "misc/macws_swap_pair/offline_qa.json": "ebee0b881b5f589c4ca100c5dbcd4c72faa946b0bf741511a7396138139ae29c",
+    "misc/macws_swap_pair/prepare_control_payload.py": "b50084a3150027f0388af0a7fdac8389652bd8acdfacd271e9b8d10098a455ae",
+    "misc/macws_swap_pair/project_session.py": "bb8118c78a99540709cb965a8fc6a25e77855e6c3f9d1797323c407727ae264d",
+    "misc/macws_swap_pair/readonly_observer.py": "717de31eb1d7a05ed363eca7c3dce0dbd7f4ff500bb8cb65377bd340babf1c7a",
+    "misc/macws_swap_pair/reviewed_delivery_plan.json": "d287798e366823c1394b7c6e57f0902daf6881fd9c198f116a8400464177bd76",
+    "misc/macws_swap_pair/runtime_support.py": "5d09cf9380afaa2409661a58909d1bfee41d81943f1b2306facb0cd94ee10fe0",
+    "misc/macws_swap_pair/watchdog.py": "c28ec9edd30bf86613c7cb29693697901228b579100b8b181a4dc47915f00e0a",
+    "misc/test_macws_swap_pair_cleanup.py": "39de539b43e951505a7ba43fa067f671645ade362419366b8408c82bff6fe9c9",
+    "misc/test_macws_swap_pair_session.py": "f8f45d867b254688bcdb490d043169072edae71bd73e22a08e325d11fc3279f6"
+  },
+  "synthetic_regressions": {
+    "cleanup_v1_final_EIO_EACCES_claimed_verified": true,
+    "cleanup_v2_final_elapsed_9s_claimed_verified": true,
+    "cleanup_v3_final_EIO_EACCES_claims_verified": false,
+    "cleanup_v3_final_elapsed_9s_claims_verified": false,
+    "copied_native_witness": false,
+    "final_transport_preserved_bytes": 27,
+    "old_transport_preserved_bytes": 0,
+    "transport_read_prefix_bytes": 27,
+    "witness_sha256": {
+      "cleanup_final_absence_before_after": "54b48dfec0551cf8e860363f66ca7fbd5d77b3443a959db2c4e8ebbecee607cd",
+      "cleanup_final_deadline_before_after": "a29fd022cfe0827b9b542c923a528e6b929ddeb3b44512c8831dd1332502f4ff",
+      "post_prefix_EIO_old": "70df6ff7b13e2a5df5024b20f31a47bcf03e41d74a63a0fba29a0692603957bd",
+      "selector_finalization_EIO_before": "71ae21903fe32e28e75adbf9db75ad7fec107d37272d81281ac41d0ec914a5e7",
+      "transport_r3_independent_review": "594cc0c0d9f73f52fc8e6b28090ecae967c7c07cbf4fe3dcc6b90361d5b3a08c"
+    }
+  },
+  "user_device_unavailable": true,
+  "validation": {
+    "cleanup_QA_sha256": "33895e3088984333e445051649c910a3f09516a382522e119541c23d7c41689a",
+    "diff_check_passed": true,
+    "independent_public_privacy_review_sha256": "7663b8f802f578cbe08fe3ab8006ffa4251fc0d560983644de67c57588f3db8a",
+    "independent_transport_review_sha256": "594cc0c0d9f73f52fc8e6b28090ecae967c7c07cbf4fe3dcc6b90361d5b3a08c",
+    "new_public_cleanup_cases": 28,
+    "new_public_projector_cases": 20,
+    "private_normal_adapter_QA_sha256": "ad3deaafc9a1d3f74b09f4f7e9f479556c282c7e2f1a2d8b87460f9141a1d42b",
+    "private_normal_adapter_cases": 14,
+    "private_transport_QA_sha256": "cb2c3f396e1110198363e21da83f8785dff572c50a3c08fd433dc6541bc2af99",
+    "private_transport_cases": 25,
+    "public_portable_total": 121,
+    "pure_projector_QA_sha256": "b9d7bb965444eb0d743859de50b4f96588866025fa55a08400b373c3aaa1ef28",
+    "repository_suites": {
+      "companion": {
+        "complete_suite_passing": false,
+        "errors": 8,
+        "failed_case_ids": [
+          "ERROR: setUpClass (test_texture_sampling_probe.TextureSamplingStockControl)",
+          "ERROR: setUpClass (test_texture_stride_probe_contract.TextureStrideStockControl)",
+          "ERROR: test_changed_dependency_rejected_even_same_boot (test_settings_verify.SettingsVerification.test_changed_dependency_rejected_even_same_boot)",
+          "ERROR: test_complete_real_signature_verification_passes (test_settings_verify.SettingsVerification.test_complete_real_signature_verification_passes)",
+          "ERROR: test_embedded_non_settings_plugin_is_untouched (test_settings_verify.SettingsVerification.test_embedded_non_settings_plugin_is_untouched)",
+          "ERROR: test_embedded_settings_pane_must_be_prepared (test_settings_verify.SettingsVerification.test_embedded_settings_pane_must_be_prepared)",
+          "ERROR: test_missing_executable_name_requires_unique_image (test_settings_verify.SettingsVerification.test_missing_executable_name_requires_unique_image)",
+          "ERROR: test_real_cpu_bitmap_original_method_arguments_errno_and_budgets (test_office_upload_observer.OfficeUploadObserver.test_real_cpu_bitmap_original_method_arguments_errno_and_budgets)",
+          "FAIL: test_current_registration_required (test_settings_verify.SettingsVerification.test_current_registration_required)",
+          "FAIL: test_marker_and_base_dependency_must_match (test_settings_verify.SettingsVerification.test_marker_and_base_dependency_must_match)",
+          "FAIL: test_stock_managed (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed)",
+          "FAIL: test_stock_managed_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed_allocation_only)",
+          "FAIL: test_stock_shared (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared)",
+          "FAIL: test_stock_shared_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared_allocation_only)"
+        ],
+        "failures": 6,
+        "log_sha256": "52da53a76cd5265b58272ccc9c04eb3a963e90592d0453d31789e2730c18bd66",
+        "same_fourteen_baseline_case_ids": true,
+        "skipped": 12,
+        "source_sha256": {
+          "misc/device_pipeline.sh": "056084157a2774f4d8f9fcadc8f3a97a9e2862b410f6342cd87c830e142c3f98",
+          "misc/macws_diagnostic_probe_pipeline.py": "0d310c1c733807c810d867ccb04def8467f26fada6fcdf27b299f1ea6df9848e",
+          "misc/macws_diagnostic_probe_receiver.py": "1d4a9f515b7884ead3326f39d35cc639e1e2972048e2f26a1f73033af3100463",
+          "misc/macws_swap_pair/cleanup_payload.py": "163a222759d985c1ada68366584a003b95578e877a60ec3a4f51437e62fb7e90",
+          "misc/macws_swap_pair/controller.py": "955c50b5cb2b30b8f0aefd69720675d04c91126dec17c802fb09be8c42197977",
+          "misc/macws_swap_pair/observer_inputs.json": "f7261fcf3e6c47493e92f8b04396316acf9d3f66b229d77a85cc0f95ffa6f280",
+          "misc/macws_swap_pair/offline_qa.json": "ebee0b881b5f589c4ca100c5dbcd4c72faa946b0bf741511a7396138139ae29c",
+          "misc/macws_swap_pair/prepare_control_payload.py": "b50084a3150027f0388af0a7fdac8389652bd8acdfacd271e9b8d10098a455ae",
+          "misc/macws_swap_pair/project_session.py": "bb8118c78a99540709cb965a8fc6a25e77855e6c3f9d1797323c407727ae264d",
+          "misc/macws_swap_pair/readonly_observer.py": "717de31eb1d7a05ed363eca7c3dce0dbd7f4ff500bb8cb65377bd340babf1c7a",
+          "misc/macws_swap_pair/reviewed_delivery_plan.json": "d287798e366823c1394b7c6e57f0902daf6881fd9c198f116a8400464177bd76",
+          "misc/macws_swap_pair/runtime_support.py": "5d09cf9380afaa2409661a58909d1bfee41d81943f1b2306facb0cd94ee10fe0",
+          "misc/macws_swap_pair/watchdog.py": "c28ec9edd30bf86613c7cb29693697901228b579100b8b181a4dc47915f00e0a",
+          "misc/test_macws_swap_pair_cleanup.py": "39de539b43e951505a7ba43fa067f671645ade362419366b8408c82bff6fe9c9",
+          "misc/test_macws_swap_pair_session.py": "f8f45d867b254688bcdb490d043169072edae71bd73e22a08e325d11fc3279f6"
+        },
+        "test_seconds": 50.067,
+        "tests_run": 884
+      },
+      "publication": {
+        "complete_suite_passing": false,
+        "errors": 8,
+        "failed_case_ids": [
+          "ERROR: setUpClass (test_texture_sampling_probe.TextureSamplingStockControl)",
+          "ERROR: setUpClass (test_texture_stride_probe_contract.TextureStrideStockControl)",
+          "ERROR: test_changed_dependency_rejected_even_same_boot (test_settings_verify.SettingsVerification.test_changed_dependency_rejected_even_same_boot)",
+          "ERROR: test_complete_real_signature_verification_passes (test_settings_verify.SettingsVerification.test_complete_real_signature_verification_passes)",
+          "ERROR: test_embedded_non_settings_plugin_is_untouched (test_settings_verify.SettingsVerification.test_embedded_non_settings_plugin_is_untouched)",
+          "ERROR: test_embedded_settings_pane_must_be_prepared (test_settings_verify.SettingsVerification.test_embedded_settings_pane_must_be_prepared)",
+          "ERROR: test_missing_executable_name_requires_unique_image (test_settings_verify.SettingsVerification.test_missing_executable_name_requires_unique_image)",
+          "ERROR: test_real_cpu_bitmap_original_method_arguments_errno_and_budgets (test_office_upload_observer.OfficeUploadObserver.test_real_cpu_bitmap_original_method_arguments_errno_and_budgets)",
+          "FAIL: test_current_registration_required (test_settings_verify.SettingsVerification.test_current_registration_required)",
+          "FAIL: test_marker_and_base_dependency_must_match (test_settings_verify.SettingsVerification.test_marker_and_base_dependency_must_match)",
+          "FAIL: test_stock_managed (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed)",
+          "FAIL: test_stock_managed_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed_allocation_only)",
+          "FAIL: test_stock_shared (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared)",
+          "FAIL: test_stock_shared_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared_allocation_only)"
+        ],
+        "failures": 6,
+        "log_sha256": "897b6e3ee3547a63a2d81bfbae601305722a60a5414936bb8440960be1a86f89",
+        "same_fourteen_baseline_case_ids": true,
+        "skipped": 12,
+        "source_sha256": {
+          "misc/device_pipeline.sh": "056084157a2774f4d8f9fcadc8f3a97a9e2862b410f6342cd87c830e142c3f98",
+          "misc/macws_diagnostic_probe_pipeline.py": "0d310c1c733807c810d867ccb04def8467f26fada6fcdf27b299f1ea6df9848e",
+          "misc/macws_diagnostic_probe_receiver.py": "1d4a9f515b7884ead3326f39d35cc639e1e2972048e2f26a1f73033af3100463",
+          "misc/macws_swap_pair/cleanup_payload.py": "163a222759d985c1ada68366584a003b95578e877a60ec3a4f51437e62fb7e90",
+          "misc/macws_swap_pair/controller.py": "955c50b5cb2b30b8f0aefd69720675d04c91126dec17c802fb09be8c42197977",
+          "misc/macws_swap_pair/observer_inputs.json": "f7261fcf3e6c47493e92f8b04396316acf9d3f66b229d77a85cc0f95ffa6f280",
+          "misc/macws_swap_pair/offline_qa.json": "ebee0b881b5f589c4ca100c5dbcd4c72faa946b0bf741511a7396138139ae29c",
+          "misc/macws_swap_pair/prepare_control_payload.py": "b50084a3150027f0388af0a7fdac8389652bd8acdfacd271e9b8d10098a455ae",
+          "misc/macws_swap_pair/project_session.py": "bb8118c78a99540709cb965a8fc6a25e77855e6c3f9d1797323c407727ae264d",
+          "misc/macws_swap_pair/readonly_observer.py": "717de31eb1d7a05ed363eca7c3dce0dbd7f4ff500bb8cb65377bd340babf1c7a",
+          "misc/macws_swap_pair/reviewed_delivery_plan.json": "d287798e366823c1394b7c6e57f0902daf6881fd9c198f116a8400464177bd76",
+          "misc/macws_swap_pair/runtime_support.py": "5d09cf9380afaa2409661a58909d1bfee41d81943f1b2306facb0cd94ee10fe0",
+          "misc/macws_swap_pair/watchdog.py": "c28ec9edd30bf86613c7cb29693697901228b579100b8b181a4dc47915f00e0a",
+          "misc/test_macws_swap_pair_cleanup.py": "39de539b43e951505a7ba43fa067f671645ade362419366b8408c82bff6fe9c9",
+          "misc/test_macws_swap_pair_session.py": "f8f45d867b254688bcdb490d043169072edae71bd73e22a08e325d11fc3279f6"
+        },
+        "test_seconds": 54.274,
+        "tests_run": 888
+      }
+    },
+    "retained_public_cases": 73,
+    "root_source_review_sha256": "4d5feeafc0a925eabce1aa9e95fd84e9f3a8a11f46191df1173055fa07dbccf7",
+    "runtime_and_libmachook_unchanged": true,
+    "runtime_switch_audit": {
+      "entries": 444,
+      "names": 286,
+      "passed": true,
+      "source_flag_files": 85
+    },
+    "selected_public_and_companion_bytes_equal": true,
+    "shell_syntax_passed": true,
+    "tracked_shell_scripts_checked_per_repository": 41
+  }
+}
