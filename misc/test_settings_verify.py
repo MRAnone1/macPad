@@ -4,9 +4,11 @@ import io
 import os
 from pathlib import Path
 import plistlib
+import stat
 import subprocess
 import sys
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
@@ -47,7 +49,23 @@ class SettingsVerification(unittest.TestCase):
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(macho())
             path.chmod(0o755)
-        self.dependencies[1].chmod(0o4755)
+        # A host temporary file need not retain privileged mode bits. Model
+        # only this invented carrier's mode; keep real file kind, owner,
+        # contents, identity and every other path's complete stat unchanged.
+        self.carrier_mode = 0o4755
+        self.real_stat = os.stat
+        carrier_path = str(self.dependencies[1])
+        def fixture_stat(path, *args, **kwargs):
+            info = self.real_stat(path, *args, **kwargs)
+            if not isinstance(path, (str, os.PathLike)) or os.fspath(path) != carrier_path:
+                return info
+            fields = {name: getattr(info, name) for name in dir(info)
+                      if name.startswith('st_')}
+            fields['st_mode'] = (info.st_mode & ~0o7777) | self.carrier_mode
+            return SimpleNamespace(**fields)
+        active = patch.object(settings.os, 'stat', side_effect=fixture_stat)
+        active.start()
+        self.addCleanup(active.stop)
         records, _, _ = trust.scan([str(path) for path in self.base + self.dependencies], {})
         marker = [settings.SCHEMA] + [settings.selected(records, str(path))
                                      for path in self.base + self.dependencies]
@@ -71,6 +89,14 @@ class SettingsVerification(unittest.TestCase):
             self.assertEqual(restore.call_count, 1)
 
     def test_complete_real_signature_verification_passes(self):
+        physical = self.real_stat(self.dependencies[1])
+        modeled = settings.os.stat(self.dependencies[1])
+        self.assertEqual(trust.identity(modeled), trust.identity(physical))
+        self.assertEqual(modeled.st_uid, physical.st_uid)
+        self.assertEqual(stat.S_IFMT(modeled.st_mode), stat.S_IFMT(physical.st_mode))
+        self.assertEqual(modeled.st_mode & 0o7777, 0o4755)
+        self.assertEqual(settings.os.stat(self.dependencies[2]),
+                         self.real_stat(self.dependencies[2]))
         self.verify()
         self.verify()  # positive extraction cache also has to pass all checks
 
@@ -85,7 +111,8 @@ class SettingsVerification(unittest.TestCase):
             self.verify(ui='')
 
     def test_setuid_carrier_required(self):
-        self.dependencies[1].chmod(0o755)
+        self.carrier_mode = 0o755
+        self.assertFalse(settings.os.stat(self.dependencies[1]).st_mode & stat.S_ISUID)
         with self.assertRaisesRegex(ValueError, 'setuid'):
             self.verify()
 

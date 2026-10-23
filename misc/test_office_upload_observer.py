@@ -403,8 +403,11 @@ int main(void) {
 '''
         with tempfile.TemporaryDirectory(prefix="macws-office-upload-test-") as directory:
             binary = str(Path(directory) / "test")
+            # Compile the historical Ventura control against its macOS 13 baseline.
+            # Newer SDK deprecations must not silently select the host OS as its target.
             command = ["xcrun", "clang", "-x", "objective-c", "-fno-objc-arc", "-fblocks",
-                       "-Wall", "-Wextra", "-Werror", "-I", str(ROOT), "-",
+                       "-Wall", "-Wextra", "-Werror", "-mmacosx-version-min=13.0",
+                       "-I", str(ROOT), "-",
                        "-framework", "Foundation", "-framework", "CoreGraphics",
                        "-framework", "Metal", "-o", binary]
             subprocess.run(command, input=fixture, text=True, check=True, timeout=30)

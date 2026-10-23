@@ -136,3 +136,8 @@ See the [dated rehearsal evidence](../../docs/evidence/ipados-1641-offline-workf
 The complete suite of portable swap-pair controls now contains 127 tests.
 Freshness, authenticity, cleanup verification and device acceptance remain
 unverified by this rehearsal.
+
+The [single-control handoff](../../docs/ipados-1641-one-control-handoff.md)
+orders the fresh inventory, delivery, admission, one normal attempt and exact
+cleanup gates. It also records private capture/storage/transport wiring that
+must be reviewed before dispatch. It executes no commands.

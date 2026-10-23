@@ -113,8 +113,11 @@ class TextureSamplingStockControl(unittest.TestCase):
 
     @staticmethod
     def compile(source, binary):
+        # Preserve the historical Ventura API baseline with current SDK headers.
+        # Runtime device/storage/shader checks below remain authoritative.
         subprocess.run(["xcrun", "--sdk", "macosx", "clang", "-fno-objc-arc",
-                        "-fblocks", "-Wall", "-Wextra", "-Werror", str(source),
+                        "-fblocks", "-Wall", "-Wextra", "-Werror",
+                        "-mmacosx-version-min=13.0", str(source),
                         "-framework", "Foundation", "-framework", "Metal", "-o", binary],
                        check=True, timeout=60, capture_output=True, text=True)
 

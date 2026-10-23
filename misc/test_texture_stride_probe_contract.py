@@ -125,8 +125,11 @@ class TextureStrideStockControl(unittest.TestCase):
         cls.directory = tempfile.TemporaryDirectory(prefix="macws-stride-stock-")
         cls.addClassCleanup(cls.directory.cleanup)
         cls.binary = str(Path(cls.directory.name) / "stride")
+        # Preserve the historical Ventura API baseline with current SDK headers.
+        # Runtime device/storage/pixel checks below remain authoritative.
         subprocess.run(["xcrun", "--sdk", "macosx", "clang", "-fno-objc-arc",
-                        "-fblocks", "-Wall", "-Wextra", "-Werror", str(PROBE),
+                        "-fblocks", "-Wall", "-Wextra", "-Werror",
+                        "-mmacosx-version-min=13.0", str(PROBE),
                         "-framework", "Foundation", "-framework", "Metal",
                         "-framework", "QuartzCore", "-framework", "CoreGraphics",
                         "-framework", "IOSurface", "-o", cls.binary],

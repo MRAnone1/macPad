@@ -1,0 +1,222 @@
+{
+  "SDK": {
+    "Office_CPU_bitmap_ObjectiveC_contract_pass": true,
+    "Wall_Wextra_Werror_retained": true,
+    "compiler_failure": "SDK27 deprecation diagnostics promoted by unchanged Werror on the default current-host target",
+    "copied_diagnostic_symbols": [
+      "MTLStorageModeManaged",
+      "didModifyRange:",
+      "synchronizeResource:"
+    ],
+    "existing_missing_private_Office_fixture_skip_now_reached": 1,
+    "final_five_compiler_calls_pass": true,
+    "native_assertions_weakened": false,
+    "new_skip_rule_added": false,
+    "newly_exposed_failing_methods": 7,
+    "newly_exposed_native_failure_records": 39,
+    "newly_reached_sampling_stride_test_methods": 10,
+    "private_triage_sha256": "5a5013e133ff9f897bb505dd8e9b9f7dd88cf3e0e738470904d19b8041a895bb",
+    "sole_behavior_change": "-mmacosx-version-min=13.0 for historical Ventura host controls",
+    "strict_before_after_compilation_AB": true,
+    "warnings_disabled": false
+  },
+  "SSH_executions": 0,
+  "actual_admission_or_control_receipts_created": false,
+  "changed_host_test_before_sha256": {
+    "misc/test_office_upload_observer.py": "3e7abecfc00c9b4ffc69c14e1fb99ce3e1e3731293355afd0c01e5e0dc34f0ef",
+    "misc/test_settings_verify.py": "c0443e88a52af38e0275fad584441c98408cbede097b78804aaa72c80daaea34",
+    "misc/test_texture_sampling_probe.py": "264cac512c075bb4bb70a8c20783668f0895cee5e0e80cce673e34544599a552",
+    "misc/test_texture_stride_probe_contract.py": "9a23fae9578d6c11e43ce2079f6f0a2a831b6529a90c84f087b50a49383f71ea"
+  },
+  "current_device_freshness_claimed": false,
+  "date": "2026-10-23",
+  "device_available": false,
+  "device_commands": 0,
+  "device_deployments": 0,
+  "full_suites": {
+    "companion": {
+      "error_records": 0,
+      "exit": 1,
+      "failed_method_count": 11,
+      "failed_methods": [
+        "test_actual_fragment_render_pixels (test_texture_sampling_probe.TextureSamplingStockControl.test_actual_fragment_render_pixels)",
+        "test_actual_read_and_sample_pixels (test_texture_sampling_probe.TextureSamplingStockControl.test_actual_read_and_sample_pixels)",
+        "test_actual_shader_compile_failure_is_not_pass (test_texture_sampling_probe.TextureSamplingStockControl.test_actual_shader_compile_failure_is_not_pass)",
+        "test_nocopy_buffer_view (test_texture_stride_probe_contract.TextureStrideStockControl.test_nocopy_buffer_view)",
+        "test_nocopy_recorded_office_row_stride (test_texture_stride_probe_contract.TextureStrideStockControl.test_nocopy_recorded_office_row_stride)",
+        "test_nocopy_small_and_actual_shared_and_managed (test_texture_stride_probe_contract.TextureStrideStockControl.test_nocopy_small_and_actual_shared_and_managed)",
+        "test_original_modes_preserved (test_texture_stride_probe_contract.TextureStrideStockControl.test_original_modes_preserved)",
+        "test_stock_managed (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed)",
+        "test_stock_managed_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed_allocation_only)",
+        "test_stock_shared (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared)",
+        "test_stock_shared_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared_allocation_only)"
+      ],
+      "failure_records": 43,
+      "log_sha256": "bb930ca558d03e464b85bece00d0a9834c4e5e20cf3ddb3828667c7bc9aaeb7e",
+      "private_receipt_sha256": "791d6d480e6e4711832079b348124dd55628a6528159c3f9d7caa3cfd193824c",
+      "remaining_failures_only_native_metal_controls": true,
+      "skips": 13,
+      "sources_unchanged_during_tests": true,
+      "suite_pass": false,
+      "test_seconds": 44.279,
+      "tests_run": 900
+    },
+    "publication": {
+      "error_records": 0,
+      "exit": 1,
+      "failed_method_count": 11,
+      "failed_methods": [
+        "test_actual_fragment_render_pixels (test_texture_sampling_probe.TextureSamplingStockControl.test_actual_fragment_render_pixels)",
+        "test_actual_read_and_sample_pixels (test_texture_sampling_probe.TextureSamplingStockControl.test_actual_read_and_sample_pixels)",
+        "test_actual_shader_compile_failure_is_not_pass (test_texture_sampling_probe.TextureSamplingStockControl.test_actual_shader_compile_failure_is_not_pass)",
+        "test_nocopy_buffer_view (test_texture_stride_probe_contract.TextureStrideStockControl.test_nocopy_buffer_view)",
+        "test_nocopy_recorded_office_row_stride (test_texture_stride_probe_contract.TextureStrideStockControl.test_nocopy_recorded_office_row_stride)",
+        "test_nocopy_small_and_actual_shared_and_managed (test_texture_stride_probe_contract.TextureStrideStockControl.test_nocopy_small_and_actual_shared_and_managed)",
+        "test_original_modes_preserved (test_texture_stride_probe_contract.TextureStrideStockControl.test_original_modes_preserved)",
+        "test_stock_managed (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed)",
+        "test_stock_managed_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_managed_allocation_only)",
+        "test_stock_shared (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared)",
+        "test_stock_shared_allocation_only (test_nocopy_contract_probe.NoCopyStockMetalControl.test_stock_shared_allocation_only)"
+      ],
+      "failure_records": 43,
+      "log_sha256": "da06d3a796131d3bcbd38d2ad5b2586bf0d75ee0a73600ad2050ad83093c1c5d",
+      "private_receipt_sha256": "29ec10e00be91c2e1af65e75500df2b1691509b23711481d759bcd82021352d2",
+      "remaining_failures_only_native_metal_controls": true,
+      "skips": 13,
+      "sources_unchanged_during_tests": true,
+      "suite_pass": false,
+      "test_seconds": 51.47,
+      "tests_run": 904
+    }
+  },
+  "handoff": {
+    "live_dispatch_ready": false,
+    "path": "docs/ipados-1641-one-control-handoff.md",
+    "reviewed": true,
+    "sha256": "7afcfc1346f13d89d4207c96f1e88814f83a56ef6ddb25f1f3e25eee696d24af",
+    "unresolved_wiring": [
+      "new exclusive inventory captures",
+      "exclusive private session persistence",
+      "real connection configuration",
+      "cleanup transport and exact owned-state recovery"
+    ]
+  },
+  "host_Metal_FACT": "MTLCreateSystemDefaultDevice returned nil in each copied bounded diagnostic execution; GPU contracts were not reached",
+  "host_Metal_THEORY": "The process environment or access policy may explain nil; the cause is not established and hardware failure is not claimed",
+  "host_Metal_witnesses": [
+    {
+      "GPU_submissions": 0,
+      "arguments": "allocation-only shared and managed",
+      "diagnostic": "HOST_NOCOPY_DEVICE_PRESENT=0",
+      "executions": 2,
+      "exit": 4,
+      "instrumented_source_sha256": "ea23455211ea899257e6da00072e113d0cbf0d22af8d1fd1ee7b3e03db5efabf",
+      "source": "misc/macws_nocopy_contract_probe.m"
+    },
+    {
+      "GPU_submissions": 0,
+      "arguments": [
+        "plain",
+        "shared"
+      ],
+      "binary_sha256": "e4aeb764f944e9ea21f9142930964b5fba34dbd136b2d1a7f2b174ff9a543340",
+      "diagnostic": "HOST_SAMPLING_DEVICE_PRESENT=0",
+      "executions": 1,
+      "exit": 4,
+      "instrumented_source_sha256": "6d6e2b81e526f537bc535f532e0c63d6fe146aa183f4b3f4693f62f4a09a9c51",
+      "source": "misc/macws_texture_sampling_probe.m"
+    },
+    {
+      "GPU_submissions": 0,
+      "arguments": [
+        "plain",
+        "shared"
+      ],
+      "binary_sha256": "5dce6d619892d2f875a61bb2e14d577a8f5fcfc634898e8730c2b294d0aadee0",
+      "diagnostic": "HOST_STRIDE_DEVICE_PRESENT=0",
+      "executions": 1,
+      "exit": 3,
+      "instrumented_source_sha256": "0da8459657bc0355293a0f29c962728640f0046990a13713c0678f1c808a3706",
+      "source": "misc/macws_texture_stride_probe.m"
+    }
+  ],
+  "host_environment": {
+    "SDK": "27.0",
+    "architecture": "arm64",
+    "build": "26A434",
+    "clang": "Apple clang 21.0.0",
+    "macOS": "27.0.1",
+    "page_size": 16384,
+    "python": "3.14.4"
+  },
+  "independent_reviews_private_receipt_sha256": "5b0ec4df73dd7765fd23dc848802bcc254cc4dd71e28a5e47c9c644ef6cb04a2",
+  "local_gates_private_receipt_sha256": "695533ed20e9bdb88d0c3aa9da9634276298ac523877aabf495d747761f27c06",
+  "native_iPad_acceptance": false,
+  "original_fourteen_cases": {
+    "nocopy_native_runtime": 4,
+    "office_CPU_fixture_compile": 1,
+    "remaining_original_nocopy_failures": 4,
+    "resolved_original_failure_or_setup_error_entries": 10,
+    "sampling_class_compile": 1,
+    "settings_fixture_mode": 7,
+    "stride_class_compile": 1
+  },
+  "original_freeze_reproduced_or_fixed": false,
+  "portable_swap_pair_tests": 127,
+  "portable_swap_pair_tests_pass_both_repositories": true,
+  "private_NoCopy_triage_sha256": "267c12b949128d78005c317ab2e17f0dc5b3d60630fcec13030e43fee874e1dd",
+  "production_or_probe_runtime_sources_changed": false,
+  "protocol_runtime_switch_shell_diff_checks_pass_both_repositories": true,
+  "public_source_sha256": {
+    "layout/usr/macOS/bin/macws_boot_trust.py": "2c727c302a55b15470f9bc1cf4ec8c45e87091e8b448974d866e8ca1dd955135",
+    "layout/usr/macOS/bin/macws_settings_verify.py": "8b61759fe172a432cd385c959c43f5b9b8bac267737212408f105a63843e736a",
+    "misc/device_pipeline.sh": "056084157a2774f4d8f9fcadc8f3a97a9e2862b410f6342cd87c830e142c3f98",
+    "misc/macws_diagnostic_probe_pipeline.py": "0d310c1c733807c810d867ccb04def8467f26fada6fcdf27b299f1ea6df9848e",
+    "misc/macws_diagnostic_probe_receiver.py": "1d4a9f515b7884ead3326f39d35cc639e1e2972048e2f26a1f73033af3100463",
+    "misc/macws_nocopy_contract_probe.m": "d1a8389e8931d5f33e8c6bf1f2d9d6fe1c7ecf7d943a0359a9e174c61b3279bc",
+    "misc/macws_office_upload_observer.m": "a823bde29e87296ded9dcf39c9f2b9de9a9bba0710621098b352e190168379d4",
+    "misc/macws_swap_pair/cleanup_payload.py": "163a222759d985c1ada68366584a003b95578e877a60ec3a4f51437e62fb7e90",
+    "misc/macws_swap_pair/controller.py": "955c50b5cb2b30b8f0aefd69720675d04c91126dec17c802fb09be8c42197977",
+    "misc/macws_swap_pair/observer_inputs.json": "f7261fcf3e6c47493e92f8b04396316acf9d3f66b229d77a85cc0f95ffa6f280",
+    "misc/macws_swap_pair/offline_qa.json": "ebee0b881b5f589c4ca100c5dbcd4c72faa946b0bf741511a7396138139ae29c",
+    "misc/macws_swap_pair/prepare_control_payload.py": "b50084a3150027f0388af0a7fdac8389652bd8acdfacd271e9b8d10098a455ae",
+    "misc/macws_swap_pair/project_session.py": "bb8118c78a99540709cb965a8fc6a25e77855e6c3f9d1797323c407727ae264d",
+    "misc/macws_swap_pair/readonly_observer.py": "717de31eb1d7a05ed363eca7c3dce0dbd7f4ff500bb8cb65377bd340babf1c7a",
+    "misc/macws_swap_pair/reviewed_delivery_plan.json": "d287798e366823c1394b7c6e57f0902daf6881fd9c198f116a8400464177bd76",
+    "misc/macws_swap_pair/runtime_support.py": "5d09cf9380afaa2409661a58909d1bfee41d81943f1b2306facb0cd94ee10fe0",
+    "misc/macws_swap_pair/watchdog.py": "c28ec9edd30bf86613c7cb29693697901228b579100b8b181a4dc47915f00e0a",
+    "misc/macws_texture_sampling_probe.m": "af7f528e2015c323b1e37521936803e05532394bfa088242fed75ac35a37950c",
+    "misc/macws_texture_stride_probe.m": "7f65e6c04b4d9e761a9c4566a66479acc2515368e50e10c05dd9979eba37ebc5",
+    "misc/test_macws_swap_pair_workflow.py": "e257e1efef5f5f8bd5f6dd9cebd7a7b58be54a586de3272dcf0be8a2a461dcdc",
+    "misc/test_office_upload_observer.py": "ce47e36fc7d60007caea39b85836808e66441606bb00b0d09e3809eab549bfa0",
+    "misc/test_settings_verify.py": "f186233f658ec14a1b9bcafd2b58f53b5e64aaae36f9390c65e44d9d48c2a1cd",
+    "misc/test_texture_sampling_probe.py": "fab850f4b979a68dff2ee7c14fe201e733affaf5bc1f41e3cadb332efd1b2a4d",
+    "misc/test_texture_stride_probe_contract.py": "82cdc3b052b657528394ac9edc978b6761601d086e29d4d117ae4f347f9ebfab"
+  },
+  "schema": "macws.host-suite-triage.evidence.v1",
+  "settings": {
+    "copied_host_witness": {
+      "observed_mode_after_chmod": "00755",
+      "requested_mode": "04755"
+    },
+    "fix": "explicit synthetic mode only on the invented carrier; real contents/kind/owner/stat identity preserved",
+    "focused_tests": 9,
+    "focused_tests_pass": true,
+    "host_mode_restriction_cause_proven": false,
+    "negative_setuid_check_still_rejects": true,
+    "previously_failed_cases_now_pass": [
+      "test_changed_dependency_rejected_even_same_boot (test_settings_verify.SettingsVerification.test_changed_dependency_rejected_even_same_boot)",
+      "test_complete_real_signature_verification_passes (test_settings_verify.SettingsVerification.test_complete_real_signature_verification_passes)",
+      "test_embedded_non_settings_plugin_is_untouched (test_settings_verify.SettingsVerification.test_embedded_non_settings_plugin_is_untouched)",
+      "test_embedded_settings_pane_must_be_prepared (test_settings_verify.SettingsVerification.test_embedded_settings_pane_must_be_prepared)",
+      "test_missing_executable_name_requires_unique_image (test_settings_verify.SettingsVerification.test_missing_executable_name_requires_unique_image)",
+      "test_current_registration_required (test_settings_verify.SettingsVerification.test_current_registration_required)",
+      "test_marker_and_base_dependency_must_match (test_settings_verify.SettingsVerification.test_marker_and_base_dependency_must_match)"
+    ],
+    "private_final_receipt_sha256": "bb42fa312a5709a0da0c54c1d9f52f8a1b8edd8f9f55cf6a5bd20d721d6b478f",
+    "private_mode_witness_sha256": "29f5b2ea1cda51d2c051dfbb82a78f584b28e8fdf3d3687720c9d4d47ecd852c"
+  },
+  "settings_tests_pass_both_repositories": true,
+  "tracked_shell_files_per_repository": 41,
+  "trust_mutations": 0
+}
