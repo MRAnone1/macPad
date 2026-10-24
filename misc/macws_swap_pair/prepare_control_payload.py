@@ -398,7 +398,7 @@ def capture_consistency(outer, expected_config):
     run, watch = full.get("run_private"), full.get("watchdog_private")
     _require(type(run) is dict and type(watch) is dict, "full run/watchdog objects required")
     _require(not any("error_private" in key for key in run) and not any("error_private" in key for key in watch) and
-             "pair_result_private" not in run, "control report contains error or active-pair result")
+             run.get("pair_result_private") is None, "control report contains error or active-pair result")
     for key, expected in (("bootstraps", 1), ("resumes", 1), ("second_resumes", 0)):
         _require(type(run.get(key)) is int and run[key] == expected, "typed stopped-control counter: " + key)
     _require(run.get("C_ready_verified") is True, "verified C-ready stop required")

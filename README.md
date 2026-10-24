@@ -47,6 +47,11 @@ and recovery observer.
 
 ## Validated configurations
 
+The iPad13,6 / iPadOS 16.4.1 (20E252) port remains unverified. Its
+[24 October 2026 normal control](docs/evidence/ipados-1641-normal-control-20261024.md)
+refused before the first resume; the stopped test job and scoped cleanup remain
+unresolved. Do not repeat a control on that occupied baseline.
+
 | Device and system | Jailbreak | macOS userspace | Status |
 | --- | --- | --- | --- |
 | iPad13,6 (M1), iPadOS 16.3.1 / 20D67 | Dopamine rootless | Ventura 13.4 / 22F66 | Primary and broadest validation target |

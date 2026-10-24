@@ -1,14 +1,25 @@
 # iPadOS 16.4.1: next single stopped control
 
-Prepared offline on 2026-10-23. The iPad is unavailable; no step below has been
-dispatched. This iPad13,6 / 20E252 / Ventura 13.4 / 22F66 port remains unverified.
+Updated 2026-10-24: one actual normal control was dispatched after fresh
+inventory, exclusive delivery, a validated cleanup contract and all eleven
+post-stage checks. It refused before the first resume at the watchdog's exact
+path/inode guard. Cleanup is incomplete: the same stopped native process,
+control job/scratch and staged payloads remain. **Do not dispatch another
+control or repeat staging on this occupied baseline.** See the
+[dated negative evidence](evidence/ipados-1641-normal-control-20261024.md).
+This iPad13,6 / 20E252 / Ventura 13.4 / 22F66 port remains unverified.
 Historical inventories and consistent JSON are not current native evidence.
+
+The ordered gates below remain the procedure for a future independently
+reviewed attempt after ownership/recovery is resolved. Current snapshots do
+not replace original file-ownership tokens omitted from the controller report.
 
 ## Resolve these host prerequisites first
 
-The existing public components are reviewable, but a live dispatch still needs
-reviewed private wiring for fresh inventory capture, exclusive session-file
-storage, the real connection configuration and fixed cleanup transport. The
+Reviewed private capture, session-storage, normal-only and cleanup transports
+were used or validated for the 2026-10-24 attempt. They are not published live
+dispatch commands. The missing standalone recovery authority after the failed
+owned-generation cleanup remains unresolved. The
 historical inventory wrappers dispatch at top level and use already occupied
 output names. Do not rerun them unchanged. The projector and cleanup builder
 provide no transport. Keep actual endpoints, keys, runtime tokens and raw

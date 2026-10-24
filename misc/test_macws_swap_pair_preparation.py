@@ -4,6 +4,7 @@ All purported device identities/tokens in fixture() are invented in memory
 for adversarial parser tests. No session/config/receipt file is generated.
 """
 from contextlib import redirect_stdout
+import ast
 import base64
 import builtins
 import copy
@@ -99,6 +100,7 @@ def synthetic_capture(control="normal_ready_stop"):
              "hook_uuid_code_gates_passed": True, "pair_invoked": False, "runtime_accepted": False}
     trigger = {"normal_ready_stop": "controller_done", "parent_pipe_EOF": "parent_loss_or_invalid_control", "active_deadline": "active_deadline"}[control]
     run = {"bootstraps": 1, "resumes": 1, "second_resumes": 0, "C_ready_verified": True, "C_ready_private": ready,
+           "pair_result_private": None,
            "birth_private": birth, "initial_process_private": copy.deepcopy(process), "C_ready_process_private": copy.deepcopy(process)}
     cleanup = {"own_job_absent": True, "bootout_calls": 1, "known_generation_absent": True,
                "generation_absence_evidence_private": {"api": "proc_pidinfo", "flavor": 3, "requested_bytes": 136, "returned": 0,
@@ -122,14 +124,20 @@ def synthetic_capture(control="normal_ready_stop"):
 def refresh_synthetic_receipt(outer, config):
     """Re-encode a tampered fixture, so tests do not rely on hash mismatch alone."""
     full = outer["full_private_report"]; run = full["run_private"]; watch = full["watchdog_private"]
-    projection = {"schema": "macws.swap-pair.stopped-control-witness.v7", "operation": outer["operation"],
-                  "source_sha256": dict(p.SOURCES), "full_private_report_sha256": canonical_sha(full),
-                  "independent_watchdog_ready_before_bootstrap": full["independent_watchdog_ready_before_bootstrap"],
-                  "control_capture_accepted": full["control_capture_accepted"], "pair_capture_accepted": full["pair_capture_accepted"],
-                  "device_acceptance": full["device_acceptance"], "cleanup_verified": full["cleanup_verified"],
-                  "run": copy.deepcopy(run),
-                  "watchdog": {key: copy.deepcopy(watch[key]) for key in ("ready", "trigger", "cleanup_verified", "cleanup", "samples", "seconds", "active_alarm_fired", "deadline_mechanism")},
-                  "final_C_result_observed": False}
+    # Use the exact pinned producer projection. The complete runtime run has
+    # additional fields, including a null pair placeholder; its wire projection
+    # intentionally includes only eight run fields while hashing the full report.
+    source = (RUNTIME_DIR / "controller.py").read_bytes()
+    if hashlib.sha256(source).hexdigest() != p.SOURCES["controller.py"]:
+        raise AssertionError("runtime projection source changed")
+    functions = [node for node in ast.parse(source).body
+                 if isinstance(node, ast.FunctionDef) and node.name == "stopped_control_projection"]
+    if len(functions) != 1:
+        raise AssertionError("one actual runtime projection required")
+    namespace = {"config_sha": canonical_sha}
+    exec(compile(ast.fix_missing_locations(ast.Module(body=functions, type_ignores=[])),
+                 "<pinned-runtime-stopped-control-projection>", "exec"), namespace)
+    projection = namespace["stopped_control_projection"](full)
     outer["native_control_receipt"] = {"schema": "macws.swap-pair.native-stopped-control.v7", "control": outer["control"],
                                        "operation": outer["operation"], "accepted": True, "native_job_used": True, "simulation_only": False,
                                        "raw_sha256": canonical_sha(projection), "raw_witness": projection, "source_sha256": dict(p.SOURCES),
@@ -458,6 +466,26 @@ class CaptureConsistencyTests(unittest.TestCase):
             self.assertIs(result["current_device_freshness_claimed"], False)
             self.assertIs(result["native_evidence_authenticity_verified"], False)
             self.assertIs(result["device_acceptance"], False)
+
+    def test_runtime_null_placeholder_is_preserved_without_an_active_projection(self):
+        config, outer = synthetic_capture()
+        before = copy.deepcopy(outer)
+        result = decode_capture(config, outer)
+        self.assertIs(result["accepted_scoped_capture"], True)
+        self.assertIs(outer["full_private_report"]["run_private"]["pair_result_private"], None)
+        self.assertNotIn("pair_result_private", outer["native_control_receipt"]["raw_witness"]["run"])
+        self.assertEqual(outer, before)
+        self.assertIs(result["native_evidence_authenticity_verified"], False)
+        self.assertIs(result["current_device_freshness_claimed"], False)
+        self.assertIs(result["device_acceptance"], False)
+
+    def test_nonnull_pair_result_refuses_even_after_actual_projection_is_rebound(self):
+        for value in ({}, {"pair_invoked": True}, False, 0, [], "null"):
+            config, outer = synthetic_capture()
+            outer["full_private_report"]["run_private"]["pair_result_private"] = value
+            refresh_synthetic_receipt(outer, config)
+            with self.subTest(value=value):
+                self.assert_refuses(config, outer)
 
 
     def test_positive_without_explicit_context_refuses(self):

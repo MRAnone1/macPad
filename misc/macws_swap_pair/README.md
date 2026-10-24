@@ -7,6 +7,10 @@ binds their hashes to 107 synthetic host tests, including the copied native
 service-domain regression and retained descriptor/report-finalization tests.
 The private raw fixture and reports are excluded from Git.
 
+Latest device result: the [24 October normal attempt](../../docs/evidence/ipados-1641-normal-control-20261024.md)
+failed before first resume and left an unresolved stopped job and scoped
+cleanup. Do not dispatch another control on that occupied baseline.
+
 Default invocation only hashes the three local sources and prints metadata:
 
 ```sh
@@ -49,8 +53,8 @@ python3 misc/macws_swap_pair/prepare_control_payload.py
 `observer_inputs.json` contains exact own runtime-support source, static
 build/signature identities and historical evidence digests. Its baseline is
 null. It is neither a current inventory nor an admission receipt. Explicit
-observation is separately gated by the exact observer/input hashes and remains
-unverified on the device. Only fixed read-only commands are permitted, including
+observation is separately gated by the exact observer/input hashes. It was
+unverified on the device at that offline handoff. Only fixed read-only commands are permitted, including
 the two `user/501` label queries; present, redirected or unknown jobs refuse.
 The observer retains partial observations when final clock or budget reporting
 fails. Unavailable fields stay null and all admission flags stay false.
@@ -81,9 +85,9 @@ python3 -m unittest discover -s misc -p 'test_macws_swap_pair*.py'
 ```
 
 The five-file delivery bundle and runtime controller sources are unchanged.
-Neither historical v5/v6 session files nor the read-only observer output may
-be reused as new control prerequisites. Device tests remain deferred while the
-iPad is unavailable.
+Neither historical v5/v6 session files nor historical read-only observer output
+may be reused as fresh control prerequisites. Device tests were deferred at
+that handoff while the iPad was unavailable.
 
 ## Explicit session and cleanup preparation — 2026-10-23
 
@@ -133,7 +137,7 @@ before dispatching a control. An incompatible receipt must not be rewritten
 to make cleanup preparation accept it.
 
 See the [dated rehearsal evidence](../../docs/evidence/ipados-1641-offline-workflow-20261023.md).
-The complete suite of portable swap-pair controls now contains 127 tests.
+The complete suite at that rehearsal contained 127 portable swap-pair tests.
 Freshness, authenticity, cleanup verification and device acceptance remain
 unverified by this rehearsal.
 
@@ -141,3 +145,20 @@ The [single-control handoff](../../docs/ipados-1641-one-control-handoff.md)
 orders the fresh inventory, delivery, admission, one normal attempt and exact
 cleanup gates. It also records private capture/storage/transport wiring that
 must be reviewed before dispatch. It executes no commands.
+
+## Actual negative normal control — 2026-10-24
+
+One fresh admitted normal attempt recorded one bootstrap and zero resumes.
+The independent watchdog refused its exact path/inode guard and could not
+verify cleanup. The job, same stopped native process, control scratch and
+staged delivery remain; do not retry on this occupied baseline. The offending
+path/stat sample was not copied, and a current snapshot cannot recreate the
+original scratch ownership tokens. No runtime identity guard was relaxed.
+See the [dated evidence and cleanup limitation](../../docs/evidence/ipados-1641-normal-control-20261024.md).
+
+The host decoder now accepts the producer's absent-or-exact-null
+`pair_result_private` placeholder. Its full report remains unchanged; non-null
+values still refuse. The fixture uses the exact pinned producer projection.
+All 129 portable tests pass. The actual negative report remains refused, the
+full suites retain their native Metal failures, and zero stopped controls are
+accepted. This host compatibility fix grants no active-pair or freeze acceptance.
