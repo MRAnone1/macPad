@@ -51,6 +51,7 @@ The iPad13,6 / iPadOS 16.4.1 (20E252) port remains unverified.
 [25 October 2026 process recovery](docs/evidence/ipados-1641-process-retirement-20261025.md)
 retired the original stopped test job. Control scratch and delivered-file cleanup
 remain unresolved; do not repeat a control on that occupied scratch baseline.
+[Offline ownership-capture preparation](docs/evidence/ipados-1641-ownership-capture-20261025.md) adds tested evidence tooling; runtime integration and file cleanup remain pending.
 
 | Device and system | Jailbreak | macOS userspace | Status |
 | --- | --- | --- | --- |

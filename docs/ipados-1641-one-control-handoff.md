@@ -16,6 +16,12 @@ The ordered gates below remain the procedure for a future independently
 reviewed attempt after file ownership/cleanup is resolved. Current snapshots do
 not replace original file-ownership tokens omitted from the controller report.
 
+The [offline ownership-capture primitive](evidence/ipados-1641-ownership-capture-20261025.md)
+is not integrated or deployed. The [retained-artifact cleanup design](ipados-1641-retained-artifact-cleanup-design.md)
+allows reviewing a distinct current selection after fresh complete capture,
+private durable archive and independent absence gates; it does not restore
+missing original tokens. No deletion implementation or new control is supplied.
+
 ## Resolve these host prerequisites first
 
 Reviewed private capture, session-storage, normal-only and cleanup transports

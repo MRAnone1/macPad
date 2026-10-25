@@ -191,3 +191,23 @@ records actual scope, known full-suite failures and non-atomic service limits.
 The [future witness design](../../docs/ipados-1641-recovery-witness-design.md)
 preserves original file tokens and first-refusal observations for future work;
 it has not been deployed. The staged v7 package remains unchanged.
+
+## Offline ownership capture — 2026-10-25
+
+`ownership_capture.py` is a reference stored-token snapshot/decoder, with 27
+synthetic tests in `misc/test_macws_ownership_capture.py`. Import/default CLI
+is metadata-only. Explicit capture verifies the exact v7 source bytes and
+config, freezes the caller-held original `OwnedFiles` tokens, calls unchanged
+`checked()` and returns a strict independent copy. The mutable log hash stays
+null; no current tokens are adopted. Source leaf reads are nonblocking and
+no-follow, bounded and stable; the unchanged runtime check retains its existing
+I/O/concurrency limits. This is a trusted-caller helper, not a Python sandbox
+or an authenticated native witness. It cannot prove creation timing or loaded
+code integrity and grants no action authority.
+
+It has no controller integration, watchdog acknowledgment, durable receipt,
+transport or cleanup route. Future integration requires coherent versioned
+source/QA/bundle migration. The [dated offline evidence](../../docs/evidence/ipados-1641-ownership-capture-20261025.md)
+and [separate retained-artifact cleanup design](../../docs/ipados-1641-retained-artifact-cleanup-design.md)
+record what remains before another device action. Existing runtime switches
+and their inventory are unchanged; no native control or freeze fix is accepted.

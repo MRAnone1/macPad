@@ -5,6 +5,22 @@ source pin, transport, or native-control state is changed by this design.
 This is observability/recovery preparation, not a display/freeze fix and not
 authority to rerun the occupied 24 October control.
 
+## Offline implementation follow-up
+
+The [25 October ownership-capture preparation](evidence/ipados-1641-ownership-capture-20261025.md)
+adds a separately tested reference primitive for the stored-token snapshot and
+strict decoder only. It is not called by the existing controller/watchdog and
+has no durable host receipt or live transport. All existing v7 runtime/source,
+QA, observer, bundle and cleanup bindings remain unchanged. A future integrated
+version must migrate those pins coherently as described below; this reference
+primitive deliberately still verifies the frozen v7 sources.
+
+The missing historical tokens still prohibit original-ownership cleanup.
+A [separate retained-current-artifact cleanup design](ipados-1641-retained-artifact-cleanup-design.md)
+records the fresh archive/manifest/absence gates for deliberately selecting
+current retained diagnostics. That design provides no deletion implementation
+and never claims original vnode continuity.
+
 ## Reviewed scope and confirmed gap
 
 Read all 2,009 lines of the publication AGENTS.md. The companion is the same
