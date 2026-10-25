@@ -7,9 +7,10 @@ binds their hashes to 107 synthetic host tests, including the copied native
 service-domain regression and retained descriptor/report-finalization tests.
 The private raw fixture and reports are excluded from Git.
 
-Latest device result: the [24 October normal attempt](../../docs/evidence/ipados-1641-normal-control-20261024.md)
-failed before first resume and left an unresolved stopped job and scoped
-cleanup. Do not dispatch another control on that occupied baseline.
+Latest device result: [25 October process recovery](../../docs/evidence/ipados-1641-process-retirement-20261025.md)
+retired the original stopped job from the failed 24 October control. Both
+labels are absent; control scratch and delivery cleanup remain unresolved.
+Do not dispatch another control on that occupied scratch baseline.
 
 Default invocation only hashes the three local sources and prints metadata:
 
@@ -18,9 +19,10 @@ python3 misc/macws_swap_pair/controller.py
 ```
 
 No native API, job, trust, signing or deployment operation is performed by that
-default. Native execution remains unverified and requires explicit, fresh,
-source-bound prerequisite files and three genuine stopped controls before an
-active pair. Hardware/build/rootfs/hook/signature/clock/ownership gates remain
+default. Successful stopped-control and active-pair execution remain unverified.
+Native controls require explicit fresh source-bound prerequisites; active pairs
+additionally require three genuine stopped controls.
+Hardware/build/rootfs/hook/signature/clock/ownership gates remain
 specific to the recorded iPad13,6 / iPadOS 16.4.1/20E252 port. The code is not a
 portable generic launchd or iPadOS controller.
 
@@ -150,8 +152,9 @@ must be reviewed before dispatch. It executes no commands.
 
 One fresh admitted normal attempt recorded one bootstrap and zero resumes.
 The independent watchdog refused its exact path/inode guard and could not
-verify cleanup. The job, same stopped native process, control scratch and
-staged delivery remain; do not retry on this occupied baseline. The offending
+verify cleanup. At the end of that attempt, the job, stopped native process,
+control scratch and staged delivery remained. The process-only follow-up below
+retired the job. The offending
 path/stat sample was not copied, and a current snapshot cannot recreate the
 original scratch ownership tokens. No runtime identity guard was relaxed.
 See the [dated evidence and cleanup limitation](../../docs/evidence/ipados-1641-normal-control-20261024.md).
@@ -162,3 +165,29 @@ values still refuse. The fixture uses the exact pinned producer projection.
 All 129 portable tests pass. The actual negative report remains refused, the
 full suites retain their native Metal failures, and zero stopped controls are
 accepted. This host compatibility fix grants no active-pair or freeze acceptance.
+
+## Process-only recovery — 2026-10-25
+
+`process_retirement.py` is a separate dependency-injected capability; its
+ordinary invocation prints metadata. It constructs no native backend and
+provides no transport, default execution, `OwnedFiles` substitute, file deletion,
+resume, new job or trust mutation. Its explicit API needs original copied
+config/report/delivery evidence and a separately reviewed real caller. JSON
+consistency alone grants no authority. Historical times are not refreshed.
+
+The reviewed private caller verified the original native stopped generation,
+source/artifact/token and exact current service, called the unchanged runtime
+bind gate with wrapper fallback disabled, then made one exact-service SIGKILL
+and one bootout. Copied ESRCH and job absence verify process/service retirement.
+Both labels are free; control scratch is the sole refusal among eleven fresh
+observer checks. File ownership/cleanup, three stopped-control acceptance and
+freeze remediation remain open. No new control was attempted.
+
+The public core is byte-identical to that executed helper. Its 44 synthetic
+tests are in `misc/test_macws_process_retirement.py`; sixteen private host/
+worker tests cover timing, bounded capture and partial-effect refusal. The
+[dated recovery evidence](../../docs/evidence/ipados-1641-process-retirement-20261025.md)
+records actual scope, known full-suite failures and non-atomic service limits.
+The [future witness design](../../docs/ipados-1641-recovery-witness-design.md)
+preserves original file tokens and first-refusal observations for future work;
+it has not been deployed. The staged v7 package remains unchanged.

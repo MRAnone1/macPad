@@ -1,25 +1,28 @@
 # iPadOS 16.4.1: next single stopped control
 
-Updated 2026-10-24: one actual normal control was dispatched after fresh
-inventory, exclusive delivery, a validated cleanup contract and all eleven
-post-stage checks. It refused before the first resume at the watchdog's exact
-path/inode guard. Cleanup is incomplete: the same stopped native process,
-control job/scratch and staged payloads remain. **Do not dispatch another
-control or repeat staging on this occupied baseline.** See the
-[dated negative evidence](evidence/ipados-1641-normal-control-20261024.md).
+Updated 2026-10-25: the original stopped process and exact service from the
+[failed 24 October control](evidence/ipados-1641-normal-control-20261024.md)
+have been retired through a separately reviewed process-only capability.
+One exact-service SIGKILL and one bootout returned quietly; copied native
+ESRCH and exact service absence verify retirement. Both test labels are now
+absent, but control scratch and staged payloads remain. Ten of eleven fresh
+observer checks pass; scratch absence is the sole refusal. **Do not dispatch
+another control or repeat staging on this occupied scratch baseline.** See
+the [process recovery evidence](evidence/ipados-1641-process-retirement-20261025.md).
 This iPad13,6 / 20E252 / Ventura 13.4 / 22F66 port remains unverified.
 Historical inventories and consistent JSON are not current native evidence.
 
 The ordered gates below remain the procedure for a future independently
-reviewed attempt after ownership/recovery is resolved. Current snapshots do
+reviewed attempt after file ownership/cleanup is resolved. Current snapshots do
 not replace original file-ownership tokens omitted from the controller report.
 
 ## Resolve these host prerequisites first
 
 Reviewed private capture, session-storage, normal-only and cleanup transports
-were used or validated for the 2026-10-24 attempt. They are not published live
-dispatch commands. The missing standalone recovery authority after the failed
-owned-generation cleanup remains unresolved. The
+were used or validated for the 2026-10-24 attempt. The separate 25 October
+process-only helper used the original process witness without fabricating
+`OwnedFiles` or weakening its checks. These are not published live dispatch
+commands. Original scratch-file authority remains unresolved. The
 historical inventory wrappers dispatch at top level and use already occupied
 output names. Do not rerun them unchanged. The projector and cleanup builder
 provide no transport. Keep actual endpoints, keys, runtime tokens and raw

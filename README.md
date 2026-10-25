@@ -47,10 +47,10 @@ and recovery observer.
 
 ## Validated configurations
 
-The iPad13,6 / iPadOS 16.4.1 (20E252) port remains unverified. Its
-[24 October 2026 normal control](docs/evidence/ipados-1641-normal-control-20261024.md)
-refused before the first resume; the stopped test job and scoped cleanup remain
-unresolved. Do not repeat a control on that occupied baseline.
+The iPad13,6 / iPadOS 16.4.1 (20E252) port remains unverified.
+[25 October 2026 process recovery](docs/evidence/ipados-1641-process-retirement-20261025.md)
+retired the original stopped test job. Control scratch and delivered-file cleanup
+remain unresolved; do not repeat a control on that occupied scratch baseline.
 
 | Device and system | Jailbreak | macOS userspace | Status |
 | --- | --- | --- | --- |

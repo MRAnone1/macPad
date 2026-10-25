@@ -1,0 +1,213 @@
+{
+  "acceptance": {
+    "active_pair_allowed": false,
+    "device_acceptance": false,
+    "freeze_cause_or_fix_confirmed": false,
+    "full_file_cleanup_verified": false,
+    "genuine_stopped_controls_accepted": 0,
+    "physical_stable_presentation_proven": false,
+    "process_service_retirement_verified": true,
+    "required_stopped_controls": 3
+  },
+  "after_observer": {
+    "both_job_labels_absent": true,
+    "checks": {
+      "both_job_labels_absent": true,
+      "both_scratch_absent": false,
+      "candidate_present_identity_trusted": true,
+      "exact_device_build": true,
+      "frozen_dependencies_present_identity_trusted": true,
+      "no_blocked_workloads": true,
+      "nominal_thermal": true,
+      "same_UI_generations": true,
+      "same_boot": true,
+      "same_trust_membership_set": true,
+      "stable_file_observations": true
+    },
+    "checks_passed": 10,
+    "checks_total": 11,
+    "completed": true,
+    "control_scratch_present": true,
+    "no_blocked_workloads": true,
+    "refusals": [
+      "both_scratch_absent"
+    ],
+    "run_scratch_absent": true,
+    "same_original_boot_UI": true,
+    "thermal_samples": [
+      0,
+      0
+    ],
+    "trust_membership_equal_to_24_October_claimed": false,
+    "trust_membership_stable_within_capture": true,
+    "user_touch_responsive_after": true
+  },
+  "authority": {
+    "current_file_tokens_adopted_as_original": false,
+    "existing_stop_owned_not_repurposed": true,
+    "independent_core_transport_and_actual_output_review": true,
+    "old_admission_times_refreshed": false,
+    "original_actual_report_and_wire_pins_checked": true,
+    "original_delivery_pin_checked": true,
+    "original_executing_config_digest_checked": true,
+    "original_file_ownership_tokens_missing": true,
+    "original_native_136_byte_SSTOP_birth_witness_retained": true,
+    "separate_process_only_recovery_capability": true
+  },
+  "cleanup": {
+    "delivered_payload_cleanup_complete": false,
+    "directories_staged_previous_pass_retained": 2,
+    "files_staged_previous_pass_retained": 5,
+    "fixed_delivery_cleanup_executed": false,
+    "new_control_or_active_pair_attempts": 0,
+    "original_scratch_tokens_recovered": false,
+    "process_service_cleanup_complete": true,
+    "scratch_cleanup_complete": false
+  },
+  "date": "2026-10-25",
+  "limits": {
+    "acceptance_counters_and_booleans_strictly_typed": true,
+    "core_seconds": 8,
+    "exclusive_operator_assumed": true,
+    "float_exponent_overflow_separately_refused": false,
+    "host_capture_seconds": 20,
+    "kernel_stall_recovery_guaranteed": false,
+    "literal_NaN_Infinity_and_duplicate_keys_refused": true,
+    "lost_partial_or_124_effects_remain_unknown": true,
+    "service_check_and_action_atomic": false,
+    "worker_self_exit_seconds": 12
+  },
+  "port": {
+    "build": "20E252",
+    "device": "iPad13,6",
+    "eleven_cache_image_identities_match": true,
+    "free_GiB_approx": 87.32,
+    "fresh_trust_entries": 172,
+    "iPadOS": "16.4.1",
+    "jailbreak": "Dopamine 3.0.10",
+    "macOS": "13.4",
+    "macOS_build": "22F66",
+    "nine_direct_MachO_identities_match": true,
+    "own_probe_hash_present": true,
+    "prior_trust_entries": 167,
+    "same_original_boot": true,
+    "trust_count_difference_preserved": true,
+    "verified_port": false,
+    "whole_framework_or_live_codepage_attestation": false
+  },
+  "preflight": {
+    "fresh_readonly_snapshot_completed": true,
+    "original_process_service_candidate_source_matches": true,
+    "read_only_core_observe_accepted": true,
+    "read_only_mutation_attempts": 0,
+    "unchanged_Runtime_bind_gate_before_kill": true,
+    "user_available_unlocked_charging_responsive": true,
+    "wrapper_alias_fallback_allowed": false
+  },
+  "private_evidence_sha256": {
+    "actual_retirement": "7c87719fec3bb00837861c9ab745f59fe64c81f7de3e55614b50fceff99b7b06",
+    "cache_inventory": "e0eb3f021f872b10fd953dad01a0786d334a0afa47dd5506e010ad94cbd10091",
+    "combined_QA": "7690ce155571d7de067068a1363591eac8fb7f15b1d77ba6006c07bdd7bf4d8e",
+    "core_QA": "3ce1cf502c25257b6e09741207819a3641984810fa2dc5930601f81e9d4ab6b7",
+    "core_observe": "322776c804f178bf6a8dc0d30fbfd39188ab2436640df85fe48ba1af605033fa",
+    "core_transport_source_review": "928d72d20d8b7d50ad0963cf3857d49b515bf16cae2e2b475af851b0d3681652",
+    "original_mode_schema_replay": "7c10393eee4341191d65ecbc507c26d6a321bffcca0181379c2de9ecf00223f9",
+    "original_process_snapshot": "4ed4f616220d65d2a86de344e4a9d19d84e6441731a9d26eefad30d1320672ef",
+    "port_inventory": "7154bbcb6cf793acfcd13812e43acc55ae7f0eacd0080c620102a02c0c09e289",
+    "post_retirement_observer": "02d01f975f5bd9495489633b58a4c916d8c3ff0d54dcb9ddd42b4efe7ea38868",
+    "retirement_envelope": "6ff17ef718d664b681b5daab91dcc9f9e3d5e4e3359b7b22a886c3c725287844"
+  },
+  "retirement": {
+    "accepted_process_service_capture": true,
+    "allowlisted_command_count": 20,
+    "attempts": 1,
+    "automatic_retry": false,
+    "bootout_attempts": 1,
+    "bootout_completed": 1,
+    "command_breakdown": {
+      "UI_process_inventories": 4,
+      "exact_service_SIGKILL": 1,
+      "exact_service_bootout": 1,
+      "fixed_job_queries": 10,
+      "trust_info_reads": 4
+    },
+    "effect_results_quiet_exit_zero": true,
+    "exact_job_absent": true,
+    "file_or_directory_removals": 0,
+    "kill_attempts": 1,
+    "kill_completed": 1,
+    "original_generation_native_ESRCH_results": 2,
+    "process_retired": true,
+    "resume_debug_bootstrap_or_trust_calls": 0,
+    "timeout_or_overflow": false,
+    "transport_complete_quiet": true,
+    "worker_seconds": 0.44318
+  },
+  "schema": "macws.original-process-retirement.evidence.v1",
+  "source_sha256": {
+    "cleanup_payload.py": "163a222759d985c1ada68366584a003b95578e877a60ec3a4f51437e62fb7e90",
+    "controller.py": "955c50b5cb2b30b8f0aefd69720675d04c91126dec17c802fb09be8c42197977",
+    "offline_qa.json": "ebee0b881b5f589c4ca100c5dbcd4c72faa946b0bf741511a7396138139ae29c",
+    "prepare_control_payload.py": "e62d029d18db87cd83cd77dca10300fe9c99f9ac2d48b7e1a977423cf85b51dd",
+    "private_transport": "3eead9c51f73e2680d2414499a13db7d2939b547e2ea3bd626c58ffa6148d96f",
+    "private_worker_template": "a0dedf05036cc0edce3951e00e3fa0ce657f75017c90ad446a2493574f20fd2a",
+    "process_retirement.py": "259d817eb942a251a07407751bce4785d0495cf252bd98aebdfc5176bebf0ee5",
+    "project_session.py": "ff91239ec9d15455f1dfaa9a46815110b510c4f0c01d8e2908c83c39d360179d",
+    "public_retirement_tests": "088dde9792842084aa0bb88692ca2853ef5763720fcbed703436266a9365d267",
+    "readonly_observer.py": "717de31eb1d7a05ed363eca7c3dce0dbd7f4ff500bb8cb65377bd340babf1c7a",
+    "reviewed_delivery_plan.json": "d287798e366823c1394b7c6e57f0902daf6881fd9c198f116a8400464177bd76",
+    "runtime_support.py": "5d09cf9380afaa2409661a58909d1bfee41d81943f1b2306facb0cd94ee10fe0",
+    "watchdog.py": "c28ec9edd30bf86613c7cb29693697901228b579100b8b181a4dc47915f00e0a"
+  },
+  "timezone": "Europe/Zurich",
+  "validation": {
+    "companion": {
+      "C_protocol_pass": true,
+      "diff_check_pass": true,
+      "existing_swap_pair_tests": 129,
+      "full_errors": 0,
+      "full_failures": 43,
+      "full_skips": 13,
+      "full_suite_log_sha256": "449296c44c90504cfba17fa56573b9c1d9638698996207c94ba4c37213fd8943",
+      "full_suite_pass": false,
+      "full_tests": 946,
+      "native_metal_failed_methods": 11,
+      "retirement_synthetic_pass": true,
+      "retirement_synthetic_tests": 44,
+      "runtime_switch_audit_pass": true,
+      "shell_syntax_files": 41,
+      "shell_syntax_pass": true,
+      "source_bytes_unchanged_during_tests": true
+    },
+    "private_transport": {
+      "final_combined_core_transport_tests": 60,
+      "fixture_uses_pinned_receiver_token_projection": true,
+      "independent_review_findings_fixed_before_dispatch": [
+        "soft alarm replaced by self-only hard exit through flush",
+        "unknown bootout and contradictory positive decoder evidence refused"
+      ],
+      "original_mode_schema_before_after_replay_pass": true,
+      "pass": true,
+      "source_bytes_unchanged": true,
+      "synthetic_tests": 16
+    },
+    "publication": {
+      "C_protocol_pass": true,
+      "diff_check_pass": true,
+      "existing_swap_pair_tests": 129,
+      "full_errors": 0,
+      "full_failures": 43,
+      "full_skips": 13,
+      "full_suite_log_sha256": "4c8af9cf90d256e5969d30b55d3188df5b708302a96e68719d79229476f54cb6",
+      "full_suite_pass": false,
+      "full_tests": 950,
+      "native_metal_failed_methods": 11,
+      "retirement_synthetic_pass": true,
+      "retirement_synthetic_tests": 44,
+      "runtime_switch_audit_pass": true,
+      "shell_syntax_files": 38,
+      "shell_syntax_pass": true,
+      "source_bytes_unchanged_during_tests": true
+    }
+  }
+}
