@@ -1,9 +1,12 @@
 # Retained diagnostic artifact cleanup design — 25 October 2026
 
-Offline design only. No cleanup implementation, transport or device action is
-provided by this document. The current two-file control scratch and five-file
-delivery remain untouched. This is separate from the unchanged v7 ownership
-cleanup and does not make the failed control acceptable.
+The design below was frozen on 25 October. The
+[26 October offline implementation](evidence/ipados-1641-retained-artifact-20261026.md)
+now supplies a tested host archive and fixed-scope reference cleanup core.
+It supplies no native observation backend, hard worker deadline, transport or
+deployment. No device cleanup has been attempted; the last observed two-file
+scratch and five-file delivery are retained. This remains separate from unchanged
+v7 original-ownership cleanup and does not make the failed control acceptable.
 
 ## Authority and evidence
 

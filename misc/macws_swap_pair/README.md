@@ -211,3 +211,33 @@ source/QA/bundle migration. The [dated offline evidence](../../docs/evidence/ipa
 and [separate retained-artifact cleanup design](../../docs/ipados-1641-retained-artifact-cleanup-design.md)
 record what remains before another device action. Existing runtime switches
 and their inventory are unchanged; no native control or freeze fix is accepted.
+
+## Retained-artifact archive and cleanup reference — 2026-10-26
+
+`retained_archive.py` exclusively preserves a complete bounded wire capture,
+manifest/provenance and two files in a private host directory. All six files,
+the archive directory and parent are fsynced/read back. `verify_archive()`
+requires caller-frozen expected manifest, provenance, wire and both file hashes;
+rewriting a blob and receipt together cannot refresh those expectations.
+Only the direct successful creation return establishes completion of that
+process's fsync steps. A persisted true bit or later verification cannot prove
+past durability or native authenticity. Failures preserve partial artifacts.
+
+`retained_cleanup.py` provides read-only selection and an explicit one-use
+reference core for only the fixed two-file control scratch. It requires both
+content hashes from previously copied evidence, a matching successful archive
+receipt and a trusted caller supplying fresh copied boot/source/UI/thermal,
+original-generation ESRCH, both-services absence and no candidate/test workload
+checks. No real observation backend or transport is provided. Its only effects
+are two exact FD-relative unlinks and one exact empty-directory removal, with
+full identity/content/link checks, held path anchors and per-effect freshness.
+The result preserves bounded gate observations, failed stage, refusal and
+attempted/completed effects. Unknown/partial results never retry.
+
+Both defaults are inert. The 8-second cooperative budget and 1-second freshness
+checks are not hard I/O interruption, kernel recovery or protection against
+another root writer. No `OwnedFiles` authority is reconstructed; the old runtime,
+QA, bundle and delivery cleanup remain unchanged. 39 archive and 39 core tests
+use only self-owned host temporary files, including actual archive-to-core
+integration. These are not native acceptance. See the
+[dated scope, results and open live-adapter requirements](../../docs/evidence/ipados-1641-retained-artifact-20261026.md).

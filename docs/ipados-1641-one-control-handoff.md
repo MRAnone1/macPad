@@ -18,9 +18,12 @@ not replace original file-ownership tokens omitted from the controller report.
 
 The [offline ownership-capture primitive](evidence/ipados-1641-ownership-capture-20261025.md)
 is not integrated or deployed. The [retained-artifact cleanup design](ipados-1641-retained-artifact-cleanup-design.md)
-allows reviewing a distinct current selection after fresh complete capture,
+defines a distinct current selection after fresh complete capture,
 private durable archive and independent absence gates; it does not restore
-missing original tokens. No deletion implementation or new control is supplied.
+missing original tokens. The [26 October archive/reference core](evidence/ipados-1641-retained-artifact-20261026.md)
+passes host tests, but has no live native adapter, bounded worker/transport or
+deployment. Do not invoke it on the device from a fabricated freshness backend
+or archive JSON. No new control is authorized.
 
 ## Resolve these host prerequisites first
 
