@@ -8,6 +8,11 @@ deployment. No device cleanup has been attempted; the last observed two-file
 scratch and five-file delivery are retained. This remains separate from unchanged
 v7 original-ownership cleanup and does not make the failed control acceptable.
 
+The [27 October adapter preparation](evidence/ipados-1641-retained-observer-20261027.md)
+adds original-input validation and a read-only native wrapper/capture API.
+It remains untested on the device and has no reviewed hard worker/transport.
+No removal is authorized by its capture-only provenance or host tests.
+
 ## Authority and evidence
 
 The user's continuing diagnostic-cleanup authorization supplies the scope.

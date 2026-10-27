@@ -241,3 +241,28 @@ QA, bundle and delivery cleanup remain unchanged. 39 archive and 39 core tests
 use only self-owned host temporary files, including actual archive-to-core
 integration. These are not native acceptance. See the
 [dated scope, results and open live-adapter requirements](../../docs/evidence/ipados-1641-retained-artifact-20261026.md).
+
+## Read-only retained observer — 2026-10-27
+
+`retained_inputs.py` binds six original raw artifacts and the unchanged v7
+context plus full five-file/two-directory delivery validators. Historical
+retirement wire/generation/job/command data and complete old plist/log are
+checked offline. Current selection never inherits old scratch inode authority.
+Inputs, returned maps and canonical JSON are bounded and mutation-checked.
+
+`retained_observer.py` provides an explicit native read-only factory, state
+observations and two-copy retained-file capture. It strictly parses every
+process/trust row, copies native query blocks before refusal, validates original
+artifact tokens/hashes/signatures/trust, and holds/revalidates complete physical
+path chains. The intentional rootless target is exact; its freshly copied lexical
+spelling/inode stays pinned for the whole session. Gates retain their oldest
+observation time. Failed stages and bounded current copies remain in the report.
+
+Defaults are inert. 43 input and 38 observer tests pass, including real temporary
+host archive→Cleaner→Observer integration and disposable host pipe faults. No
+native query or device cleanup was executed. Cooperative budgets, one-block
+negative command overshoot, loaded-module trust and root-writer races remain
+explicit limits. There is no hard worker/transport yet; the historical retirement
+wire exceeds unchanged R3 stdin capacity after base64. Capture-only provenance
+cannot authorize final cleanup. See the
+[dated evidence and remaining integration requirements](../../docs/evidence/ipados-1641-retained-observer-20261027.md).

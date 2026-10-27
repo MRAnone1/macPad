@@ -53,6 +53,7 @@ retired the original stopped test job. Control scratch and delivered-file cleanu
 remain unresolved; do not repeat a control on that occupied scratch baseline.
 [Offline ownership-capture preparation](docs/evidence/ipados-1641-ownership-capture-20261025.md) adds tested evidence tooling; runtime integration and file cleanup remain pending.
 [26 October archive and cleanup preparation](docs/evidence/ipados-1641-retained-artifact-20261026.md) adds host-tested reference helpers; no device cleanup or live adapter is accepted.
+[27 October read-only adapter preparation](docs/evidence/ipados-1641-retained-observer-20261027.md) adds validated historical inputs and a host-tested native API; bounded live dispatch and device acceptance remain pending.
 
 | Device and system | Jailbreak | macOS userspace | Status |
 | --- | --- | --- | --- |

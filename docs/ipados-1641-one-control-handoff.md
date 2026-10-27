@@ -25,6 +25,12 @@ passes host tests, but has no live native adapter, bounded worker/transport or
 deployment. Do not invoke it on the device from a fabricated freshness backend
 or archive JSON. No new control is authorized.
 
+The [27 October read-only adapter](evidence/ipados-1641-retained-observer-20261027.md)
+now validates the original inputs and exposes an explicit native read-only API.
+It has only host acceptance so far. A reviewed hard worker, lossless bounded
+transport/frame and current device capture are still missing. Capture-only
+provenance cannot admit cleanup; no existing R3 limit may be silently expanded.
+
 ## Resolve these host prerequisites first
 
 Reviewed private capture, session-storage, normal-only and cleanup transports
