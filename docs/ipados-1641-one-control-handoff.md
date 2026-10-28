@@ -27,8 +27,10 @@ or archive JSON. No new control is authorized.
 
 The [27 October read-only adapter](evidence/ipados-1641-retained-observer-20261027.md)
 now validates the original inputs and exposes an explicit native read-only API.
-It has only host acceptance so far. A reviewed hard worker, lossless bounded
-transport/frame and current device capture are still missing. Capture-only
+It has only host acceptance so far. The
+[28 October lossless frame and self-deadline worker](evidence/ipados-1641-retained-worker-frame-20261028.md)
+now fit the unchanged stdin cap and pass host tests. A reviewed one-attempt host
+capturer, current inventory and native capture are still missing. Capture-only
 provenance cannot admit cleanup; no existing R3 limit may be silently expanded.
 
 ## Resolve these host prerequisites first

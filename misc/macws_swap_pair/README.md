@@ -262,7 +262,33 @@ Defaults are inert. 43 input and 38 observer tests pass, including real temporar
 host archive→Cleaner→Observer integration and disposable host pipe faults. No
 native query or device cleanup was executed. Cooperative budgets, one-block
 negative command overshoot, loaded-module trust and root-writer races remain
-explicit limits. There is no hard worker/transport yet; the historical retirement
-wire exceeds unchanged R3 stdin capacity after base64. Capture-only provenance
+explicit limits. At that checkpoint there was no hard worker/transport; the historical
+retirement wire exceeded unchanged R3 stdin capacity after base64. Capture-only provenance
 cannot authorize final cleanup. See the
 [dated evidence and remaining integration requirements](../../docs/evidence/ipados-1641-retained-observer-20261027.md).
+
+
+## Lossless frame and read-only worker — 2026-10-28
+
+`retained_frame.py` encodes exact caller-pinned bytes with a canonical bounded
+metadata table and a single bounded zlib stream. Foreign/missing entries,
+changed offsets/hashes, incomplete or concatenated streams and expansion bombs
+refuse. All six original historical artifacts remain complete. The frame cap
+is 128 KiB, metadata 8 KiB, each entry 512 KiB and all entries 2 MiB.
+
+`retained_worker.py.in` is a reviewed template requiring all six placeholders
+rendered once by a trusted caller; it is not an executable dispatch command.
+False capture mode is inert. True arms a 12-second self-only exit before decode
+and keeps it through serialization/write/flush. It rejects ambient package
+modules, checks every one of 13 entry hashes before helper execution and calls
+only the explicit read-only capture API. New optional embedded-source APIs avoid
+staging validators; the unchanged original validator still requires the three
+installed runtime sources. Pins do not attest arbitrary loaded Python objects.
+
+The actual offline payload is 190,950 bytes within unchanged 256 KiB stdin,
+with 419,088 original bytes round-tripped. 93 new host tests pass, including the
+unmodified 12-second self-exit. Oversized/unserializable captures produce an
+explicit negative omitted-report receipt; it is not a complete native witness.
+No transport, device capture or cleanup is provided. The alarm cannot promise
+kernel recovery or cleanup of every managed read child after abrupt exit.
+See the [dated evidence and next prerequisites](../../docs/evidence/ipados-1641-retained-worker-frame-20261028.md).

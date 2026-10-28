@@ -94,3 +94,9 @@ No stopped control is authorized by this design. The original freeze cause,
 three genuine stopped controls, full cleanup and device acceptance remain open.
 See the [last actual process recovery](evidence/ipados-1641-process-retirement-20261025.md)
 and [future witness design](ipados-1641-recovery-witness-design.md).
+
+
+The [28 October frame/worker preparation](evidence/ipados-1641-retained-worker-frame-20261028.md)
+adds lossless bounded inputs and a host-tested self-only deadline through stdout
+flush. It supplies no live transport, current device witness or cleanup grant.
+Original validators and scoped removal guards remain unchanged.

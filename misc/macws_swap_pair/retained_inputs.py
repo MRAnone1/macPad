@@ -31,6 +31,8 @@ INPUT_PINS = {
 CORE_SHA256 = "259d817eb942a251a07407751bce4785d0495cf252bd98aebdfc5176bebf0ee5"
 CLEANUP_SHA256 = "163a222759d985c1ada68366584a003b95578e877a60ec3a4f51437e62fb7e90"
 PLAN_SHA256 = "d287798e366823c1394b7c6e57f0902daf6881fd9c198f116a8400464177bd76"
+MAX_VALIDATOR_SOURCE = 128 * 1024
+MAX_VALIDATOR_SOURCES = 3 * MAX_VALIDATOR_SOURCE
 MAX_RAW = 512 * 1024
 NAMES = ("job.plist", "probe.log")
 FILE_LIMITS = {"job.plist": 65536, "probe.log": 262144}
@@ -175,9 +177,55 @@ def _load_module(source_directory, filename, expected_sha):
     return module
 
 
-def _delivery_checked(source_directory, delivery):
-    cleanup = _load_module(source_directory, "cleanup_payload.py", CLEANUP_SHA256)
-    raw_plan = _source_raw(source_directory, "reviewed_delivery_plan.json", PLAN_SHA256)
+def _validator_sources_checked(value):
+    """Freeze all three exact source bytes before any embedded source executes.
+
+    Only a plain dictionary of plain immutable bytes is admitted. This is not a
+    plugin interface: the source identities remain the existing fixed pins.
+    """
+    expected = {"process_retirement.py": CORE_SHA256,
+                "cleanup_payload.py": CLEANUP_SHA256,
+                "reviewed_delivery_plan.json": PLAN_SHA256}
+    need(type(value) is dict and len(value) == len(expected) and
+         all(type(key) is str for key in value) and set(value) == set(expected),
+         "exact_embedded_validator_source_set")
+    # Copy only the fixed keys. The caller's mutable container is not consulted
+    # after this snapshot; bytes subclasses and mutable buffers are rejected.
+    raw = {name: value[name] for name in expected}
+    need(all(type(item) is bytes and 0 < len(item) <= MAX_VALIDATOR_SOURCE
+             for item in raw.values()) and
+         sum(len(item) for item in raw.values()) <= MAX_VALIDATOR_SOURCES,
+         "bounded_immutable_embedded_validator_sources")
+    need({name: digest(item) for name, item in raw.items()} == expected,
+         "frozen_embedded_validation_sources")
+    return types.MappingProxyType(raw)
+
+
+def _load_embedded_module(filename, raw):
+    # Each instance owns a fresh name so dataclasses can resolve only this
+    # instance's globals. This relies on a trusted, single-process interpreter;
+    # it is not a sandbox against concurrent sys.modules or stdlib mutation.
+    module = types.ModuleType("_retained_inputs_embedded_pending")
+    name = "_retained_inputs_embedded_" + filename.replace(".", "_") + str(id(module))
+    need(name not in sys.modules, "fresh_embedded_validator_namespace")
+    module.__name__ = name
+    module.__file__ = "<retained-inputs-embedded/" + filename + ">"
+    sys.modules[name] = module
+    try:
+        exec(compile(raw, module.__file__, "exec"), module.__dict__)
+    except BaseException:
+        sys.modules.pop(name, None)
+        raise
+    return module
+
+
+def _delivery_checked(source_directory, delivery, validator_sources=None):
+    if validator_sources is None:
+        cleanup = _load_module(source_directory, "cleanup_payload.py", CLEANUP_SHA256)
+        raw_plan = _source_raw(source_directory, "reviewed_delivery_plan.json", PLAN_SHA256)
+    else:
+        cleanup = _load_embedded_module("cleanup_payload.py", validator_sources["cleanup_payload.py"])
+        raw_plan = validator_sources["reviewed_delivery_plan.json"]
     decode(raw_plan)
     try:
         plan = cleanup.validate_plan(raw_plan)
@@ -416,13 +464,19 @@ class Inputs:
 
 
 def build_inputs(config_raw, control_wire_raw, host_raw, delivery_raw, retirement_wire_raw,
-                 snapshot_raw, *, source_directory):
+                 snapshot_raw, *, source_directory, validator_sources=None):
     """Explicit offline validation; no backend, command, archive or device action.
 
     Only the effective operation is derived by the unchanged v7 validator. Base
     config/wire bytes and times are preserved. Old snapshot tokens are checked
     only for content consistency and are excluded from every returned context.
+    Optional validator_sources supplies the exact three pinned validator bytes
+    without staging files. All are frozen and verified before first execution.
+    source_directory still selects the installed, unchanged three runtime files
+    read and verified by the unchanged original validator.
     """
+    sources = (None if validator_sources is None else
+               _validator_sources_checked(validator_sources))
     raw = dict(zip(INPUT_PINS, (config_raw, control_wire_raw, host_raw, delivery_raw,
                               retirement_wire_raw, snapshot_raw)))
     need(all(type(value) is bytes and 0 < len(value) <= MAX_RAW for value in raw.values()),
@@ -430,8 +484,10 @@ def build_inputs(config_raw, control_wire_raw, host_raw, delivery_raw, retiremen
     need({name: digest(value) for name, value in raw.items()} == INPUT_PINS, "exact_historical_input_bytes")
     data = {name: decode(value) for name, value in raw.items()}
     _host_checked(data["host"], data["control_wire"], control_wire_raw, config_raw)
-    cleanup, raw_plan = _delivery_checked(source_directory, data["delivery"])
-    pr = _load_module(source_directory, "process_retirement.py", CORE_SHA256)
+    cleanup, raw_plan = _delivery_checked(source_directory, data["delivery"], sources)
+    pr = (_load_module(source_directory, "process_retirement.py", CORE_SHA256)
+          if sources is None else
+          _load_embedded_module("process_retirement.py", sources["process_retirement.py"]))
     try:
         original = pr.validate_original(data["config"], data["control_wire"], data["delivery"],
                                         source_directory=source_directory)

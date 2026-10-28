@@ -470,13 +470,32 @@ def capture_observation(observer,selection_reader=None):
     return report
 
 
-def native_observer(inputs):
-    """Explicit native construction after exact dependencies and lineage checks."""
-    for module in (cleanup,readonly):
-        name=Path(module.__file__).name
-        raw,_=nofollow_read(str(Path(module.__file__).resolve()),256*1024)
-        need(cleanup.digest(raw)==PINS[name],"observer dependency source pin")
-    inputs.intact()
+def native_observer(inputs,*,dependency_sources=None):
+    """Explicit native construction after exact dependencies and lineage checks.
+
+    Embedded bytes are for a reviewed fresh worker that loaded these exact
+    modules into an otherwise empty package namespace. They avoid staging new
+    files on the device. Neither byte pins nor on-disk hashes attest already
+    loaded Python objects; caller/process integrity remains a trusted premise.
+    """
+    if dependency_sources is None:
+        sources={}
+        for module in (cleanup,readonly):
+            name=Path(module.__file__).name
+            raw,_=nofollow_read(str(Path(module.__file__).resolve()),256*1024)
+            sources[name]=raw
+    else:
+        need(type(dependency_sources)is dict and all(type(key)is str for key in dependency_sources) and
+             set(dependency_sources)==set(PINS),
+             "exact embedded observer dependency names")
+        sources=dict(dependency_sources)
+    need(set(sources)==set(PINS),"exact observer dependency names")
+    # Validate the entire immutable byte snapshot before native construction.
+    for name,expected in PINS.items():
+        raw=sources[name]
+        need(type(raw)is bytes and 0<len(raw)<=256*1024 and cleanup.digest(raw)==expected,
+             "observer dependency source pin")
+    need(inputs.intact()is True,"intact historical inputs")
     return Observer(inputs,NativeReadOnlyBackend(inputs.original))
 
 

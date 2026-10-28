@@ -1,0 +1,213 @@
+"""Explicit one-shot read-only capture. Render all six placeholders once.
+
+The default only emits metadata. True captures no cleanup authorization, starts
+no existing workload and does not restore original scratch ownership.
+"""
+import base64
+import hashlib
+import json
+import os
+import signal
+import sys
+import types
+
+CODEC_B64 = __CODEC_B64__
+CODEC_SHA = __CODEC_SHA__
+FRAME_B64 = __FRAME_B64__
+FRAME_SHA = __FRAME_SHA__
+ENTRY_PINS = __ENTRY_PINS__
+CAPTURE = __CAPTURE__
+
+HARD_SECONDS = 12
+MAX_CODEC = 32 * 1024
+MAX_FRAME = 128 * 1024
+MAX_ENTRY = 512 * 1024
+MAX_ENTRIES = 2 * 1024 * 1024
+MAX_OUTPUT = 4 * 1024 * 1024
+PACKAGE = 'macws_swap_pair'
+CODEC_MODULE = '_macws_retained_frame_worker_v1'
+EVIDENCE = ('config', 'control_wire', 'host', 'delivery', 'retirement_wire', 'snapshot')
+SOURCES = ('process_retirement.py', 'cleanup_payload.py', 'reviewed_delivery_plan.json',
+           'retained_inputs.py', 'retained_cleanup.py', 'readonly_observer.py',
+           'retained_observer.py')
+EXPECTED_ENTRIES = frozenset(['evidence.' + name for name in EVIDENCE] +
+                             ['source.' + name for name in SOURCES])
+LOAD_ORDER = ('retained_cleanup', 'readonly_observer', 'retained_inputs', 'retained_observer')
+CONTROLLER_DIR = '/var/jb/usr/libexec/macws-swap-pair-controller-20261018'
+
+
+class WorkerRefused(ValueError):
+    pass
+
+
+def need(value, category):
+    if value is not True:
+        raise WorkerRefused(category)
+
+
+def sha(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+
+def pin(value):
+    return type(value) is str and len(value) == 64 and all(c in '0123456789abcdef' for c in value)
+
+
+def decode_literal(value, expected, limit):
+    need(type(value) is str and 0 < len(value) <= 4 * ((limit + 2) // 3), 'bounded_base64_literal')
+    need(pin(expected), 'lowercase_sha256_pin')
+    try:
+        raw = base64.b64decode(value, validate=True)
+    except (ValueError, TypeError):
+        raise WorkerRefused('invalid_base64_literal') from None
+    need(0 < len(raw) <= limit and base64.b64encode(raw).decode('ascii') == value,
+         'canonical_bounded_base64')
+    need(sha(raw) == expected, 'literal_sha256_mismatch')
+    return raw
+
+
+def deadline(signum, frame):
+    # This signal handler exits only this disposable worker. It never signals
+    # an existing process/job. Missing or partial output is unknown, not success.
+    os._exit(124)
+
+
+def load_source(package, name, raw):
+    qualified = PACKAGE + '.' + name
+    need(qualified not in sys.modules and not hasattr(package, name), 'module_namespace_conflict')
+    module = types.ModuleType(qualified)
+    module.__package__ = PACKAGE
+    module.__file__ = '<pinned-retained-worker/' + name + '.py>'
+    sys.modules[qualified] = module
+    setattr(package, name, module)
+    exec(compile(raw, module.__file__, 'exec'), module.__dict__)
+    return module
+
+
+def encode_output(value):
+    # No partial JSON is emitted. Oversized full capture becomes an explicit
+    # negative receipt without a full current native-wire witness.
+    chunks = []
+    length = 0
+    encoder = json.JSONEncoder(sort_keys=True, separators=(',', ':'), ensure_ascii=True,
+                               allow_nan=False)
+    for chunk in encoder.iterencode(value):
+        length += len(chunk)
+        if length + 1 > MAX_OUTPUT:
+            raise WorkerRefused('full_capture_output_limit')
+        chunks.append(chunk)
+    return ''.join(chunks) + '\n'
+
+
+out = {'schema': 'macws.retained-artifact.worker.private.v1',
+       'capture_requested': CAPTURE if type(CAPTURE) is bool else None,
+       'default_inert': CAPTURE is False, 'capture_completed': False,
+       'capture_only_not_cleanup_admission': True, 'cleanup_authorized': False,
+       'device_acceptance': False, 'freeze_fix': False,
+       'original_ownership_recovered': False,
+       'native_backend_construction_attempted': False,
+       'native_backend_constructed': False, 'helper_modules_executed': [],
+       'capture_report_private': None, 'capture_report_omitted': False,
+       'worker_error_category': None, 'worker_refusal_category': None,
+       'stage': 'mode', 'hard_seconds': HARD_SECONDS,
+       'output_limit_bytes': MAX_OUTPUT, 'output_limit_exceeded': False,
+       'codec_sha256': None, 'frame_sha256': None, 'entry_sha256': None}
+observer = None
+exit_code = 1
+timer_armed = False
+try:
+    need(type(CAPTURE) is bool, 'explicit_boolean_capture')
+    if CAPTURE is False:
+        # Payload and source placeholders are deliberately not inspected here.
+        out['stage'] = 'metadata_only'
+        exit_code = 0
+    else:
+        signal.signal(signal.SIGALRM, deadline)
+        signal.setitimer(signal.ITIMER_REAL, HARD_SECONDS)
+        timer_armed = True
+        out['stage'] = 'namespace'
+        need(not any(name == PACKAGE or name.startswith(PACKAGE + '.') or name == CODEC_MODULE
+                     for name in sys.modules), 'ambient_module_namespace_conflict')
+        out['stage'] = 'codec_and_frame'
+        codec_raw = decode_literal(CODEC_B64, CODEC_SHA, MAX_CODEC)
+        frame_raw = decode_literal(FRAME_B64, FRAME_SHA, MAX_FRAME)
+        out.update(codec_sha256=sha(codec_raw), frame_sha256=sha(frame_raw))
+        need(type(ENTRY_PINS) is dict and set(ENTRY_PINS) == EXPECTED_ENTRIES and
+             all(pin(value) for value in ENTRY_PINS.values()), 'exact_entry_pin_schema')
+        codec = types.ModuleType(CODEC_MODULE)
+        codec.__file__ = '<pinned-retained-frame-codec>'
+        sys.modules[CODEC_MODULE] = codec
+        exec(compile(codec_raw, codec.__file__, 'exec'), codec.__dict__)
+        out['stage'] = 'all_entries'
+        entries = codec.decode(frame_raw, dict(ENTRY_PINS))
+        need(type(entries) is dict and set(entries) == EXPECTED_ENTRIES,
+             'exact_decoded_entry_schema')
+        need(all(type(raw) is bytes and 0 < len(raw) <= MAX_ENTRY for raw in entries.values()) and
+             sum(len(raw) for raw in entries.values()) <= MAX_ENTRIES, 'bounded_decoded_entries')
+        need(all(sha(raw) == ENTRY_PINS[name] for name, raw in entries.items()),
+             'decoded_entry_sha256_mismatch')
+        out['entry_sha256'] = {name: sha(raw) for name, raw in entries.items()}
+        out['stage'] = 'helper_sources'
+        package = types.ModuleType(PACKAGE)
+        package.__path__ = []
+        package.__package__ = PACKAGE
+        package.__file__ = '<pinned-retained-worker-package>'
+        sys.modules[PACKAGE] = package
+        modules = {}
+        for name in LOAD_ORDER:
+            modules[name] = load_source(package, name, entries['source.' + name + '.py'])
+            out['helper_modules_executed'].append(name)
+        out['stage'] = 'historical_lineage'
+        validators = {name: entries['source.' + name] for name in SOURCES[:3]}
+        inputs = modules['retained_inputs'].build_inputs(
+            *(entries['evidence.' + name] for name in EVIDENCE),
+            source_directory=CONTROLLER_DIR, validator_sources=validators)
+        out['stage'] = 'native_factory'
+        dependencies = {name + '.py': entries['source.' + name + '.py']
+                        for name in LOAD_ORDER[:2]}
+        out['native_backend_construction_attempted'] = True
+        observer = modules['retained_observer'].native_observer(inputs, dependency_sources=dependencies)
+        out['native_backend_constructed'] = True
+        out['stage'] = 'capture'
+        capture = modules['retained_observer'].capture_observation(observer)
+        out['capture_report_private'] = capture
+        need(type(capture) is dict and type(capture.get('capture_completed')) is bool and
+             capture.get('capture_only_not_cleanup_admission') is True and
+             capture.get('cleanup_authorized') is False and capture.get('device_acceptance') is False,
+             'read_only_capture_result_schema')
+        out['capture_completed'] = capture['capture_completed']
+        out['stage'] = 'capture_complete' if capture['capture_completed'] else 'capture_refused'
+        exit_code = 0 if capture['capture_completed'] else 1
+except BaseException as error:
+    out['worker_error_category'] = type(error).__name__
+    out['worker_refusal_category'] = str(error) if type(error) is WorkerRefused else None
+    if observer is not None and out['capture_report_private'] is None:
+        try:
+            out['observer_partial_private'] = observer.report()
+        except BaseException as report_error:
+            out['observer_partial_error_category'] = type(report_error).__name__
+finally:
+    try:
+        try:
+            wire = encode_output(out)
+        except BaseException as output_error:
+            out = {'schema': 'macws.retained-artifact.worker.private.v1',
+                   'capture_requested': CAPTURE if type(CAPTURE) is bool else None,
+                   'capture_completed': False, 'capture_only_not_cleanup_admission': True,
+                   'cleanup_authorized': False, 'device_acceptance': False, 'freeze_fix': False,
+                   'capture_report_omitted': True, 'full_current_native_wire_witness': False,
+                   'output_limit_exceeded': type(output_error) is WorkerRefused and
+                                            str(output_error) == 'full_capture_output_limit',
+                   'worker_error_category': type(output_error).__name__,
+                   'worker_refusal_category': str(output_error) if type(output_error) is WorkerRefused else None,
+                   'stage': 'output_refused', 'codec_sha256': out.get('codec_sha256'),
+                   'frame_sha256': out.get('frame_sha256'), 'entry_sha256': out.get('entry_sha256')}
+            exit_code = 1
+            wire = encode_output(out)
+        sys.stdout.write(wire)
+        sys.stdout.flush()
+    finally:
+        # Keep the self-only hard timer armed through serialization/write/flush.
+        if timer_armed:
+            signal.setitimer(signal.ITIMER_REAL, 0)
+sys.exit(exit_code)
