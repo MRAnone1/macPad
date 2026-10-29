@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-29",
+  "fact": {
+    "accepted_stopped_controls": 0,
+    "cleanup_authorized": false,
+    "current_device_readiness_not_confirmed": true,
+    "device_acceptance": false,
+    "device_commands": 0,
+    "device_connections": 0,
+    "device_file_removals": 0,
+    "freeze_fix": false,
+    "native_device_queries": 0,
+    "native_evidence_authenticity_verified": false,
+    "new_stopped_controls": 0,
+    "process_retirement_repeated": false,
+    "required_stopped_controls": 3,
+    "runtime_binary_patch": false,
+    "worker_runtime_validators_QA_pipeline_unchanged": true
+  },
+  "gates": {
+    "C_protocol_pass_both": true,
+    "audit_counts": [
+      286,
+      85,
+      444
+    ],
+    "frozen_prior_source_files_unchanged": 43,
+    "runtime_audit_pass_both": true,
+    "shell_file_counts": [
+      38,
+      41
+    ],
+    "shellsyntax_pass_both": true
+  },
+  "limits": {
+    "existing_archive_wire_bytes": 2097152,
+    "hard_IO_or_kernel_recovery_guarantee": false,
+    "host_JSON_bytes": 262144,
+    "host_R3_timeout_seconds": 20,
+    "interpreter_JSON_depth": 24,
+    "interpreter_JSON_nodes": 100000,
+    "preserved_overflow_bytes": 1,
+    "stderr_bytes": 16384,
+    "stdin_bytes": 262144,
+    "stdout_bytes": 4194304,
+    "worker_self_alarm_seconds": 12
+  },
+  "preservation": {
+    "attempt_consumed_before_IO": true,
+    "automatic_retry": false,
+    "delete_or_overwrite_partial_capture": false,
+    "fixed_private_attempt_name": true,
+    "full_final_file_count": 8,
+    "intent_and_exact_stdin_before_dispatch": true,
+    "partial_known_streams_preserved_without_inventing_unknown_streams": true,
+    "persisted_receipt_proves_past_final_fsync": false,
+    "raw_transport_before_semantic_assessment": true,
+    "successful_direct_return_required": true,
+    "terminal_partial_route": true,
+    "transport_failure_proves_zero_remote_effects": false
+  },
+  "private_QA_sha256": "12ae47c9bd965d2f8761cf2c4ba18222a7f5d77850c0afaa4e072cfc35dbeabd",
+  "private_adapter_sha256": "b5b8536cdb5015e5a734e2e4b3e3d7b59883a14fd0514249d12c3b8021ead188",
+  "remaining": [
+    "current_device_state_confirmation",
+    "fresh_read_only_port_inventory",
+    "one_bounded_native_capture",
+    "complete_private_retained_archive",
+    "fresh_independent_cleanup_gates",
+    "scoped_cleanup_and_independent_verification",
+    "three_genuine_stopped_controls",
+    "runtime_witness_for_display_freeze_invariant"
+  ],
+  "review": {
+    "actual_host_dependency_byte_binding_gap_closed": true,
+    "all_four_existing_host_dependency_sources_checked_before_exec": true,
+    "all_seven_private_source_test_pins_match": true,
+    "final_blockers": 0,
+    "fresh_in_memory_package_without_lookup": true,
+    "keyword_only_journal_integration_gap_closed": true
+  },
+  "schema": "macws.retained-capturer.host-evidence.v1",
+  "scope": "offline_host_only",
+  "source_sha256": {
+    "capture_journal.py": "ed3fc04e8e09ee02962381b12dc1d1172ace8d842d7daf82ed72de208023470f",
+    "capture_result.py": "78efc0b92161bcdd317bb48871c0c0c6dd08322637959e1ba96dc5115810cfd4",
+    "retained_capturer.py": "310f603261452e731393f680b12f5312e9de822e65c7b4ba2f94c02def6d292f"
+  },
+  "tests": {
+    "actual_fresh_process_build_only_pass": true,
+    "core": 21,
+    "full_suites": [
+      {
+        "error_records": 0,
+        "exit": 1,
+        "failed_method_count": 11,
+        "failure_records": 43,
+        "log_sha256": "93ca565590d3af668e832895bdc28725f7c368fe6e682b51f43a0bae61598b7d",
+        "remaining_failures_only_native_metal_controls": true,
+        "repository": "publication",
+        "same_exact_failure_records_as_previous_suite": true,
+        "skips": 13,
+        "sources_unchanged_during_tests": true,
+        "suite_all_green": false,
+        "test_seconds": 76.222,
+        "tests_run": 1334
+      },
+      {
+        "error_records": 0,
+        "exit": 1,
+        "failed_method_count": 11,
+        "failure_records": 43,
+        "log_sha256": "537cf9fed5786d76164ca130c42d82ad845a1a848678ac846a1d5656943fb6bd",
+        "remaining_failures_only_native_metal_controls": true,
+        "repository": "companion",
+        "same_exact_failure_records_as_previous_suite": true,
+        "skips": 13,
+        "sources_unchanged_during_tests": true,
+        "suite_all_green": false,
+        "test_seconds": 69.753,
+        "tests_run": 1330
+      }
+    ],
+    "independent_Observer_code_synthetic_compatibility_pass": true,
+    "journal": 44,
+    "payload_bytes": 190950,
+    "payload_sha256": "acc67be3a81f297f5b400d897dfb376c4307d26b6e40875b13016ca455f89abb",
+    "private_adapter": 9,
+    "private_exit": 0,
+    "private_sources_unchanged": true,
+    "private_tests": 114,
+    "public_tests_added": 105,
+    "result": 40,
+    "synthetic_compatibility_is_native_evidence": false
+  },
+  "theory": {
+    "old_path_spelling_or_identity_timing_explanation_proven": false
+  }
+}

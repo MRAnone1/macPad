@@ -89,3 +89,10 @@ supporting its failing invariant before a runtime fix.
 See [the tools and frozen source bindings](../misc/macws_swap_pair/README.md),
 [the shared workflow rehearsal](evidence/ipados-1641-offline-workflow-20261023.md)
 and [the diagnostic delivery pipeline](diagnostic-probe-pipeline.md).
+
+
+The [29 October host capturer](evidence/ipados-1641-retained-capturer-20261029.md)
+now preserves exact raw transport bytes before assessment and consumes one
+reserved attempt without retry. It has host tests only. Current device-state
+confirmation, fresh read-only inventory and a native capture remain required;
+no old true bit or source-bound JSON grants cleanup or runtime admission.

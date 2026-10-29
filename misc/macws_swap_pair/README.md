@@ -292,3 +292,24 @@ explicit negative omitted-report receipt; it is not a complete native witness.
 No transport, device capture or cleanup is provided. The alarm cannot promise
 kernel recovery or cleanup of every managed read child after abrupt exit.
 See the [dated evidence and next prerequisites](../../docs/evidence/ipados-1641-retained-worker-frame-20261028.md).
+
+
+## One-attempt host preservation — 2026-10-29
+
+`capture_journal.py` creates one exclusive host journal, preserves stdin/intent
+before dispatch, and fsyncs/readbacks raw stdout/stderr and transport status
+before semantic assessment. Partial known streams are preserved without
+inventing missing bytes; all failures consume their phase, never retry/delete.
+`capture_result.assess()` validates complete source-bound worker/selection/gate
+and trace reports with bounded parsing. It returns digest summaries and what
+the worker reported, never independent native authenticity or cleanup authority.
+A 2–4-MiB report stays preserved but exceeds the unchanged 2-MiB archive cap.
+
+`retained_capturer.OneShotCapture` binds payload and original Inputs, invokes an
+explicit trusted transport callback at most once after durable dispatch intent,
+and journals raw bytes before calling the assessor. Defaults construct no
+endpoint, SSH process or native backend. The private fixed adapter still needs
+current device readiness and fresh read-only inventory before live use. No
+archive or Cleaner is called automatically. 105 public host tests pass;
+114 private tests include adapter boundaries. See the
+[dated evidence and remaining device steps](../../docs/evidence/ipados-1641-retained-capturer-20261029.md).

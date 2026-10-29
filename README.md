@@ -55,6 +55,7 @@ remain unresolved; do not repeat a control on that occupied scratch baseline.
 [26 October archive and cleanup preparation](docs/evidence/ipados-1641-retained-artifact-20261026.md) adds host-tested reference helpers; no device cleanup or live adapter is accepted.
 [27 October read-only adapter preparation](docs/evidence/ipados-1641-retained-observer-20261027.md) adds validated historical inputs and a host-tested native API; bounded live dispatch and device acceptance remain pending.
 [28 October frame and worker preparation](docs/evidence/ipados-1641-retained-worker-frame-20261028.md) adds a bounded lossless frame and host-tested self-deadline worker; host transport and current device capture remain pending.
+[29 October host capturer preparation](docs/evidence/ipados-1641-retained-capturer-20261029.md) adds durable one-attempt preservation and strict host assessment; current inventory, native capture and cleanup remain pending.
 
 | Device and system | Jailbreak | macOS userspace | Status |
 | --- | --- | --- | --- |

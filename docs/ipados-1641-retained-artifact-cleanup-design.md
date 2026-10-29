@@ -100,3 +100,9 @@ The [28 October frame/worker preparation](evidence/ipados-1641-retained-worker-f
 adds lossless bounded inputs and a host-tested self-only deadline through stdout
 flush. It supplies no live transport, current device witness or cleanup grant.
 Original validators and scoped removal guards remain unchanged.
+
+
+The [29 October capturer/assessor](evidence/ipados-1641-retained-capturer-20261029.md)
+adds host-only one-attempt raw preservation and strict reported-capture checks.
+It performs no automatic retained archive or removal. A positive size check
+cannot replace archive durability, fresh native cleanup gates or verification.
