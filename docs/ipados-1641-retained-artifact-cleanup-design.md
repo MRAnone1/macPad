@@ -106,3 +106,11 @@ The [29 October capturer/assessor](evidence/ipados-1641-retained-capturer-202610
 adds host-only one-attempt raw preservation and strict reported-capture checks.
 It performs no automatic retained archive or removal. A positive size check
 cannot replace archive durability, fresh native cleanup gates or verification.
+
+As of the [31 October current-boot witness](evidence/ipados-1641-current-boot-inventory-20261031.md),
+both scratch names are already absent in a different boot. No removal was
+performed by this workflow. The historical retained-scratch cleanup should not
+be executed or reinterpreted as today's authority. The five delivered files and
+two directories remain present: contents match but original ownership tokens
+differ in `dev`. The new read-only audit grants no cleanup authority. Keep the
+old receipt immutable and establish new installation/trust/session prerequisites.

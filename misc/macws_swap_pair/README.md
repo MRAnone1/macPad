@@ -313,3 +313,15 @@ current device readiness and fresh read-only inventory before live use. No
 archive or Cleaner is called automatically. 105 public host tests pass;
 114 private tests include adapter boundaries. See the
 [dated evidence and remaining device steps](../../docs/evidence/ipados-1641-retained-capturer-20261029.md).
+
+## Current-boot state — 2026-10-31
+
+A new read-only inventory confirms a boot different from the historical Inputs.
+Nine direct binary and eleven selected cache-header identities match; current UI
+is stable and both job/scratch names are absent. The probe, wrapper and hooks
+remain exact signed files but their hashes are absent from the reported current
+trust set. Historical retained capture/cleanup remains unadmitted; do not rewrite
+old config/times. All five delivered file contents match the original receipt,
+but their full tokens and the two created-directory tokens differ only in
+`dev`; a new boot-bound installation revalidation path is still needed. See the
+[dated facts and next prerequisites](../../docs/evidence/ipados-1641-current-boot-inventory-20261031.md).

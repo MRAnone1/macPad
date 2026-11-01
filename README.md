@@ -48,14 +48,18 @@ and recovery observer.
 ## Validated configurations
 
 The iPad13,6 / iPadOS 16.4.1 (20E252) port remains unverified.
-[25 October 2026 process recovery](docs/evidence/ipados-1641-process-retirement-20261025.md)
-retired the original stopped test job. Control scratch and delivered-file cleanup
-remain unresolved; do not repeat a control on that occupied scratch baseline.
-[Offline ownership-capture preparation](docs/evidence/ipados-1641-ownership-capture-20261025.md) adds tested evidence tooling; runtime integration and file cleanup remain pending.
-[26 October archive and cleanup preparation](docs/evidence/ipados-1641-retained-artifact-20261026.md) adds host-tested reference helpers; no device cleanup or live adapter is accepted.
-[27 October read-only adapter preparation](docs/evidence/ipados-1641-retained-observer-20261027.md) adds validated historical inputs and a host-tested native API; bounded live dispatch and device acceptance remain pending.
-[28 October frame and worker preparation](docs/evidence/ipados-1641-retained-worker-frame-20261028.md) adds a bounded lossless frame and host-tested self-deadline worker; host transport and current device capture remain pending.
-[29 October host capturer preparation](docs/evidence/ipados-1641-retained-capturer-20261029.md) adds durable one-attempt preservation and strict host assessment; current inventory, native capture and cleanup remain pending.
+[31 October inventory and delivery audit](docs/evidence/ipados-1641-current-boot-inventory-20261031.md)
+found unchanged file contents but a changed boot and file-device tokens. Both
+diagnostic jobs and scratch paths are absent; four artifact hashes are absent
+from the reported current trust set. The old session remains unadmitted, with
+no new control execution, freeze fix or device acceptance.
+
+[25 October process recovery](docs/evidence/ipados-1641-process-retirement-20261025.md)
+retired the original stopped job. Its scratch was retained then; the later
+absence has no established cause. Delivered files remain present, and their
+old receipt grants no current cleanup authority. The
+[control handoff](docs/ipados-1641-one-control-handoff.md) records the remaining
+installation, trust and fresh-session prerequisites before three stopped controls.
 
 | Device and system | Jailbreak | macOS userspace | Status |
 | --- | --- | --- | --- |

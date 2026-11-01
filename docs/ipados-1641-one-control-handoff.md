@@ -1,5 +1,13 @@
 # iPadOS 16.4.1: next single stopped control
 
+**31 October current state:** the [new read-only witness](evidence/ipados-1641-current-boot-inventory-20261031.md)
+has a different boot from the historical session. Both diagnostic scratch paths
+and jobs are absent; probe/dependencies remain exact but absent from the reported
+trust set. Do not run historical retained capture/cleanup or refresh its times.
+The five delivered contents match, but old file/directory tokens differ in
+`dev`. Establish versioned current-boot installation revalidation and exact
+trust prerequisites before creating a new session. The dated older steps below remain historical.
+
 Updated 2026-10-25: the original stopped process and exact service from the
 [failed 24 October control](evidence/ipados-1641-normal-control-20261024.md)
 have been retired through a separately reviewed process-only capability.
