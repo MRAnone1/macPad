@@ -1,0 +1,120 @@
+{
+  "actual_copied_input_check": {
+    "all_full_copied_hashes_match_original": true,
+    "changed_file_and_created_directory_stat9_fields": [
+      "dev"
+    ],
+    "completed": true,
+    "files": 5,
+    "original_audit_remains_negative": true,
+    "original_lineage_refusals": 9,
+    "parent_changed_compared_fields": [
+      "dev"
+    ],
+    "parent_compared_fields": [
+      "dev",
+      "ino",
+      "mode",
+      "uid",
+      "gid"
+    ],
+    "per_path_comparison_only": true,
+    "source_bytes": 174394
+  },
+  "authority": {
+    "cleanup_authorized": false,
+    "current_device_freshness_claimed": false,
+    "device_acceptance": false,
+    "evidence_authenticity_proven": false,
+    "execution_authorized": false,
+    "historical_volume_continuity_proven": false,
+    "installation_ownership_authorized": false,
+    "session_authorized": false,
+    "trust_authorized": false
+  },
+  "checker_schema": "macws.installation-revalidation.evidence.v1",
+  "date": "2026-11-01",
+  "device_observation_date": "2026-10-31",
+  "effects": {
+    "checker_network_calls": 0,
+    "freeze_fix": false,
+    "new_device_calls": 0,
+    "new_native_controls_accepted": 0,
+    "new_vnode_claim_created": false,
+    "old_receipt_changes": 0,
+    "required_stopped_controls": 3,
+    "v7_projector_or_runtime_changed": false
+  },
+  "expectation_sha256": "07e25cdb41c8157a6ef3947c4a5bf1984359e9c420a6c52379a435dccece7157",
+  "independent_current_binding_raw_sha256": "833d3d6bb849e632f66eba7f25751b66e85ac2c3d383e1bdd309f3654594265b",
+  "input_sha256": {
+    "audit": "41aceeea3488ebf33953a3569cb19d7a1f5cbb00a3076a7c069e8a1ac46c933b",
+    "delivery": "bd7d13afb89c48006737ccbab4c564e93fdb7304bb680241a979f350f20cc940",
+    "transport": "10d1aa9bd380a235a5dd658e13822911f2a2bfecee7cd47ebbcd3e86fb984703"
+  },
+  "limits": {
+    "audit_input_bytes": 524288,
+    "cross_path_volume_continuity_inferred": false,
+    "delivery_input_bytes": 65536,
+    "macOS_rootfs_build_recheck": false,
+    "native_clock_or_UI_recheck": false,
+    "native_signature_recheck": false,
+    "result_bytes": 524288,
+    "transport_input_bytes": 16384
+  },
+  "next_requirements": [
+    "coherently_version_execution_consumer_and_native_current_token_gates",
+    "separately_review_exact_four_artifact_trust_route",
+    "fresh_all_eleven_native_observer_checks",
+    "new_session_config_and_nonce",
+    "three_genuine_stopped_controls_before_bounded_active_pair"
+  ],
+  "port_status": "unverified",
+  "private_evidence_sha256": "9221434407a1713b2ce974231571685aa79a1946bdf31ffd908a922936bbd6df",
+  "schema": "macws.installation-revalidation.public-evidence.v1",
+  "source_sha256": {
+    "misc/macws_swap_pair/installation_revalidation.py": "ed9445b2adc1e666b3d95bbba3c1339ae304a661bc4e46caea4076fa644f49fe",
+    "misc/test_macws_installation_revalidation.py": "6d18df490a169ab0c39d83c830db49e329960f18857bd8b03db9f3c32c409d2b"
+  },
+  "validation": {
+    "changed_shell_files": 0,
+    "full_suite_skips_each": 13,
+    "full_suites": [
+      {
+        "error_records": 0,
+        "failure_records": 43,
+        "log_sha256": "cae6906f68d99b05bbe0163ccaff3308d7910b5117c54ad228fcb6f83ea9de6f",
+        "repository": "publication",
+        "same_exact_failure_records_as_20261029": true,
+        "sources_unchanged_during_tests": true,
+        "suite_pass": false,
+        "test_seconds": 68.973,
+        "tests_run": 1352
+      },
+      {
+        "error_records": 0,
+        "failure_records": 43,
+        "log_sha256": "4fa1205858ea3487ba64ebbbf08d17d0135c9a7ec18811e592395f03e8a7462f",
+        "repository": "companion",
+        "same_exact_failure_records_as_20261029": true,
+        "sources_unchanged_during_tests": true,
+        "suite_pass": false,
+        "test_seconds": 61.532,
+        "tests_run": 1348
+      }
+    ],
+    "independent_reviews": 2,
+    "native_binary_build_required": false,
+    "new_test_methods": 18,
+    "old_frozen_sources_unchanged": 49,
+    "protocol_each": "PASS",
+    "review_blockers": 0,
+    "runtime_switch_audit_each": {
+      "entries": 444,
+      "env_names": 286,
+      "flag_files": 85,
+      "pass": true
+    },
+    "sources_checked_before_after_full_suites": 51
+  }
+}

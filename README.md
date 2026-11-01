@@ -60,6 +60,9 @@ absence has no established cause. Delivered files remain present, and their
 old receipt grants no current cleanup authority. The
 [control handoff](docs/ipados-1641-one-control-handoff.md) records the remaining
 installation, trust and fresh-session prerequisites before three stopped controls.
+The [1 November offline checker](docs/evidence/ipados-1641-installation-revalidation-20261101.md)
+recomputes copied installation evidence while preserving separate old/current
+tokens; it does not authorize a new session.
 
 | Device and system | Jailbreak | macOS userspace | Status |
 | --- | --- | --- | --- |

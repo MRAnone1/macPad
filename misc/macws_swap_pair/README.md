@@ -325,3 +325,13 @@ old config/times. All five delivered file contents match the original receipt,
 but their full tokens and the two created-directory tokens differ only in
 `dev`; a new boot-bound installation revalidation path is still needed. See the
 [dated facts and next prerequisites](../../docs/evidence/ipados-1641-current-boot-inventory-20261031.md).
+
+## Offline installation evidence — 2026-11-01
+
+`installation_revalidation.py` checks explicitly supplied, externally pinned
+original-delivery/audit/transport bytes. It preserves old/current records and
+requires complete copied hashes, stable brackets and only the observed per-path
+`dev` differences. It supplies evidence only; no current freshness, ownership,
+trust, cleanup or session authority, and no v7 `new_vnode` receipt. The actual
+31 October copies and 18 invented host test methods pass this offline check.
+See the [dated result and execution boundary](../../docs/evidence/ipados-1641-installation-revalidation-20261101.md).

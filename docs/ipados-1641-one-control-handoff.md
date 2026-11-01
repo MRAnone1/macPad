@@ -8,6 +8,11 @@ The five delivered contents match, but old file/directory tokens differ in
 `dev`. Establish versioned current-boot installation revalidation and exact
 trust prerequisites before creating a new session. The dated older steps below remain historical.
 
+**1 November offline step:** the [installation evidence checker](evidence/ipados-1641-installation-revalidation-20261101.md)
+recomputes the saved delivery/audit comparison while preserving old/current
+tokens separately. It does not create execution prerequisites or alter v7.
+Current trust and a coherently versioned fresh-session transition remain open.
+
 Updated 2026-10-25: the original stopped process and exact service from the
 [failed 24 October control](evidence/ipados-1641-normal-control-20261024.md)
 have been retired through a separately reviewed process-only capability.
