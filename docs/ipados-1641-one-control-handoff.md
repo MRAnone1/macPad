@@ -1,5 +1,12 @@
 # iPadOS 16.4.1: next single stopped control
 
+**7 November offline update:** the [exact jbctl analysis and transition check](evidence/ipados-1641-jbctl-trust-transition-20261107.md)
+preserve four read-only witnesses from 1 November. Route selected: fresh scoped
+current-selection cleanup, unchanged exclusive v5 redelivery, exact trust
+restoration, fresh all-eleven observer, then unchanged v7 with a new nonce.
+Only the pure postcondition is implemented; cleanup, raw-journaled delivery and
+native trust actions remain open. The old receipt/guards stay unchanged.
+
 **31 October current state:** the [new read-only witness](evidence/ipados-1641-current-boot-inventory-20261031.md)
 has a different boot from the historical session. Both diagnostic scratch paths
 and jobs are absent; probe/dependencies remain exact but absent from the reported

@@ -1,0 +1,259 @@
+{
+  "RE_confirmed": {
+    "add_client_buffer_bytes": 20,
+    "add_requires_40_hex_characters": true,
+    "add_requires_real_uid_zero": true,
+    "add_returns_client_result": true,
+    "info_client_error_can_return_zero": true,
+    "zero_exit_proves_membership": false
+  },
+  "cache_headers_are_loaded_image_acceptance": false,
+  "cache_image_header_count_unchanged": 11,
+  "captures": {
+    "cache": {
+      "files": 8,
+      "manifest_does_not_independently_prove_final_fsync": true,
+      "manifest_readback_verified": true,
+      "quiet_exit": 0,
+      "receipt_sha256": "18ea0351f73253e2a9e16cacf4d8689df56f929fdce5c2c26ed04ade081181ac",
+      "wire_bytes": 35171,
+      "wire_sha256": "485cd9673773058c57296f58916bf6cc692c292db32dcb3242501df97c9bf16e"
+    },
+    "current-runtime": {
+      "files": 8,
+      "manifest_does_not_independently_prove_final_fsync": true,
+      "manifest_readback_verified": true,
+      "quiet_exit": 0,
+      "receipt_sha256": "bf60b50a873f04a272f2fe917ad4b78d748792b1eb7425a3f4a60a1e177e6c2e",
+      "wire_bytes": 327876,
+      "wire_sha256": "b326f5b65dd86894ee7277869619d95c210ccc89154dfbd297572979a39909bb"
+    },
+    "jbctl-copy": {
+      "files": 8,
+      "manifest_does_not_independently_prove_final_fsync": true,
+      "manifest_readback_verified": true,
+      "quiet_exit": 0,
+      "receipt_sha256": "4eb4ce5d6c99b69e734ffeb624677c8fd003b862011d328da77790adad05fc3a",
+      "wire_bytes": 232785,
+      "wire_sha256": "5f4cb6fc971f531576f60e7e6cb8d510344153e82443b8741ad72726c4e5760e"
+    },
+    "port": {
+      "files": 8,
+      "manifest_does_not_independently_prove_final_fsync": true,
+      "manifest_readback_verified": true,
+      "quiet_exit": 0,
+      "receipt_sha256": "7295c55f7a76a7fcbc0972f45e3d64d2b573bfc9d25083553a6c78133ff3e184",
+      "wire_bytes": 109328,
+      "wire_sha256": "9bba78fc6f824b16e0d3c51c5beb7e324d811907d311676e1a94bdcc5dd18902"
+    }
+  },
+  "copied_jbctl": {
+    "bytes": 173152,
+    "full_copy_and_tokens_verified": true,
+    "independent_macho_slices": [
+      {
+        "UUID": "c2466aa4-2f3e-374f-a78b-6c6d751999c5",
+        "architecture": "arm64",
+        "cpu_subtype": 0,
+        "filetype": 2
+      },
+      {
+        "UUID": "092eb768-2a8a-3272-99b8-f19f22b34492",
+        "architecture": "arm64e",
+        "cpu_subtype": 2147483650,
+        "filetype": 2
+      }
+    ],
+    "matches_current_port_inventory": true,
+    "sha256": "64701bf3968cc4f79fe39b7e581e4db0e3aefb10cefcaf24dfd1737a8c6e599c"
+  },
+  "current_device_freshness_claim": false,
+  "date": "2026-11-07",
+  "device_observation_date": "2026-11-01",
+  "direct_binary_identity_count_unchanged": 9,
+  "effects": {
+    "accepted_stopped_controls": 0,
+    "candidate_executions": 0,
+    "device_acceptance": false,
+    "device_file_removals": 0,
+    "device_file_writes": 0,
+    "device_queries_20261107": 0,
+    "freeze_fix": false,
+    "job_mutations": 0,
+    "new_stopped_controls": 0,
+    "original_receipt_modified": false,
+    "required_stopped_controls": 3,
+    "trust_add_commands": 0
+  },
+  "exact_binary_disassembly": {
+    "arm64": {
+      "listing_sha256": "bb826732183d21adf15dbaa0f82ea30d10b9d3beb6e840a2b21ba102d61ddaf8",
+      "unslid_VM_excerpt": [
+        "0000000100005158\tbl\t0x100005da0 ; symbol stub for: _jbclient_root_trustcache_info",
+        "000000010000516c\tldr\tw0, [x19, #0xac]",
+        "0000000100005170\tcbnz\tw0, 0x1000053d0",
+        "00000001000053d0\tmov\tw8, #0x0",
+        "00000001000053d4\tstur\tw8, [x29, #-0x44]",
+        "0000000100005458\tsubs\tx8, x0, #0x28",
+        "0000000100005484\tbl\t0x100005d04 ; symbol stub for: _convert_hex_string_to_data",
+        "00000001000054a8\tmov\tw8, #0x14",
+        "00000001000054ac\tmov\tx1, x8",
+        "00000001000054b4\tbl\t0x100005d88 ; symbol stub for: _jbclient_root_trustcache_add_cdhash",
+        "00000001000054b8\tstur\tw0, [x29, #-0x44]"
+      ]
+    },
+    "arm64e": {
+      "listing_sha256": "f514fe1b91f6a2ed2b422f908a83903baa60b6d59da12cfdf6b2e0f30a3d6bb8",
+      "unslid_VM_excerpt": [
+        "00000001000051dc\tbl\t0x100005e98 ; symbol stub for: _jbclient_root_trustcache_info",
+        "00000001000051f0\tldr\tw0, [x19, #0xac]",
+        "00000001000051f4\tcbnz\tw0, 0x10000545c",
+        "000000010000545c\tmov\tw8, #0x0",
+        "0000000100005460\tstur\tw8, [x29, #-0x44]",
+        "00000001000054e4\tsubs\tx8, x0, #0x28",
+        "0000000100005510\tbl\t0x100005dc8 ; symbol stub for: _convert_hex_string_to_data",
+        "0000000100005534\tmov\tw8, #0x14",
+        "0000000100005538\tmov\tx1, x8",
+        "0000000100005540\tbl\t0x100005e78 ; symbol stub for: _jbclient_root_trustcache_add_cdhash",
+        "0000000100005544\tstur\tw0, [x29, #-0x44]"
+      ]
+    }
+  },
+  "free_space": {
+    "available_var_GiB": 85.08539199829102,
+    "available_var_bytes": 91359744000,
+    "delta_vs_oct31_bytes": -119402496,
+    "rootfs_available_matches_var": true
+  },
+  "implementation": {
+    "cleanup_authorized": false,
+    "empty_info_is_not_empty_set": true,
+    "execution_authorized": false,
+    "fixed_target_roles": [
+      "candidate",
+      "wrapper",
+      "hook_arm64",
+      "hook_arm64e"
+    ],
+    "module": "misc/macws_swap_pair/trust_transition.py",
+    "module_sha256": "73748b7d7eabf3d6ec0fc999544a23d9bb7e704501afa2ff20726b3bcb3b80dd",
+    "native_adapter_or_mutator_implemented": false,
+    "native_authenticity_verified": false,
+    "raw_preservation_is_caller_precondition": true,
+    "readonly_parser_sha256_unchanged": "717de31eb1d7a05ed363eca7c3dce0dbd7f4ff500bb8cb65377bd340babf1c7a",
+    "requires_exact_before_union_one_target": true,
+    "retry_authorized": false,
+    "rollback_authorized": false,
+    "test": "misc/test_macws_trust_transition.py",
+    "test_sha256": "ca6e14fbcc817b1a9ca6447954ecaa2948ce0609825ca2005756f9957121e3c4"
+  },
+  "port_status": "unverified",
+  "profile": {
+    "build": "20E252",
+    "hardware": "iPad13,6",
+    "iPadOS": "16.4.1",
+    "jailbreak": "3.0.10",
+    "kernel": "22.4.0",
+    "macOS_build": "22F66",
+    "macOS_rootfs": "13.4"
+  },
+  "runtime": {
+    "checks_total": 11,
+    "checks_true": 9,
+    "commands": 8,
+    "elapsed_seconds": 0.27779816599650076,
+    "exec_denial_proven": false,
+    "four_artifact_file_observations_equal_oct31": true,
+    "four_known_cdhashes_absent_from_reported_set": true,
+    "job_and_scratch_observations_equal_oct31": true,
+    "refusals": [
+      "candidate_present_identity_trusted",
+      "frozen_dependencies_present_identity_trusted"
+    ]
+  },
+  "same_boot_as_oct31": true,
+  "schema": "macws.jbctl-trust-transition.public-evidence.v1",
+  "selected_route": {
+    "envelope_bytes": 284358,
+    "envelope_sha256": "dfffb7d28ea6bc7a3aec52754be03e44c7c8f7968c5b9f05e2b44d671f4cb3b0",
+    "exclusive_receiver_preserves_truthful_new_vnode": true,
+    "existing_pipeline_stdin_limit": 1048576,
+    "fresh_cleanup_native_trust_and_delivery_journal_still_unimplemented": true,
+    "frozen_bundle_files": 41,
+    "old_receipt_remains_immutable": true,
+    "original_receipt_sha_or_date_not_pinned_by_projector": true,
+    "r3_stdin_limit": 262144,
+    "sequence": [
+      "separately_scoped_fresh_current_selection_cleanup",
+      "unchanged_exclusive_v5_delivery",
+      "exact_four_artifact_trust_route",
+      "fresh_all_eleven_observer",
+      "unchanged_v7_projector_with_new_nonce_session"
+    ]
+  },
+  "trust": {
+    "added_vs_oct31_port": 3,
+    "change_cause_established": false,
+    "nov1_port": {
+      "groups": [
+        145
+      ],
+      "rows": 145,
+      "unique_hashes": 145
+    },
+    "nov1_runtime_unique": 145,
+    "oct31_port": {
+      "groups": [
+        142
+      ],
+      "rows": 142,
+      "unique_hashes": 142
+    },
+    "port_runtime_sets_equal": true,
+    "removed_vs_oct31_port": 0,
+    "runtime_set_equals_oct31_runtime": true
+  },
+  "ui_generations_equal_to_oct31_and_stable": true,
+  "validation": {
+    "C_protocol_build_and_run_each": "PASS",
+    "changed_shell_files": 0,
+    "full_suite_skips_each": 13,
+    "full_suites": [
+      {
+        "error_records": 0,
+        "failure_records": 43,
+        "log_sha256": "d627b578d83c15eefbab5bb829e6f8966f5da3e2980d96a3330697f4cd40475a",
+        "repository": "publication",
+        "same_exact_failure_records_as_20261101": true,
+        "sources_unchanged_during_tests": true,
+        "suite_pass": false,
+        "test_seconds": 75.008,
+        "tests_run": 1363
+      },
+      {
+        "error_records": 0,
+        "failure_records": 43,
+        "log_sha256": "a531609e83017e12c63742ce5993072760a88d0057d1ea2735f87c6519ef7d48",
+        "repository": "companion",
+        "same_exact_failure_records_as_20261101": true,
+        "sources_unchanged_during_tests": true,
+        "suite_pass": false,
+        "test_seconds": 66.259,
+        "tests_run": 1359
+      }
+    ],
+    "independent_raw_evidence_review_blockers": 0,
+    "independent_source_review_blockers": 0,
+    "native_binary_build_required": false,
+    "new_public_test_methods": 11,
+    "old_frozen_sources_unchanged": 51,
+    "private_copy_worker_test_methods": 8,
+    "runtime_switch_audits_each": {
+      "entries": 444,
+      "env_names": 286,
+      "flag_files": 85,
+      "pass": true
+    },
+    "tested_source_count": 53
+  }
+}

@@ -335,3 +335,11 @@ requires complete copied hashes, stable brackets and only the observed per-path
 trust, cleanup or session authority, and no v7 `new_vnode` receipt. The actual
 31 October copies and 18 invented host test methods pass this offline check.
 See the [dated result and execution boundary](../../docs/evidence/ipados-1641-installation-revalidation-20261101.md).
+
+## Exact trust-set transition — 2026-11-07
+
+`trust_transition.assess()` checks copied before/add/after results for one fixed
+diagnostic hash. It requires complete queries and exactly the expected set
+addition; `jbctl info` exit zero alone is insufficient on the copied binary.
+It executes no command and grants no native freshness, session, cleanup or
+retry authority. See the [exact-binary evidence and fresh-delivery route](../../docs/evidence/ipados-1641-jbctl-trust-transition-20261107.md).

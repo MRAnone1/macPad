@@ -63,6 +63,9 @@ installation, trust and fresh-session prerequisites before three stopped control
 The [1 November offline checker](docs/evidence/ipados-1641-installation-revalidation-20261101.md)
 recomputes copied installation evidence while preserving separate old/current
 tokens; it does not authorize a new session.
+The [7 November trust check](docs/evidence/ipados-1641-jbctl-trust-transition-20261107.md)
+requires an exact reported hash-set addition and documents the route through
+fresh exclusive delivery. Native restoration and device acceptance remain pending.
 
 | Device and system | Jailbreak | macOS userspace | Status |
 | --- | --- | --- | --- |
