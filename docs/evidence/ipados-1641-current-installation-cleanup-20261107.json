@@ -11,6 +11,16 @@
     "recursive_removal": false,
     "rollback": false
   },
+  "clock_profile_type_witness": {
+    "current_actual_clock_profile_strict_types_before_selection": true,
+    "device_calls": 0,
+    "dict_equality_previously_accepted_invalid_profile": true,
+    "expected_profile_numer_type": "int",
+    "host_only_with_invented_clock_and_health": true,
+    "private_witness_sha256": "b65d0d12a741259237aee8f55c340dd88ce622a47f1207017069c656342a4258",
+    "source_sha256_before_correction": "4603f11661ae5a95dca13f50d8821d305c38d13c93872f9682b90cae24df329e",
+    "wrong_profile_numer_type": "bool"
+  },
   "date": "2026-11-07",
   "effects": {
     "accepted_stopped_controls": 0,
@@ -32,13 +42,13 @@
     "copied_files": 5,
     "copied_source_bytes": 174394,
     "file_read_bytes": 1010934,
-    "host_elapsed_seconds": 0.018389208998996764,
+    "host_elapsed_seconds": 0.01959720799641218,
     "host_owner_override_for_fixture": true,
     "host_scoped_cleanup_verified": true,
     "original_audit_sha256": "41aceeea3488ebf33953a3569cb19d7a1f5cbb00a3076a7c069e8a1ac46c933b",
     "original_delivery_sha256": "bd7d13afb89c48006737ccbab4c564e93fdb7304bb680241a979f350f20cc940",
     "production_content_hash_table_unchanged": true,
-    "result_private_sha256": "d8ea25d3d9c8ce45a8c663f3341298f59011f9ce2496a144a92066bddd72e927",
+    "result_private_sha256": "84a3dab1ce52c258d6fccac8f67c951b269810c292516720f6b64b9a4d4eb2a4",
     "synthetic_health_and_clock": true
   },
   "host_namespace_witness": {
@@ -94,8 +104,8 @@
   "port_status": "unverified",
   "schema": "macws.current-installation-cleanup.public-evidence.v1",
   "source_sha256": {
-    "misc/macws_swap_pair/current_installation_cleanup.py": "4603f11661ae5a95dca13f50d8821d305c38d13c93872f9682b90cae24df329e",
-    "misc/test_macws_current_installation_cleanup.py": "4bc560551bf33fd2ed86643b0b0e397100e0a2680a6ba56c351461905de7b9f1"
+    "misc/macws_swap_pair/current_installation_cleanup.py": "c4a84fc1ad3e69fdd219a8b81a4f355552c71f5465a993a6460cc9db16ec51bc",
+    "misc/test_macws_current_installation_cleanup.py": "4c1d03dbd711ca87a89420b497e45e90172e0643afaf77e982500b15f468ade1"
   },
   "trusted_dependency_sha256": {
     "physical_directory": "d283e5ceaa297a5860e124a542e8e0cfc43bf22f7aac5c21b3da434c8bbecf58",
@@ -112,27 +122,30 @@
       {
         "error_records": 0,
         "failure_records": 43,
-        "log_sha256": "bbaf94ddb8f50262a9bab86c7ccb4f8566e5a73cbce5646c837c0cbbcb35fc4c",
+        "log_sha256": "bfe499b826783084afc6dc05f97b7e7e4062ab6333598c5e31d41ee9434c760d",
         "repository": "publication",
         "same_exact_failure_records_as_trust_transition_20261107": true,
         "sources_unchanged_during_tests": true,
         "suite_pass": false,
-        "test_seconds": 71.969,
-        "tests_run": 1392
+        "test_seconds": 75.678,
+        "tests_run": 1393
       },
       {
         "error_records": 0,
         "failure_records": 43,
-        "log_sha256": "040698157d0f7e077576e31fa0d8197a39adc928efe7941d7498b5293a08de9d",
+        "log_sha256": "8783d1585c9d38638266229f7bc6f4adce388677af4e1627c5eb494e20852f3a",
         "repository": "companion",
         "same_exact_failure_records_as_trust_transition_20261107": true,
         "sources_unchanged_during_tests": true,
         "suite_pass": false,
-        "test_seconds": 67.652,
-        "tests_run": 1388
+        "test_seconds": 64.865,
+        "tests_run": 1389
       }
     ],
-    "host_test_methods": 29,
+    "host_test_methods": 30,
+    "independent_host_review_blockers": 0,
+    "independent_host_review_sha256": "4db414f9fea8bc11b7be62ecba18769ffabf230b4c16bf21fda91277bcdd7d19",
+    "independent_host_source_review_complete": true,
     "native_architecture_build_required": false,
     "native_independent_qualification_complete": false,
     "old_frozen_source_count": 53,

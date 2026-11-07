@@ -155,6 +155,10 @@ class CleanupTests(unittest.TestCase):
                 else: report['observed_monotonic'] -= 2
             self.gate.hook = hook
             with self.subTest(change=change): self.assert_no_effect(self.run_action())
+    def test_actual_clock_profile_bool_alias_refuses_before_filesystem(self):
+        self.clock.profile = dict(self.clock.profile, numer=True)
+        result = self.run_action(); self.assert_no_effect(result)
+        self.assertEqual(self.fs.events, [])
     def test_last_file_bad_hash_keeps_all_seven_objects(self):
         path = next(p for p in self.fs.targets.values() if 'controller' in p.name) / 'offline-QA.canonical.private.json'
         path.write_bytes(b'offending bytes'); path.chmod(0o600)

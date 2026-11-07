@@ -82,7 +82,7 @@ No result claims atomic namespace ownership or recovery of historical ownership.
 
 ## Validation
 
-Twenty-nine host test methods pass. They exercise real held-FD operations,
+Thirty host test methods pass. They exercise real held-FD operations,
 all-seven-before-first-effect ordering, changed current devices/inodes,
 foreign/missing children, linked-file and directory substitution, symlinks and
 hardlinks, wrong modes/typed owners, stale/bad health gates, changed rootless
@@ -90,6 +90,9 @@ anchors, immutable/partial copied data, archive callback refusal, effects follow
 by exceptions, failed rmdir, reappearance, final close failures and deadline
 expiry. Invented fixtures patch content hashes/ownership only within test code;
 there is no production synthetic bypass.
+An independent source/FD-contract review and independent run of all thirty
+tests found no blocker for the offline dependency-injected core. Native
+qualification remains a separate step.
 
 A separate host fixture used the actual immutable delivery receipt and all five
 archived contents, **174,394 bytes**, with the production content-hash table
@@ -98,7 +101,14 @@ unlinks/two rmdirs in owned temporary directories. Health/clock were simulated
 and ownership was mapped to the host fixture; it is not device acceptance or
 current native freshness. Private payloads, tokens and copied bytes stay private.
 
-Both full suites ran: **1,392 / 1,388 tests**, exactly the same 43 known native
+A further host-only witness showed Python dictionary equality accepting a
+boolean `True` where the actual clock profile required integer `1`. The core
+now validates the actual clock object's profile types before comparison, as it
+already does for supplied gate metadata. The additional regression refuses
+this malformed profile before opening any selected filesystem path. The old
+misconfiguration witness remains private; it is not a device-clock failure.
+
+Both full suites ran: **1,393 / 1,389 tests**, exactly the same 43 known native
 Metal failure records as the earlier 7 November baseline, zero Errors and 13
 Skips each. The suites are not fully green. All 53 prior frozen source/test pins
 match; all 55 old/new pins remained unchanged during these runs. Both runtime

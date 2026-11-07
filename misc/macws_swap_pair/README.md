@@ -350,6 +350,6 @@ retry authority. See the [exact-binary evidence and fresh-delivery route](../../
 files/two directories. It acquires current tokens, checks all seven objects
 before deletion and rechecks held identities/content/names around each effect.
 Default calls are inert; trusted archive/gate/clock/FS callbacks are required.
-29 host methods and an owned-temp fixture with actual archived bytes pass.
+30 host methods and an owned-temp fixture with actual archived bytes pass.
 Native integration, bounded dispatch and device qualification remain pending.
 See the [host evidence, namespace limit and remaining steps](../../docs/evidence/ipados-1641-current-installation-cleanup-20261107.md).

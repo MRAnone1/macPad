@@ -207,7 +207,8 @@ class CurrentInstallationCleanup:
                  value['no_candidate_or_test_workloads'] is True, 'health_or_exclusivity_refusal')
             provenance.exact_keys(value['jobs_absent'], LABELS); provenance.exact_keys(value['scratch_absent'], SCRATCH)
             need(all(v is True for group in ('jobs_absent', 'scratch_absent') for v in value[group].values()), 'job_or_scratch_present')
-            need(clock.profile == self.context['clock_info'], 'shared_clock_changed')
+            current_clock = checked_context(dict(self.context, clock_info=copied(clock.profile)))
+            need(current_clock == self.context, 'shared_clock_changed')
             return observed
         def anchor():
             value = copied(fs.anchor()); record = value['stat']
