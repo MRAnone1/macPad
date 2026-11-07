@@ -1,0 +1,146 @@
+{
+  "boundary": {
+    "atomic_conditional_inode_deletion_claimed": false,
+    "automatic_retry": false,
+    "callbacks_require_trusted_caller_integration": true,
+    "check_unlink_race_test_stops_subsequent_effects_but_does_not_undo_prior_syscall": true,
+    "consistent_JSON_authenticates_native_evidence": false,
+    "durable_host_attempt_slot_required": true,
+    "privileged_concurrent_writers_must_be_excluded": true,
+    "process_death_without_report_never_proves_zero_effects": true,
+    "recursive_removal": false,
+    "rollback": false
+  },
+  "date": "2026-11-07",
+  "effects": {
+    "accepted_stopped_controls": 0,
+    "candidate_executions": 0,
+    "device_acceptance": false,
+    "device_file_removals": 0,
+    "device_installations": 0,
+    "device_queries": 0,
+    "device_trust_mutations": 0,
+    "freeze_fix": false,
+    "new_stopped_controls": 0,
+    "required_stopped_controls": 3
+  },
+  "host_actual_contents_case": {
+    "archive_direct_return_observed": true,
+    "archive_sha256": "334b492d658959a556a04ec2436a308617aa2bddc95457d40baae27d9125b2f4",
+    "completed_directory_removals": 2,
+    "completed_file_unlinks": 5,
+    "copied_files": 5,
+    "copied_source_bytes": 174394,
+    "file_read_bytes": 1010934,
+    "host_elapsed_seconds": 0.018389208998996764,
+    "host_owner_override_for_fixture": true,
+    "host_scoped_cleanup_verified": true,
+    "original_audit_sha256": "41aceeea3488ebf33953a3569cb19d7a1f5cbb00a3076a7c069e8a1ac46c933b",
+    "original_delivery_sha256": "bd7d13afb89c48006737ccbab4c564e93fdb7304bb680241a979f350f20cc940",
+    "production_content_hash_table_unchanged": true,
+    "result_private_sha256": "d8ea25d3d9c8ce45a8c663f3341298f59011f9ce2496a144a92066bddd72e927",
+    "synthetic_health_and_clock": true
+  },
+  "host_namespace_witness": {
+    "actual_host_fs_calls": true,
+    "current_endpoint": "held_parent_ENOENT_and_exact_remaining_siblings_with_held_directory_identity",
+    "device_calls": 0,
+    "directory_entry_absent": true,
+    "held_directory_nlink_after_rmdir": 2,
+    "held_directory_nlink_before": 2,
+    "private_witness_sha256": "094d26e6415a54c054429d83be91c854f32509a95c29913ff57d9668bb2fff0e",
+    "rejected_assumption": "held_removed_directory_requires_nlink_zero",
+    "source_sha256_before_correction": "15df6c95ced15cded10fd3f51efad2084e7aee81e329a40952157cae4399c286",
+    "synthetic_gate_and_paths": true
+  },
+  "implementation": {
+    "all_seven_prevalidated_before_mutation": true,
+    "archive_callback_direct_return_required": true,
+    "default_inert": true,
+    "explicit_action_flag_required": true,
+    "fixed_directories": 2,
+    "fixed_files": 5,
+    "historical_tokens_rewritten_or_recovered": false,
+    "maximum_gates": 9,
+    "maximum_rmdir_calls": 2,
+    "maximum_unlink_calls": 5,
+    "native_gate_clock_archive_factory_provided": false,
+    "new_current_tokens_acquired_in_action": true,
+    "one_use_consumed_before_callbacks": true,
+    "serialized_archive_true_bit_is_authority": false,
+    "worker_or_transport_provided": false
+  },
+  "limits": {
+    "aggregate_file_read_bytes": 4194304,
+    "archive_bytes": 1048576,
+    "cooperative_action_seconds_after_archive_verification": 8,
+    "encoded_name_list_bytes_each": 32768,
+    "file_bytes_each": 131072,
+    "gate_bytes_each": 16384,
+    "gate_max_age_seconds": 1,
+    "hard_alarm_through_serialization_provided": false,
+    "kernel_recovery_guaranteed": false,
+    "names_each": 4096
+  },
+  "next_requirements": [
+    "source_pinned_native_gate_clock_and_archive_integration",
+    "bounded_worker_and_durable_one_attempt_transport",
+    "fresh_device_inventory_and_acceptance",
+    "unchanged_exclusive_v5_redelivery",
+    "exact_four_artifact_trust_restoration",
+    "fresh_all_eleven_observer_new_nonce_v7_session",
+    "three_genuine_stopped_controls"
+  ],
+  "port_status": "unverified",
+  "schema": "macws.current-installation-cleanup.public-evidence.v1",
+  "source_sha256": {
+    "misc/macws_swap_pair/current_installation_cleanup.py": "4603f11661ae5a95dca13f50d8821d305c38d13c93872f9682b90cae24df329e",
+    "misc/test_macws_current_installation_cleanup.py": "4bc560551bf33fd2ed86643b0b0e397100e0a2680a6ba56c351461905de7b9f1"
+  },
+  "trusted_dependency_sha256": {
+    "physical_directory": "d283e5ceaa297a5860e124a542e8e0cfc43bf22f7aac5c21b3da434c8bbecf58",
+    "provenance": "ed9445b2adc1e666b3d95bbba3c1339ae304a661bc4e46caea4076fa644f49fe",
+    "stat_record": "da67d74855748fc60326a44073f51f9eb35186b5a4ed2fc2f2bbb55dc4d750c2"
+  },
+  "validation": {
+    "C_protocol_build_run_each": "PASS",
+    "actual_contents_host_fixture": "PASS",
+    "all_tested_source_count": 55,
+    "changed_shell_files": 0,
+    "full_suite_skips_each": 13,
+    "full_suites": [
+      {
+        "error_records": 0,
+        "failure_records": 43,
+        "log_sha256": "bbaf94ddb8f50262a9bab86c7ccb4f8566e5a73cbce5646c837c0cbbcb35fc4c",
+        "repository": "publication",
+        "same_exact_failure_records_as_trust_transition_20261107": true,
+        "sources_unchanged_during_tests": true,
+        "suite_pass": false,
+        "test_seconds": 71.969,
+        "tests_run": 1392
+      },
+      {
+        "error_records": 0,
+        "failure_records": 43,
+        "log_sha256": "040698157d0f7e077576e31fa0d8197a39adc928efe7941d7498b5293a08de9d",
+        "repository": "companion",
+        "same_exact_failure_records_as_trust_transition_20261107": true,
+        "sources_unchanged_during_tests": true,
+        "suite_pass": false,
+        "test_seconds": 67.652,
+        "tests_run": 1388
+      }
+    ],
+    "host_test_methods": 29,
+    "native_architecture_build_required": false,
+    "native_independent_qualification_complete": false,
+    "old_frozen_source_count": 53,
+    "runtime_switch_audits_each": {
+      "entries": 444,
+      "env_names": 286,
+      "flag_files": 85,
+      "pass": true
+    }
+  }
+}

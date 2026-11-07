@@ -343,3 +343,13 @@ diagnostic hash. It requires complete queries and exactly the expected set
 addition; `jbctl info` exit zero alone is insufficient on the copied binary.
 It executes no command and grants no native freshness, session, cleanup or
 retry authority. See the [exact-binary evidence and fresh-delivery route](../../docs/evidence/ipados-1641-jbctl-trust-transition-20261107.md).
+
+## Current installation cleanup core — 2026-11-07
+
+`CurrentInstallationCleanup` is an explicit one-use action for the five fixed
+files/two directories. It acquires current tokens, checks all seven objects
+before deletion and rechecks held identities/content/names around each effect.
+Default calls are inert; trusted archive/gate/clock/FS callbacks are required.
+29 host methods and an owned-temp fixture with actual archived bytes pass.
+Native integration, bounded dispatch and device qualification remain pending.
+See the [host evidence, namespace limit and remaining steps](../../docs/evidence/ipados-1641-current-installation-cleanup-20261107.md).

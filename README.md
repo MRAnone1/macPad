@@ -66,6 +66,9 @@ tokens; it does not authorize a new session.
 The [7 November trust check](docs/evidence/ipados-1641-jbctl-trust-transition-20261107.md)
 requires an exact reported hash-set addition and documents the route through
 fresh exclusive delivery. Native restoration and device acceptance remain pending.
+The [current cleanup core](docs/evidence/ipados-1641-current-installation-cleanup-20261107.md)
+has 29 host tests and acquires fresh file tokens for its explicit scoped action;
+native integration and qualification are still pending.
 
 | Device and system | Jailbreak | macOS userspace | Status |
 | --- | --- | --- | --- |

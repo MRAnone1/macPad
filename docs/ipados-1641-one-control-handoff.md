@@ -1,5 +1,11 @@
 # iPadOS 16.4.1: next single stopped control
 
+**7 November cleanup-core update:** the [new current-selection core](evidence/ipados-1641-current-installation-cleanup-20261107.md)
+now implements the one-use filesystem action with host tests. Its native
+gate/clock/archive integration, bounded worker/transport and device qualification
+remain pending. Do not call it on the iPad with invented callbacks. Old receipt
+and v7 guards remain unchanged; this does not authorize a control attempt.
+
 **7 November offline update:** the [exact jbctl analysis and transition check](evidence/ipados-1641-jbctl-trust-transition-20261107.md)
 preserve four read-only witnesses from 1 November. Route selected: fresh scoped
 current-selection cleanup, unchanged exclusive v5 redelivery, exact trust
