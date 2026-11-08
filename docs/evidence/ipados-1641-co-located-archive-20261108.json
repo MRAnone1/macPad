@@ -1,0 +1,162 @@
+{
+  "actual_contents_summary_private_sha256": "cf36a5cd6a2fb10b41f978c24f6f6f61b17418feead30dde29d6e0a121c932ed",
+  "actual_original_contents_host_case": {
+    "archive_bytes": 238990,
+    "archive_direct_None_return_before_core_selection_and_clock": true,
+    "archive_sha256": "334b492d658959a556a04ec2436a308617aa2bddc95457d40baae27d9125b2f4",
+    "archive_source_sha256": "d89e0274987bdaae5b4236832d587d63e783b10e5ee57f234137fc40d053ca23",
+    "classification": "FACT: owned host filesystem and original archive bytes",
+    "copied_bytes": 174394,
+    "copied_files": 5,
+    "date": "2026-11-08",
+    "device_queries": 0,
+    "device_writes_or_removals": 0,
+    "historical_binding_and_synthetic_health_clock": true,
+    "host_owner_paths_and_process_group_override_only": true,
+    "host_rmdirs": 2,
+    "host_unlinks": 5,
+    "native_authenticity_or_acceptance": false,
+    "original_freeze_fixed": false,
+    "original_receipt_unchanged": true,
+    "production_content_hash_table_unchanged": true,
+    "result_private_sha256": "d1cd44f9ee2c91863d3cbfc1d0c4e29a02f11aba7aa9da00e3bc7a356078f017"
+  },
+  "classification": "FACT: host-only source and filesystem acceptance",
+  "date": "2026-11-08",
+  "helper_effects_and_status": {
+    "accepted_stopped_controls": 0,
+    "candidate_executions": 0,
+    "deployed_or_tested_on_device": false,
+    "device_acceptance": false,
+    "device_queries": 0,
+    "device_writes_or_removals": 0,
+    "native_qualification": false,
+    "original_freeze_fixed": false,
+    "required_stopped_controls": 3,
+    "trust_mutations": 0
+  },
+  "implementation": {
+    "all_deep_bind_or_mount_aliases_excluded_by_code": false,
+    "archive_limit_bytes": 1048576,
+    "archive_parent_mode_octal": "0700",
+    "archive_slot_derived_from_archive_sha256": true,
+    "constructor_and_metadata_inert": true,
+    "default_parent_supplied": false,
+    "exact_core_archive_reconstructed_before_filesystem_io": true,
+    "exclusive_create_fsync_readback_and_successful_closes_before_direct_None_return": true,
+    "explicit_once_only_callback": true,
+    "explicit_process_euid_egid": [
+      0,
+      0
+    ],
+    "fixed_filename": "archive.private.bin",
+    "held_physical_chains_and_direct_watched_parent_dev_ino_alias_checks": true,
+    "host_durability_or_native_authenticity_claimed_by_callback": false,
+    "lexical_disjointness_in_both_directions_from_selection_and_watched_parents": true,
+    "partial_artifacts_and_operation_intents_retained": true,
+    "retry_rollback_or_cleanup_available": false,
+    "separate_archive_and_original_delivery_external_pins": true,
+    "transport_available": false,
+    "watched_parent_mode_octal": "0755"
+  },
+  "port_status": "unverified",
+  "refusal_after_archive_host_witness": {
+    "archive_recorded_operation_groups_attempted": [
+      "mkdir",
+      "exclusive_create_write_fsync_readback",
+      "fsync_archive_directory",
+      "fsync_archive_parent"
+    ],
+    "archive_recorded_operation_groups_completed": [
+      "mkdir",
+      "exclusive_create_write_fsync_readback",
+      "fsync_archive_directory",
+      "fsync_archive_parent"
+    ],
+    "archive_verified_before_core_refusal": true,
+    "core_archive_callback_completed": true,
+    "core_attempted_selection_effects": 0,
+    "core_completed_selection_effects": 0,
+    "core_outcome": "refused_before_effect",
+    "core_outcome_implies_zero_total_archive_effects": false,
+    "core_refusal": "health_or_exclusivity_refusal",
+    "core_selection_backend_events": 0,
+    "device_calls": 0,
+    "invented_health_clock_and_host_owner_path_group_mapping": true,
+    "invented_thermal_value": 1,
+    "original_freeze_cause_or_fix_claimed": false,
+    "private_witness_sha256": "0690f0955506074a9ec48293c1f2c1c6745816a1ad13a366d289cf3f07cc782a",
+    "recorded_operation_groups_are_exact_syscall_count": false,
+    "used_successful_fixture_version": 3
+  },
+  "remaining": [
+    "fresh_native_identity_health_mount_and_namespace_inventory",
+    "trusted_current_native_gate_shared_clock_and_capable_writer_exclusion",
+    "independently_reviewed_full_worker_alarm_through_output_flush_and_closes",
+    "source_pinned_once_only_action_worker_and_bounded_transport",
+    "native_archive_callback_acceptance_before_native_cleanup_acceptance",
+    "unchanged_v5_redelivery_exact_four_trust_prerequisites_fresh_all_eleven_observer_new_nonce_v7",
+    "three_genuine_stopped_controls_then_active_pair_acceptance"
+  ],
+  "schema": "macws.current-cleanup.co-located-archive.public-evidence.v1",
+  "source_sha256": {
+    "misc/macws_swap_pair/current_cleanup_archive.py": "d89e0274987bdaae5b4236832d587d63e783b10e5ee57f234137fc40d053ca23",
+    "misc/test_macws_current_cleanup_archive.py": "a908caf95d6b4048d231ca51e2ed6dd16f1c128be51f6f4c6aef66a5a5420bce"
+  },
+  "timing_and_authority_boundary": {
+    "archive_callback_is_covered_by_core_eight_seconds": false,
+    "archive_callback_precedes_core_selection_and_clock_start": true,
+    "core_cooperative_cleanup_seconds_unchanged": 8,
+    "fresh_native_gate_mount_inventory_and_writer_exclusion_mandatory": true,
+    "full_worker_alarm_through_serialization_flush_and_closes_implemented": false,
+    "future_full_worker_alarm_seconds": 12,
+    "serialized_receipt_is_execution_authority_or_past_fsync_proof": false,
+    "timing_limit_extended": false
+  },
+  "validation": {
+    "C_protocol_build_run_each": "PASS",
+    "changed_shell_files": 0,
+    "focused_methods_each": 24,
+    "full_suite_skips_each": 13,
+    "full_suites": [
+      {
+        "error_records": 0,
+        "failure_records": 43,
+        "log_sha256": "4e91952b4121359f23e310634241c9a163c32720a1c00b9ea46327ca4ae2f39d",
+        "old_60_selected_sources_unchanged": true,
+        "repository": "publication",
+        "same_exact_failure_records_as_cleanup_preparation_20261108": true,
+        "selected_source_count": 62,
+        "sources_unchanged_during_tests": true,
+        "suite_pass": false,
+        "test_seconds": 76.048,
+        "tests_run": 1466
+      },
+      {
+        "error_records": 0,
+        "failure_records": 43,
+        "log_sha256": "0aa3f2e014a52b6e06d0ea7b6eb1a4c4d6416ea21e9d553cfa8f1cfccf167b22",
+        "old_60_selected_sources_unchanged": true,
+        "repository": "companion",
+        "same_exact_failure_records_as_cleanup_preparation_20261108": true,
+        "selected_source_count": 62,
+        "sources_unchanged_during_tests": true,
+        "suite_pass": false,
+        "test_seconds": 66.295,
+        "tests_run": 1462
+      }
+    ],
+    "historical_evidence_rewritten": false,
+    "independent_focused_public_review_complete": true,
+    "independent_public_review_private_sha256": "dec3f31b7f01725e15f1bd3aa10b8bca4637736cf6acb91fc055ee3c477bf585",
+    "native_architecture_build_required": false,
+    "prior_49_method_increment_independent_host_review_now_complete": true,
+    "prior_49_method_review_private_sha256": "ab4513b15ba0e84972965a889b2353ac850972023fbe83636827679abdd98e69",
+    "runtime_switch_audits_each": {
+      "entries": 444,
+      "env_names": 286,
+      "flag_files": 85,
+      "pass": true
+    }
+  }
+}

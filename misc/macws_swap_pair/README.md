@@ -365,3 +365,17 @@ one deterministic per-archive slot within the same trusted host parent. Phases
 are once-only; partial files and known raw streams survive refusals. These
 helpers provide neither native archive acknowledgement nor an action worker.
 See [49 tests, real-byte host acceptance and limits](../../docs/evidence/ipados-1641-cleanup-preparation-20261108.md).
+
+## Co-located archive callback — 2026-11-08
+
+`current_cleanup_archive.CoLocatedArchive` is an explicit one-use local archive
+callback with no default parent, cleanup or transport. Exact original archive
+validation precedes exclusive private writes, fsync/readback and successful
+closes. Fresh native gates, mount/namespace inventory and capable-writer
+exclusion remain mandatory; shallow alias checks do not prove all bind aliases
+absent. Archive effects occur before the core's eight-second clock and can
+precede a core `refused_before_effect` result. A whole-worker alarm and native
+qualification remain missing. See [24 tests, original-content host acceptance
+and the separate effect reports](../../docs/evidence/ipados-1641-co-located-archive-20261108.md).
+The previous 49-method increment's final independent host review is now
+complete; the follow-up evidence preserves its earlier pending-review record.

@@ -1,5 +1,13 @@
 # iPadOS 16.4.1: next single stopped control
 
+**8 November co-located archive update:** the [new callback](evidence/ipados-1641-co-located-archive-20261108.md)
+passes 24 host tests and an original-content host composition. It has not been
+deployed or tested on the iPad. Archive writes precede the core's eight-second
+clock and can precede its selection-only `refused_before_effect`; retain both
+reports. Fresh native identity/health/mount gates, capable-writer exclusion,
+whole-worker alarm, bounded action transport and native acceptance remain open.
+The prior 49-method host increment's independent final review is now complete.
+
 **8 November host-preparation update:** the [byte package and deterministic
 host attempt](evidence/ipados-1641-cleanup-preparation-20261108.md) pass 49 host
 methods and a real-byte archive/journal/local-decode exercise. They contact no

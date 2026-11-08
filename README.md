@@ -72,6 +72,10 @@ native integration and qualification are still pending.
 The [8 November host preparation](docs/evidence/ipados-1641-cleanup-preparation-20261108.md)
 adds a byte-only package and durable per-archive attempt slot with 49 host tests;
 the iPad was not contacted and native action integration remains open.
+The [co-located archive follow-up](docs/evidence/ipados-1641-co-located-archive-20261108.md)
+adds 24 host tests and a real-content archive/cleanup composition; the helper
+has not been deployed or accepted on the device, and its whole-worker alarm
+and native action transport remain missing.
 
 | Device and system | Jailbreak | macOS userspace | Status |
 | --- | --- | --- | --- |
