@@ -69,6 +69,9 @@ fresh exclusive delivery. Native restoration and device acceptance remain pendin
 The [current cleanup core](docs/evidence/ipados-1641-current-installation-cleanup-20261107.md)
 has 30 host tests and acquires fresh file tokens for its explicit scoped action;
 native integration and qualification are still pending.
+The [8 November host preparation](docs/evidence/ipados-1641-cleanup-preparation-20261108.md)
+adds a byte-only package and durable per-archive attempt slot with 49 host tests;
+the iPad was not contacted and native action integration remains open.
 
 | Device and system | Jailbreak | macOS userspace | Status |
 | --- | --- | --- | --- |

@@ -353,3 +353,15 @@ Default calls are inert; trusted archive/gate/clock/FS callbacks are required.
 30 host methods and an owned-temp fixture with actual archived bytes pass.
 Native integration, bounded dispatch and device qualification remain pending.
 See the [host evidence, namespace limit and remaining steps](../../docs/evidence/ipados-1641-current-installation-cleanup-20261107.md).
+
+## Cleanup package and host preparation — 2026-11-08
+
+`cleanup_package.py` verifies twelve immutable entries, including five source
+modules. `cleanup_decode_payload.py` builds a default-inert, decode-only stdin
+program; it executes no framed source or native action. The older
+`cleanup_payload.py` remains unchanged. `cleanup_preparation.CleanupAttempt`
+preserves a separately pinned archive and nested unchanged capture journal in
+one deterministic per-archive slot within the same trusted host parent. Phases
+are once-only; partial files and known raw streams survive refusals. These
+helpers provide neither native archive acknowledgement nor an action worker.
+See [49 tests, real-byte host acceptance and limits](../../docs/evidence/ipados-1641-cleanup-preparation-20261108.md).

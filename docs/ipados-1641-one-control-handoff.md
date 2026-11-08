@@ -1,5 +1,12 @@
 # iPadOS 16.4.1: next single stopped control
 
+**8 November host-preparation update:** the [byte package and deterministic
+host attempt](evidence/ipados-1641-cleanup-preparation-20261108.md) pass 49 host
+methods and a real-byte archive/journal/local-decode exercise. They contact no
+device and execute no framed source. Native gate/clock/exclusivity, genuine
+device archival, action worker/alarm, transport and acceptance remain open.
+This creates no fresh native prerequisite or authorization for a control.
+
 **7 November cleanup-core update:** the [new current-selection core](evidence/ipados-1641-current-installation-cleanup-20261107.md)
 now implements the one-use filesystem action with host tests. Its native
 gate/clock/archive integration, bounded worker/transport and device qualification
