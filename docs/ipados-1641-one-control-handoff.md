@@ -1,5 +1,12 @@
 # iPadOS 16.4.1: next single stopped control
 
+**9 November gate update.** The [current cleanup gate](evidence/ipados-1641-cleanup-gate-20261109.md)
+passes 13 host tests. Its timestamp includes the age of the first read.
+Native qualification still requires a fresh inventory, a held writer-exclusion
+lease and a source-pinned worker with a whole-action alarm. The 9 November
+read-only port inventory timed out before SSH authentication. The last complete
+runtime observation was on 8 November and passed 9 of 11 checks.
+
 **8 November co-located archive update:** the [new callback](evidence/ipados-1641-co-located-archive-20261108.md)
 passes 24 host tests and an original-content host composition. It has not been
 deployed or tested on the iPad. Archive writes precede the core's eight-second

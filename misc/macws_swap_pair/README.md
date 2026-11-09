@@ -379,3 +379,10 @@ qualification remain missing. See [24 tests, original-content host acceptance
 and the separate effect reports](../../docs/evidence/ipados-1641-co-located-archive-20261108.md).
 The previous 49-method increment's final independent host review is now
 complete; the follow-up evidence preserves its earlier pending-review record.
+
+### Current cleanup gate
+
+`current_cleanup_gate.py` supplies bounded read-only observations for the
+current-installation core. The timestamp marks the start of each window.
+The native factory requires the frozen observer input and a direct check of
+the caller's held exclusion lease. See the [host timing witness and device status](../../docs/evidence/ipados-1641-cleanup-gate-20261109.md).

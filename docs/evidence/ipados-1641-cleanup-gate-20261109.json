@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-09",
+  "device_acceptance": false,
+  "focused_test_source_sha256": "64be6faffc4d685735696df9d8890499d2a9bc7b225fd175a7d82d6902c7f2e2",
+  "freeze_cause_proven": false,
+  "freshness_witness": {
+    "comparison_variant_is_deliberately_injected_not_historical_native_source": true,
+    "date": "2026-11-09",
+    "device_calls": 0,
+    "focused_methods": 13,
+    "freeze_cause_proven": false,
+    "scope": "owned host filesystem, synthetic clock and health data",
+    "variants": {
+      "end_timestamp_comparison": {
+        "attempted_effect_count": 7,
+        "cleanup_verified": true,
+        "completed_effect_count": 7,
+        "namespace_delay_seconds": 0.45,
+        "refusal": null,
+        "second_gate_emitted_timestamp": 1001.2009799999973,
+        "second_gate_end": 1001.2009799999973,
+        "second_gate_start": 1000.6008299999978,
+        "source_sha256": "7b14486b9548d82e120fd89ad373451341ebdf74d65618a6e5fec743327d1890"
+      },
+      "start_timestamp": {
+        "attempted_effect_count": 0,
+        "cleanup_verified": false,
+        "completed_effect_count": 0,
+        "namespace_delay_seconds": 0.45,
+        "refusal": "gate_stale_before_unlink",
+        "second_gate_emitted_timestamp": 1000.6008299999978,
+        "second_gate_end": 1001.2009799999973,
+        "second_gate_start": 1000.6008299999978,
+        "source_sha256": "109c098380fac91f0fd30189028f56d91c5c18c041cac80652ad070c8e587f88"
+      }
+    }
+  },
+  "freshness_witness_sha256": "b94fc1b81c65f2565fc274c8725fc173ba9af0da9fb00f3b41e5bc5a9e8b2c21",
+  "gate_source_sha256": "109c098380fac91f0fd30189028f56d91c5c18c041cac80652ad070c8e587f88",
+  "independent_host_review_sha256": "3b6c677a3f19f7fa586c716a1348e2c7598c43c92a5fdad310619cb6bc82a6e9",
+  "limits": {
+    "commands_per_observation": 4,
+    "core_action_seconds": 8,
+    "full_worker_alarm_integrated": false,
+    "observations": 9,
+    "whole_observation_seconds": 1
+  },
+  "native_gate_executions": 0,
+  "new_transport_attempt": {
+    "date": "2026-11-09",
+    "new_device_report": false,
+    "observed_failure": "SSH connection timed out before authentication",
+    "role": "port",
+    "ssh_exit": 255,
+    "stderr_bytes": 65,
+    "stderr_sha256": "004bce1f868b879b60837052028c231468bb0b9e71f16e87ca150b6753b8ad28",
+    "stdout_bytes": 0
+  },
+  "prior_runtime": {
+    "checks_total": 11,
+    "date": "2026-11-08",
+    "passed_checks": 9,
+    "raw_sha256": "8fca7b6d987ce6a3db51c88b36b514ef6cbec5d02fbe98e9670494a049db9785",
+    "reported_trust_memberships_absent": 4,
+    "springboard_generation_changed_since_nov1": true,
+    "trust_set_entries": 147
+  },
+  "schema": "macws.ipados-1641-cleanup-gate-evidence.v1",
+  "scope": "host qualification of read-only cleanup gates",
+  "validation": {
+    "c_protocol_tests_pass": true,
+    "focused_pass_each": 13,
+    "full_suites": [
+      {
+        "error_records": 0,
+        "failure_records": 43,
+        "log_sha256": "04f47f34c68a028bcdffc15e5ca7d07feeaa5704a931a2756a91d562d196f0e8",
+        "new_focused_methods": 13,
+        "repository": "publication",
+        "suite_pass": false,
+        "tests_run": 1479
+      },
+      {
+        "error_records": 0,
+        "failure_records": 43,
+        "log_sha256": "bbf137890f55ff456664ef6c488eee86e8abbd49adfda94b2fda9bb8bc7d7423",
+        "new_focused_methods": 13,
+        "repository": "companion",
+        "suite_pass": false,
+        "tests_run": 1475
+      }
+    ],
+    "old_62_selected_pins_verified": true,
+    "runtime_switch_audits_pass": true,
+    "same_exact_previous_43_metal_failures": true,
+    "skips_each": 13
+  }
+}
