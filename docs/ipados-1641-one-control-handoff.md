@@ -1,5 +1,11 @@
 # iPadOS 16.4.1: next single stopped control
 
+**16 November evidence review.** The later 9 November runtime and port captures
+completed in a separate attempt after the earlier timeout. The runtime report
+passed 9 of 11 checks and the port report confirmed nine direct Mach-O
+identities. The archived UI watchdogs document the stall. The initiating
+operation remains open. See the [dated evidence and app-level comparison](evidence/ipados-1641-inventory-and-freeze-20261116.md).
+
 **9 November gate update.** The [current cleanup gate](evidence/ipados-1641-cleanup-gate-20261109.md)
 passes 13 host tests. Its timestamp includes the age of the first read.
 Native qualification still requires a fresh inventory, a held writer-exclusion

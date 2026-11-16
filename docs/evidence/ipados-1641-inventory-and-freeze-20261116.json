@@ -1,0 +1,84 @@
+{
+  "archived_watchdog": {
+    "date": "2026-10-09",
+    "reports": {
+      "SpringBoard": {
+        "ips_sha256": "c257c9a01b3fa0362119a99460d507b828acc92d3e5b220a81b2eef6d64580a9",
+        "seconds_since_successful_checkin_reported": 60,
+        "unresponsive_queue": "com.apple.main-thread"
+      },
+      "backboardd": {
+        "ips_sha256": "426fd840d89dc26c718c0a941b30053c7d0c09861082175b929357c95ccbd6ae",
+        "seconds_since_successful_checkin_reported": 60,
+        "unresponsive_queue": "BKHIDSystem server runloop"
+      }
+    },
+    "trigger_established": false,
+    "ui_stall_observed": true,
+    "visible_freeze_duration_established": false
+  },
+  "device_acceptance": false,
+  "device_capture_date": "2026-11-09",
+  "device_observations_on_review_date": 0,
+  "journals": {
+    "port": {
+      "journal_file_hashes_verified": 7,
+      "ssh_exit": 0,
+      "stderr_bytes": 0,
+      "stdin_sha256": "fa9509ca091a6f9d44d8c42c76e1b7e9d2ba576c0a189237acbc72b3f7ab8a58",
+      "stdout_bytes": 96986,
+      "stdout_sha256": "a1fcfc4f06e2a01f36b99d9086a1db8835bf3a7ced8251c2e3c5b3c75887a567",
+      "transport_sha256": "597b92ac27990a57a396f9fe853e81aa56283f7cfbd8ea0fe016beb6277dec1f"
+    },
+    "runtime": {
+      "journal_file_hashes_verified": 7,
+      "ssh_exit": 0,
+      "stderr_bytes": 0,
+      "stdin_sha256": "e6167201e13f55078f096d8a179ee00f8240383e3fa9dd7d31418fdbb1c51ce5",
+      "stdout_bytes": 259617,
+      "stdout_sha256": "a1be08c2f55c7f3ae495507ca1bc3ef031fb1c52ee846bb9eff3989d5d14f731",
+      "transport_sha256": "17ab9bef595626d6f5b80da353d0026b3d97e696b399023743c21323c772f687"
+    }
+  },
+  "new_freeze_reproduction": false,
+  "platform": {
+    "dopamine": "3.0.10",
+    "ipados": "16.4.1",
+    "ipados_build": "20E252",
+    "machine": "iPad13,6",
+    "model": "J518AP",
+    "rootfs": "13.4",
+    "rootfs_build": "22F66"
+  },
+  "port": {
+    "available_bytes": 82177224704,
+    "available_bytes_delta_vs_nov1": -9182519296,
+    "dedicated_rootfs_mount_in_captured_rows": false,
+    "direct_binary_rows_identical_to_nov1": 9,
+    "direct_missing_path_rows": 5,
+    "framework_cache_capture_on_nov9": false,
+    "hashed_file_bytes": 6940480,
+    "mount_rows": 14,
+    "mount_rows_match_nov1_ignoring_order": true,
+    "same_boot_bracket_matches_runtime": true,
+    "separate_jbctl_binary_copy_on_nov9": false
+  },
+  "review_date": "2026-11-16",
+  "runtime": {
+    "checks_passed": 9,
+    "checks_total": 11,
+    "failed_checks": [
+      "candidate_present_identity_trusted",
+      "frozen_dependencies_present_identity_trusted"
+    ],
+    "missing_reported_trust_memberships": 4,
+    "nominal_thermal_brackets": true,
+    "reported_candidate_executions": 0,
+    "reported_device_mutations": 0,
+    "trust_set_count": 147,
+    "trust_set_matches_port_and_nov8": true,
+    "ui_generations_match_nov8": true,
+    "verified_artifacts": 4
+  },
+  "schema": "macws.ipados-1641-inventory-and-freeze-evidence.v1"
+}
