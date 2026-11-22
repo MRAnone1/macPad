@@ -1,5 +1,13 @@
 # iPadOS 16.4.1: next single stopped control
 
+**22 November offline comparison.** A [standalone public-API UIKit/Metal app](evidence/ipados-1641-presentation-comparison-20261122.md)
+now builds for device arm64 and Simulator arm64/x86_64. Static analysis has no
+diagnostics. Both repository suites retain exactly the 43 known failure records.
+No iOS Simulator runtime is installed, and the iPad was unavailable. Visible
+output, signed installation and the paired physical trial remain pending.
+This app prepares a separate bounded observation; it does not admit a retained
+control, modify the existing runtime, or establish a freeze fix.
+
 **16 November evidence review.** The later 9 November runtime and port captures
 completed in a separate attempt after the earlier timeout. The runtime report
 passed 9 of 11 checks and the port report confirmed nine direct Mach-O

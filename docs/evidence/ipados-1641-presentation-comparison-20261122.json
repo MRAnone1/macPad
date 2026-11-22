@@ -1,0 +1,228 @@
+{
+  "build_products": {
+    "device": {
+      "bundle_identifier": "dev.macws.presentationcompare",
+      "bundle_version": "1",
+      "bytes": 164152,
+      "code_signing_allowed": false,
+      "installed": false,
+      "launched": false,
+      "minimum_os_version": "16.4",
+      "sdk": "iphoneos26.0",
+      "sha256": "02f38bae98f458293dd0da374fec4dbf4b665975a474e5980230bb53fd3bf002",
+      "slices": [
+        {
+          "architecture": "arm64",
+          "uuid": "BCCD93CF-D261-3F4D-9690-956E9DDA4900"
+        }
+      ],
+      "xcode_build": "17A324"
+    },
+    "simulator": {
+      "bundle_identifier": "dev.macws.presentationcompare",
+      "bundle_version": "1",
+      "bytes": 246296,
+      "code_signing_allowed": false,
+      "installed": false,
+      "launched": false,
+      "minimum_os_version": "16.4",
+      "sdk": "iphonesimulator26.0",
+      "sha256": "5a73b06bf2c3046c075de75d40b5d0df9dc6084cfc91274ea02582f4f8d83eb7",
+      "slices": [
+        {
+          "architecture": "x86_64",
+          "uuid": "5E984042-013A-3F36-AC66-4966357C3F3C"
+        },
+        {
+          "architecture": "arm64",
+          "uuid": "2B809005-42A7-3CE1-A288-F422129083E5"
+        }
+      ],
+      "xcode_build": "17A324"
+    }
+  },
+  "device_acceptance": false,
+  "device_connections": 0,
+  "device_mutations": 0,
+  "implementation_and_build_date": "2026-11-20",
+  "limits": {
+    "callback_deadline_implemented": false,
+    "home_and_touch_observation_pending": true,
+    "maximum_export_bytes": 1048576,
+    "maximum_metal_submissions_per_launch": 2,
+    "maximum_report_events": 256,
+    "physical_metal_trial_pending": true,
+    "physical_signing_installation_pending": true,
+    "physical_uikit_trial_pending": true,
+    "simulator_reports_device_presentation_timestamps": false,
+    "stop_cancels_committed_gpu_command": false
+  },
+  "original_freeze_fixed": false,
+  "original_freeze_reproduced": false,
+  "private_binary_patch_applied": false,
+  "publication_files": {
+    "misc/presentation_lifecycle_preview/Info.plist": {
+      "bytes": 1363,
+      "sha256": "729e21a8db99a8bf0f7deac30c5c5451d978433849c1f5839ad1b9a3ffb37491"
+    },
+    "misc/presentation_lifecycle_preview/MacWSPresentationCompare.xcodeproj/project.pbxproj": {
+      "bytes": 9188,
+      "sha256": "c50c3bdd235f033d42915907e6a37c97840b98cd3aa2c4765c9907ff1fdec1d4"
+    },
+    "misc/presentation_lifecycle_preview/MacWSPresentationCompare.xcodeproj/xcshareddata/xcschemes/MacWSPresentationCompare.xcscheme": {
+      "bytes": 2323,
+      "sha256": "9d53f9c4870803e3aba332dc0fe4e753533f4c6347cc5ce61490098df158cb9a"
+    },
+    "misc/presentation_lifecycle_preview/README.md": {
+      "bytes": 6406,
+      "sha256": "5b49260b16e958a4c1fff6e7683edf52bf7d8be45008373a2c10437da05a4ba2"
+    },
+    "misc/presentation_lifecycle_preview/main.m": {
+      "bytes": 22330,
+      "sha256": "b75c5296347ef4c6a3d464ea667413dd3bd6a96d3c654f2d8b3a0062bbdba0e7"
+    }
+  },
+  "raw_log_fingerprints": {
+    "device-analyze-20261122-v1.log": {
+      "bytes": 50945,
+      "sha256": "fdbb9bbb59e38f44bbca4f4f5b2e571d08c88e219432ac7da56b8ffa884c6a8d"
+    },
+    "device-build-v1.log": {
+      "bytes": 67384,
+      "sha256": "764e6e697aa708943062816fa4f55c9d11719f4462c4f20fd5972c82e07afcaf"
+    },
+    "guide-regression-20261122-v1.log": {
+      "bytes": 55109,
+      "sha256": "9a3f5587776a8819b798b2fffbe8d98a5cfcc08ef9f1a6c93dd89f0102918fef"
+    },
+    "macpad-regression-20261122-v1.log": {
+      "bytes": 52690,
+      "sha256": "a1548f05a3b1aa59980bf257633bc164f9fb200d1c267398154391c19637aefd"
+    },
+    "palette-from-main-20261122-v1.metal": {
+      "bytes": 442,
+      "sha256": "af321f16bea0209c1054a819bacd82dcd858eccc5a440b45621487e7b24ee379"
+    },
+    "shader-compile-20261122-v1.log": {
+      "bytes": 812,
+      "sha256": "357902ca3634df0c26a7ecb11c928798aad85e3c13fdf20220ea89d759a6fd74"
+    },
+    "simulator-build-v1.log": {
+      "bytes": 131955,
+      "sha256": "ae38bb2938357ef92a2d8649fb871a17da9f4fd8a9e64fad56dd6bdd43235685"
+    },
+    "simulator-build-v2.log": {
+      "bytes": 41669,
+      "sha256": "24237a2111337f97a3fbe941d378c213737f9993bb47b0a2b8d063a4cff9346b"
+    },
+    "simulator-build-v3.log": {
+      "bytes": 39423,
+      "sha256": "dc704b650c601cc9d278544e23d5283d4a95b7d16bfb7bae787aae9001f0f55e"
+    },
+    "simulator-runtimes-20261122-v2.json": {
+      "bytes": 26,
+      "sha256": "aca2767cbe4904c2172e617846a8f94138acd1ed5ac91866ecbe3ef5ecfeca90"
+    },
+    "simulator-runtimes-20261122-v2.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "review_date": "2026-11-22",
+  "schema": "macws.ipados-1641-presentation-comparison-evidence.v1",
+  "shader_validation": {
+    "compiler_executed": false,
+    "exact_runtime_string_extracted": true,
+    "offline_compiler_exit": 1,
+    "pipeline_creation_verified": false,
+    "pixels_verified": false,
+    "reason": "optional Xcode Metal Toolchain not installed"
+  },
+  "simulator_runtime_acceptance": false,
+  "validation": {
+    "analyzer_diagnostic_count": 0,
+    "c_protocol_each": "passed",
+    "device_build": "passed",
+    "device_static_analysis": "passed",
+    "installed_simulator_runtimes": 0,
+    "main_source_compiler_warnings_or_errors": 0,
+    "plist_and_project_lint": "passed",
+    "regression_comparison": {
+      "guide": {
+        "errors": 0,
+        "failure_records_match_20261109": true,
+        "failures": 43,
+        "new_failed_case_ids": [],
+        "sha256": "9a3f5587776a8819b798b2fffbe8d98a5cfcc08ef9f1a6c93dd89f0102918fef",
+        "summary": [
+          "Ran 1479 tests in 80.044s",
+          "FAILED (failures=43, skipped=13)"
+        ]
+      },
+      "macpad": {
+        "errors": 0,
+        "failure_records_match_20261109": true,
+        "failures": 43,
+        "new_failed_case_ids": [],
+        "sha256": "a1548f05a3b1aa59980bf257633bc164f9fb200d1c267398154391c19637aefd",
+        "summary": [
+          "Ran 1475 tests in 80.028s",
+          "FAILED (failures=43, skipped=13)"
+        ]
+      }
+    },
+    "runtime_switch_audit_each": {
+      "passed": true,
+      "recorded_entries": 444,
+      "source_flag_files": 85,
+      "source_plist_env_names": 286
+    },
+    "simulator_build": "passed",
+    "simulator_runtime_query_exit": 0,
+    "simulator_runtime_query_stderr_bytes": 0
+  },
+  "verification": {
+    "c_protocol_each_repository": {
+      "compile_exit": 0,
+      "run_exit": 0
+    },
+    "property_lists_valid": true,
+    "regression": {
+      "guide": {
+        "errors": 0,
+        "failure_records_match_20261109": true,
+        "failures": 43,
+        "new_failed_case_ids": [],
+        "sha256": "9a3f5587776a8819b798b2fffbe8d98a5cfcc08ef9f1a6c93dd89f0102918fef",
+        "summary": [
+          "Ran 1479 tests in 80.044s",
+          "FAILED (failures=43, skipped=13)"
+        ]
+      },
+      "macpad": {
+        "errors": 0,
+        "failure_records_match_20261109": true,
+        "failures": 43,
+        "new_failed_case_ids": [],
+        "sha256": "a1548f05a3b1aa59980bf257633bc164f9fb200d1c267398154391c19637aefd",
+        "summary": [
+          "Ran 1475 tests in 80.028s",
+          "FAILED (failures=43, skipped=13)"
+        ]
+      }
+    },
+    "runtime_switch_audit_each_repository": {
+      "environment_names": 286,
+      "exit": 0,
+      "recorded_entries": 444,
+      "source_flag_files": 85
+    },
+    "shared_scheme_xml_valid": true,
+    "simulator_runtime_query": {
+      "exit": 0,
+      "runtimes": [],
+      "stderr_bytes": 0
+    },
+    "static_analyzer_diagnostics": 0
+  }
+}
