@@ -119,7 +119,9 @@ def assess(raw, *, allow_simulator=False):
     need(type(allow_simulator) is bool, 'simulator_option_type')
     need(target == 'device' or allow_simulator, 'simulator_is_not_device_evidence')
     supported = target == 'device'
-    need(report['presentation_callback_supported'] is supported, 'report_capability')
+    # v1 boxes C !/!=/&& expressions as NSNumber int, not NSNumber BOOL.
+    need(integer(report['presentation_callback_supported'], int(supported), int(supported)),
+         'report_capability')
     need(report['finished'] is True and
          report['outcome'] == 'two_frames_observed_and_confirmed', 'run_incomplete')
     need(integer(report['dropped_events'], 0, 0), 'events_dropped')
@@ -157,7 +159,8 @@ def assess(raw, *, allow_simulator=False):
         if index == 0:
             need(name == 'app_ready' and event['run'] == '' and frame == 0, 'app_ready')
             need(event['target'] == target and
-                 event['presentation_callback_supported'] is supported, 'app_capability')
+                 integer(event['presentation_callback_supported'], int(supported), int(supported)),
+                 'app_capability')
             for key in ('machine', 'os', 'os_build', 'bundle_version'):
                 need(text(event[key]) and event[key] != 'unknown', 'app_metadata')
                 context[key] = event[key]
@@ -225,7 +228,7 @@ def assess(raw, *, allow_simulator=False):
                 need(setup == 0, 'metal_setup_order')
                 setup = 1
             else:
-                need(setup == 1 and event['pipeline_ready'] is True and
+                need(setup == 1 and integer(event['pipeline_ready'], 1, 1) and
                      event['error'] == '', 'metal_setup_failed')
                 setup = 2
             continue
@@ -260,7 +263,7 @@ def assess(raw, *, allow_simulator=False):
             elif name == 'drawable_presented':
                 need(supported and 'command_commit' in seen[current], 'presentation_scope')
                 need(number(event['presented_time']) and event['presented_time'] > 0 and
-                     event['positive_presented_time'] is True and
+                     integer(event['positive_presented_time'], 1, 1) and
                      integer(event['drawable_id']), 'presentation_value')
                 presentation[current] = (event['presented_time'], event['drawable_id'])
                 if current == 2:

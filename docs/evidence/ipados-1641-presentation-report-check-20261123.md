@@ -5,6 +5,27 @@ fixtures and local source files. There was no device connection, deployment,
 trust operation, native binary patch or device acceptance. The iPad13,6 /
 20E252 port and original display stall remain unverified.
 
+## FACT — correction to the first format interpretation
+
+A further copied-source experiment found a type mismatch in the first checker
+and its invented fixtures. In the unchanged app, C expressions boxed with
+`@(!...)`, `@(... != nil)` and `@(... && ...)` select `numberWithInt:`. The
+compiler AST for arm64 iOS 16.4 with the installed iPhoneOS 26.0 SDK confirms
+this for capability, pipeline and presentation flags. A typed `BOOL` selects
+`numberWithBool:`. An independent local macOS Foundation serialization witness
+emitted integer `1` for the former expressions and boolean `true` for typed BOOL.
+This is host and compiler evidence, not an observed iPad export.
+
+The final consumer therefore requires integer `0/1` for
+`presentation_callback_supported` and integer `1` for successful
+`pipeline_ready` and `positive_presented_time`. Genuine BOOL fields retain
+strict boolean typing. A new test checks both sides of this distinction.
+The initial boolean fixtures and 46-test run remain retained separately as
+v1 attempts; final logs and mutation outputs use v2 names. The 22 November
+note's `presentation_callback_supported: false` wording was an incorrect
+boolean interpretation of numeric zero, not a validated runtime result.
+The current README is corrected. No Objective-C app source was changed.
+
 ## FACT — record consumer and bounded failure
 
 The standalone preview's `outcome` field can be copied into an incomplete
@@ -55,7 +76,7 @@ responsiveness. The current app does not record all of these observations.
 
 ## FACT — host validation
 
-All 46 new synthetic unit tests pass, including CLI success/refusal paths,
+All 47 final synthetic unit tests pass, including CLI success/refusal paths,
 both callback orders, reordered captured times, lifecycle edges, parser limits,
 Simulator capabilities and incompatible pairs. A separate deterministic
 exercise replaced every value position in three invented report shapes with

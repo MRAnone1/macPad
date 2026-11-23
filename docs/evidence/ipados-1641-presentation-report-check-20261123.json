@@ -1,12 +1,55 @@
 {
+  "boxing_contract": {
+    "app_source_changed": false,
+    "compiler_target": "arm64-apple-ios16.4",
+    "derived_expression_selectors": [
+      "numberWithInt:",
+      "numberWithInt:",
+      "numberWithInt:"
+    ],
+    "genuine_boolean_fields": [
+      "finished",
+      "human_review_required",
+      "low_power",
+      "four_samples_match"
+    ],
+    "integer_0_or_1_fields": [
+      "presentation_callback_supported"
+    ],
+    "integer_1_success_fields": [
+      "pipeline_ready",
+      "positive_presented_time"
+    ],
+    "ios_runtime_serialization_observed": false,
+    "ios_target_ast_exit": 0,
+    "local_foundation_json": {
+      "and": 1,
+      "comparison": 1,
+      "not": 1,
+      "typed": true
+    },
+    "local_foundation_witness_exit": 0,
+    "local_host": {
+      "build": "26A434",
+      "machine": "arm64",
+      "macos": "27.0.1"
+    },
+    "sdk": "iPhoneOS26.0",
+    "typed_bool_selector": "numberWithBool:"
+  },
   "date": "2026-11-23",
   "device_acceptance": false,
   "device_connections": 0,
   "device_mutations": 0,
   "focused_tests": {
     "exit": 0,
-    "methods": 46,
+    "final_attempt": "v2",
+    "methods": 47,
     "synthetic_only": true
+  },
+  "host_witness_executable": {
+    "bytes": 51840,
+    "sha256": "92d83a92c1c8947384eb0b327d588a9a86fdcf4b1d4016630e27b15bcb9ea5e4"
   },
   "original_freeze_fixed": false,
   "original_freeze_reproduced": false,
@@ -18,19 +61,58 @@
     "independent visible colors and Home/touch observations",
     "post-trial thermals and crash reports"
   ],
+  "prior_boolean_interpretation": {
+    "companion_draft_commit": "92776695f591c40c91d585df9f47d35dda896314",
+    "guide_draft_commit": "737d70e653375f5cea8b6ab842dc4a76605745f8",
+    "replaced_by_final_attempt": "v2",
+    "v1_logs_retained": true,
+    "v1_tests_used_incorrect_boolean_derived_flag_fixtures": true
+  },
   "private_binary_patch_applied": false,
   "raw_host_file_fingerprints": {
+    "boxing-check-v1.m": {
+      "bytes": 515,
+      "sha256": "f1f60f680a858f3c152d3d4fd747f989fb8c387e8057f0fd93d1c289dbc92e6c"
+    },
+    "boxing-check-v1.stdout": {
+      "bytes": 83,
+      "sha256": "cf7e324e8fbe2cc8bfffa4fcad39fd5204e3bafef9f18af9500d81d9fa86efde"
+    },
+    "boxing-device-ast-v1.m": {
+      "bytes": 350,
+      "sha256": "998584298c026cc687b11be263b64aa517848884219c0a944cf1d534c0469678"
+    },
+    "boxing-device-ast-v1.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "boxing-device-ast-v1.stdout": {
+      "bytes": 9631,
+      "sha256": "4a166ef57b5ffe8963e428669a51534baad21e64f51aa8cb2d432c51ff1d588e"
+    },
     "focused-v1.log": {
       "bytes": 7959,
       "sha256": "4723dec61af42a7de2831ba722f33214f46c8ca1770f0bc6a74c61dcd1e92dec"
     },
+    "focused-v2.log": {
+      "bytes": 8165,
+      "sha256": "868fb44cf0139d391bac55e0f59d8622cc5a5b02050e40cf650aa6a3887a3df3"
+    },
     "guide-audit-v1.log": {
+      "bytes": 102,
+      "sha256": "f8542d280bc836a9f2a9532585798c2c6fa9f56661bf0c79593ff08de37e12b0"
+    },
+    "guide-audit-v2.log": {
       "bytes": 102,
       "sha256": "f8542d280bc836a9f2a9532585798c2c6fa9f56661bf0c79593ff08de37e12b0"
     },
     "guide-full-v1.log": {
       "bytes": 55155,
       "sha256": "dd802bbfc37317be26e58b5920e7491a4a3e08efb87eefd50808e0d01411f547"
+    },
+    "guide-full-v2.log": {
+      "bytes": 55156,
+      "sha256": "d10b525c5a2f5011bd9396f80bed73bfbc8e62cc6ac2c6b43c84fcb67d4bf062"
     },
     "guide-protocol-build-v1.log": {
       "bytes": 0,
@@ -44,9 +126,17 @@
       "bytes": 102,
       "sha256": "f8542d280bc836a9f2a9532585798c2c6fa9f56661bf0c79593ff08de37e12b0"
     },
+    "macpad-audit-v2.log": {
+      "bytes": 102,
+      "sha256": "f8542d280bc836a9f2a9532585798c2c6fa9f56661bf0c79593ff08de37e12b0"
+    },
     "macpad-full-v1.log": {
       "bytes": 52736,
       "sha256": "97bcc8fe800f3beeb82f3f5cd79c803bc847c0ad53c3a6c9b08a6ff1d2f63380"
+    },
+    "macpad-full-v2.log": {
+      "bytes": 52737,
+      "sha256": "83ad94b5eccf1908f2dccc4429f84d5f2421ba23a762617f3e6fae0e3d8e568d"
     },
     "macpad-protocol-build-v1.log": {
       "bytes": 0,
@@ -60,9 +150,21 @@
       "bytes": 3684,
       "sha256": "efc8d16ee9b213db0cfc3bbf7c902db531802fcf76f5af98fa1e3d68635c220f"
     },
+    "run_synthetic_validation_v2.py": {
+      "bytes": 3684,
+      "sha256": "5e0d9e0474e70892328cbd12db9cb1cf206cd89b825bdd5cbb267a4ca3b1704d"
+    },
+    "shared-files-v1.json": {
+      "bytes": 344,
+      "sha256": "34925f6bdd0dda89eceae7ef93fb68e483257a1b9e06e7a4e2b638e1f9eeddd8"
+    },
     "synthetic-missing-endpoint-v1.json": {
       "bytes": 2763,
       "sha256": "0e57215327a3512c940e3f8d06f3335ade4f71bea060479ca6924065421e6095"
+    },
+    "synthetic-missing-endpoint-v2.json": {
+      "bytes": 2757,
+      "sha256": "e42c9f7040aa012b3d50565422165bdff6e0a175017dfdd0a5bcd96fd21c60d4"
     },
     "synthetic-refusal-v1.stderr": {
       "bytes": 0,
@@ -72,9 +174,21 @@
       "bytes": 219,
       "sha256": "26b1293f0a2593088b60f80f2f3fb30966ed5328f799e2eec4dbc249f1f042b4"
     },
+    "synthetic-refusal-v2.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "synthetic-refusal-v2.stdout": {
+      "bytes": 219,
+      "sha256": "26b1293f0a2593088b60f80f2f3fb30966ed5328f799e2eec4dbc249f1f042b4"
+    },
     "synthetic-validation-v1.json": {
       "bytes": 583,
       "sha256": "17f7dafd0884e8c292a7cab4e9a2d4e1f0bb4bf7991d48ec0740897af70760ef"
+    },
+    "synthetic-validation-v2.json": {
+      "bytes": 583,
+      "sha256": "6691b8392974e07a17aac971428952e160728416a8b993aef71f82b7b0395a5a"
     }
   },
   "regressions": {
@@ -88,7 +202,8 @@
       "runtime_switch_audit_exit": 0,
       "skips": 13,
       "suite_exit": 1,
-      "tests": 1525
+      "tests": 1526,
+      "unchanged_protocol_v1_result_reused": true
     },
     "macpad": {
       "c_protocol_compile_exit": 0,
@@ -100,29 +215,31 @@
       "runtime_switch_audit_exit": 0,
       "skips": 13,
       "suite_exit": 1,
-      "tests": 1521
+      "tests": 1522,
+      "unchanged_protocol_v1_result_reused": true
     }
   },
+  "revision": 2,
   "schema": "macws.ipados-1641-presentation-report-check-evidence.v1",
   "source_files": {
     "misc/presentation_lifecycle_preview/README.md": {
-      "bytes": 8662,
-      "sha256": "ae1df2974e0f92d31b956dfe0713b94f5f14dd9a8e61087b574aa6fe438a320d"
+      "bytes": 9334,
+      "sha256": "67b410857e9669d37a4ed3f8368aee29ba023fcc1c01fd8dd3f872aece416178"
     },
     "misc/presentation_lifecycle_preview/check_report.py": {
-      "bytes": 15358,
-      "sha256": "2b34fe1e337444cda6c582a072052c7828b775155ce86a4fca1c658bf7dfa391"
+      "bytes": 15527,
+      "sha256": "bf343496502237a2cd9f19571cd20dfe0fcba09213628eabf93a38f637cf592e"
     },
     "misc/test_presentation_lifecycle_report.py": {
-      "bytes": 25460,
-      "sha256": "192a8047be14b03e55f39cd5ea9cb0c2388c9479e9fda02a2d92e9662fdf6b58"
+      "bytes": 27901,
+      "sha256": "21f218d6f5874ef08d30a6f05f6e6144f0fa41ffbd5a1346b53a508e58ec1a1c"
     }
   },
   "synthetic_exercise": {
     "date": "2026-11-23",
     "device_calls": 0,
     "false_success_cli_exit": 2,
-    "false_success_input_sha256": "0e57215327a3512c940e3f8d06f3335ade4f71bea060479ca6924065421e6095",
+    "false_success_input_sha256": "e42c9f7040aa012b3d50565422165bdff6e0a175017dfdd0a5bcd96fd21c60d4",
     "mutated_inputs": 7335,
     "refusal": {
       "authenticity_verified": false,

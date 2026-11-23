@@ -45,7 +45,8 @@ def fixture(mode="UIKit", target="device", *, presented_first=False,
 
     add("app_ready", fields={"machine": "iPad13,6", "os": "16.4.1",
         "os_build": "Version 16.4.1 (Build 20E252)", "bundle_version": "1",
-        "target": target, "presentation_callback_supported": target == "device"},
+        # @(!TARGET_OS_SIMULATOR) boxes the C int expression as JSON 0/1.
+        "target": target, "presentation_callback_supported": int(target == "device")},
         identifier="")
     if extra_lifecycle:
         add(WILL_RESIGN, fields={"application_state": 1}, identifier="")
@@ -56,7 +57,7 @@ def fixture(mode="UIKit", target="device", *, presented_first=False,
     if mode == "Metal":
         add("metal_setup_started")
         add("drawable_size_changed", fields={"width": 640, "height": 480})
-        add("metal_setup_finished", fields={"pipeline_ready": True, "error": ""})
+        add("metal_setup_finished", fields={"pipeline_ready": 1, "error": ""})
     for frame in (1, 2):
         add("frame_requested", frame)
         if mode == "UIKit":
@@ -73,7 +74,7 @@ def fixture(mode="UIKit", target="device", *, presented_first=False,
 
             def presented():
                 add("drawable_presented", frame, {"presented_time": 150.0 + frame,
-                    "positive_presented_time": True, "drawable_id": frame - 1})
+                    "positive_presented_time": 1, "drawable_id": frame - 1})
 
             if target == "device" and presented_first:
                 presented()
@@ -96,7 +97,7 @@ def fixture(mode="UIKit", target="device", *, presented_first=False,
     return {"schema": "macws.presentation-comparison.v1", "events": events,
             "mode": mode, "finished": True,
             "outcome": "two_frames_observed_and_confirmed", "target": target,
-            "presentation_callback_supported": target == "device",
+            "presentation_callback_supported": int(target == "device"),
             "dropped_events": 0, "human_review_required": True}
 
 
@@ -124,6 +125,40 @@ class PresentationReportTests(unittest.TestCase):
         for mode in ("UIKit", "Metal"):
             with self.subTest(mode=mode):
                 self.assertConservative(checker.assess(raw(fixture(mode))))
+
+    def test_objc_c_int_boxing_and_typed_bool_fields_are_not_interchangeable(self):
+        for target in ("device", "simulator"):
+            report = fixture("Metal", target)
+            derived = [(report, "presentation_callback_supported"),
+                       (event(report, "app_ready"), "presentation_callback_supported"),
+                       (event(report, "metal_setup_finished"), "pipeline_ready")]
+            if target == "device":
+                derived.extend((event(report, "drawable_presented", frame),
+                                "positive_presented_time") for frame in (1, 2))
+            for destination, key in derived:
+                original = destination[key]
+                self.assertIs(type(original), int)
+                for replacement in (False, True, 0.0, 1.0):
+                    with self.subTest(target=target, derived_field=key, value=replacement):
+                        destination[key] = replacement
+                        self.refuse(report, allow_simulator=target == "simulator")
+                destination[key] = original
+            self.assertConservative(checker.assess(raw(report),
+                                    allow_simulator=target == "simulator"))
+
+        report = fixture("Metal")
+        typed_bool = [(report, "finished"), (report, "human_review_required"),
+                      (event(report, "run_started"), "low_power")]
+        typed_bool.extend((event(report, "command_completed", frame),
+                           "four_samples_match") for frame in (1, 2))
+        for destination, key in typed_bool:
+            original = destination[key]
+            self.assertIs(type(original), bool)
+            for replacement in (int(original), float(original)):
+                with self.subTest(bool_field=key, value=replacement):
+                    destination[key] = replacement
+                    self.refuse(report)
+            destination[key] = original
 
     def test_both_device_callback_orders_are_valid(self):
         for first in (False, True):
@@ -278,7 +313,9 @@ class PresentationReportTests(unittest.TestCase):
                 ("human_review_required", 1), ("dropped_events", 1),
                 ("dropped_events", False), ("dropped_events", 0.0),
                 ("target", "unknown"), ("presentation_callback_supported", False),
-                ("presentation_callback_supported", 1), ("mode", "metal")]:
+                ("presentation_callback_supported", True),
+                ("presentation_callback_supported", 0),
+                ("presentation_callback_supported", 1.0), ("mode", "metal")]:
             with self.subTest(field=field, value=value):
                 report = fixture()
                 report[field] = value
@@ -286,6 +323,8 @@ class PresentationReportTests(unittest.TestCase):
 
     def test_app_ready_target_or_capability_must_agree(self):
         for field, value in [("target", "simulator"), ("presentation_callback_supported", False),
+                             ("presentation_callback_supported", True),
+                             ("presentation_callback_supported", 0),
                              ("bundle_version", ""), ("machine", ""), ("os_build", "")]:
             with self.subTest(field=field):
                 report = fixture()
@@ -322,7 +361,8 @@ class PresentationReportTests(unittest.TestCase):
                 self.refuse(report)
 
     def test_metal_setup_must_be_ready_without_error(self):
-        for field, value in [("pipeline_ready", False), ("pipeline_ready", 1), ("error", "failure")]:
+        for field, value in [("pipeline_ready", False), ("pipeline_ready", True),
+                             ("pipeline_ready", 0), ("pipeline_ready", 1.0), ("error", "failure")]:
             with self.subTest(field=field):
                 report = fixture("Metal")
                 event(report, "metal_setup_finished")[field] = value
@@ -346,7 +386,8 @@ class PresentationReportTests(unittest.TestCase):
         for field, value in [("presented_time", 0), ("presented_time", -1),
                 ("presented_time", None), ("presented_time", True),
                 ("presented_time", float("nan")), ("presented_time", float("inf")),
-                ("positive_presented_time", False), ("positive_presented_time", 1),
+                ("positive_presented_time", False), ("positive_presented_time", True),
+                ("positive_presented_time", 0), ("positive_presented_time", 1.0),
                 ("drawable_id", -1), ("drawable_id", True)]:
             with self.subTest(field=field, value=value):
                 report = fixture("Metal")

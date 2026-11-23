@@ -2,8 +2,10 @@
 
 **23 November offline report check.** The [local record checker](evidence/ipados-1641-presentation-report-check-20261123.md)
 checks the standalone app's completed v1 reports without contacting a device.
-Forty-six synthetic tests and a 7,335-input mutation exercise cover endpoint,
-lifecycle, parser and pair consistency. Simulator input is refused by default.
+Forty-seven synthetic tests and a 7,335-input mutation exercise cover endpoint,
+lifecycle, parser and pair consistency. Simulator input is refused by default. Derived C-expression flags use numeric
+0/1 as established by copied-source boxing witnesses; genuine BOOL fields remain
+strict booleans.
 Consistent records still require independent human review and never grant
 device acceptance. The iPad is not ready; the app and native runtime are unchanged.
 
