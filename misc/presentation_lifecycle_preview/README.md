@@ -59,3 +59,20 @@ On a physical device, each Metal frame also requires a `command_completed` event
 The Simulator build reports `target: "simulator"` and `presentation_callback_supported: false`. Its SDK does not expose the device drawable presentation callback used here, so each Metal frame records `presentation_callback_unavailable` and permits human confirmation after GPU completion and pixel checks. It emits no substitute device presentation timestamp. A Simulator outcome can exercise the app flow and readback checks, but cannot satisfy the physical-device presentation requirement.
 
 Reports retain at most 256 events and count later dropped events. Export refuses a JSON payload over 1 MiB. Review the OS/build metadata, target, mode, outcome, and event sequence before interpreting a report. A completed standalone trial does not establish that the original MacWS display stall is fixed; compare any reproduced symptom and system report by time in the dated acceptance record.
+
+## Local record check
+
+`check_report.py` reads saved exports without changing them or contacting a device. It supports the published v1 schema and bundle version `1`. From this directory:
+
+```sh
+python3 check_report.py /path/to/PresentationComparison-UIKit.json
+python3 check_report.py /path/to/PresentationComparison-UIKit.json /path/to/PresentationComparison-Metal.json
+```
+
+Supply UIKit first when checking a pair. Exit 0 means the completed records are internally consistent; exit 2 means refused, incomplete, unsupported, or unreadable input. The JSON result always has `device_acceptance: false`, `authenticity_verified: false`, `human_review_required: true`, and `original_freeze_fixed: false`. Even an entirely invented report can be internally consistent. This is not an authenticity check or a device acceptance gate.
+
+The check requires both frame endpoints, both confirmations, a background/active transition, zero dropped events, exact typed fields, and matching pixel samples rather than trusting the summary flags alone. It permits either GPU/presentation callback order and does not sort event timestamps captured on different threads. Device presentations must have increasing positive times and drawable IDs across the two frames; IDs need not be adjacent. A later inactive/background transition invalidates an earlier return before frame 2. Input is bounded to 1 MiB, 256 events and 16 nesting levels. Unknown variants, duplicate JSON keys and nonfinite numbers are refused.
+
+Simulator reports are refused by default. `--allow-simulator` permits checking their explicitly lower-capability record structure; it still grants no device acceptance. Pair checks compare reported target, machine, OS/build, bundle version, initial thermal state and low-power mode, and require distinct run UUIDs. These fields cannot prove report origin, installed app identity or fresh process launches. The current reports do not establish matching charging state, orientation, UIKit stage geometry, or Home/touch health; record and review those separately.
+
+The [23 November host evidence](../../docs/evidence/ipados-1641-presentation-report-check-20261123.md) records synthetic negative tests and their limits. No actual iPad export has been checked yet.

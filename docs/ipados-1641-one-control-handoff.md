@@ -1,5 +1,12 @@
 # iPadOS 16.4.1: next single stopped control
 
+**23 November offline report check.** The [local record checker](evidence/ipados-1641-presentation-report-check-20261123.md)
+checks the standalone app's completed v1 reports without contacting a device.
+Forty-six synthetic tests and a 7,335-input mutation exercise cover endpoint,
+lifecycle, parser and pair consistency. Simulator input is refused by default.
+Consistent records still require independent human review and never grant
+device acceptance. The iPad is not ready; the app and native runtime are unchanged.
+
 **22 November offline comparison.** A [standalone public-API UIKit/Metal app](evidence/ipados-1641-presentation-comparison-20261122.md)
 now builds for device arm64 and Simulator arm64/x86_64. Static analysis has no
 diagnostics. Both repository suites retain exactly the 43 known failure records.

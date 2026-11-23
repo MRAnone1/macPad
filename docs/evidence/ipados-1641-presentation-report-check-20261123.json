@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-23",
+  "device_acceptance": false,
+  "device_connections": 0,
+  "device_mutations": 0,
+  "focused_tests": {
+    "exit": 0,
+    "methods": 46,
+    "synthetic_only": true
+  },
+  "original_freeze_fixed": false,
+  "original_freeze_reproduced": false,
+  "pending": [
+    "fresh device inventory",
+    "ordinary development signing and installation",
+    "runtime shader and pipeline validation",
+    "physical UIKit and Metal trials",
+    "independent visible colors and Home/touch observations",
+    "post-trial thermals and crash reports"
+  ],
+  "private_binary_patch_applied": false,
+  "raw_host_file_fingerprints": {
+    "focused-v1.log": {
+      "bytes": 7959,
+      "sha256": "4723dec61af42a7de2831ba722f33214f46c8ca1770f0bc6a74c61dcd1e92dec"
+    },
+    "guide-audit-v1.log": {
+      "bytes": 102,
+      "sha256": "f8542d280bc836a9f2a9532585798c2c6fa9f56661bf0c79593ff08de37e12b0"
+    },
+    "guide-full-v1.log": {
+      "bytes": 55155,
+      "sha256": "dd802bbfc37317be26e58b5920e7491a4a3e08efb87eefd50808e0d01411f547"
+    },
+    "guide-protocol-build-v1.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "guide-protocol-run-v1.log": {
+      "bytes": 32,
+      "sha256": "ddf6cc6f312c1cc8ddfa46fcca13d327c499d8f99042dffbc1755fb3296b88c5"
+    },
+    "macpad-audit-v1.log": {
+      "bytes": 102,
+      "sha256": "f8542d280bc836a9f2a9532585798c2c6fa9f56661bf0c79593ff08de37e12b0"
+    },
+    "macpad-full-v1.log": {
+      "bytes": 52736,
+      "sha256": "97bcc8fe800f3beeb82f3f5cd79c803bc847c0ad53c3a6c9b08a6ff1d2f63380"
+    },
+    "macpad-protocol-build-v1.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "macpad-protocol-run-v1.log": {
+      "bytes": 32,
+      "sha256": "ddf6cc6f312c1cc8ddfa46fcca13d327c499d8f99042dffbc1755fb3296b88c5"
+    },
+    "run_synthetic_validation.py": {
+      "bytes": 3684,
+      "sha256": "efc8d16ee9b213db0cfc3bbf7c902db531802fcf76f5af98fa1e3d68635c220f"
+    },
+    "synthetic-missing-endpoint-v1.json": {
+      "bytes": 2763,
+      "sha256": "0e57215327a3512c940e3f8d06f3335ade4f71bea060479ca6924065421e6095"
+    },
+    "synthetic-refusal-v1.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "synthetic-refusal-v1.stdout": {
+      "bytes": 219,
+      "sha256": "26b1293f0a2593088b60f80f2f3fb30966ed5328f799e2eec4dbc249f1f042b4"
+    },
+    "synthetic-validation-v1.json": {
+      "bytes": 583,
+      "sha256": "17f7dafd0884e8c292a7cab4e9a2d4e1f0bb4bf7991d48ec0740897af70760ef"
+    }
+  },
+  "regressions": {
+    "guide": {
+      "c_protocol_compile_exit": 0,
+      "c_protocol_run_exit": 0,
+      "errors": 0,
+      "failed_case_ids_match_20261122": true,
+      "failures": 43,
+      "new_failure_records": 0,
+      "runtime_switch_audit_exit": 0,
+      "skips": 13,
+      "suite_exit": 1,
+      "tests": 1525
+    },
+    "macpad": {
+      "c_protocol_compile_exit": 0,
+      "c_protocol_run_exit": 0,
+      "errors": 0,
+      "failed_case_ids_match_20261122": true,
+      "failures": 43,
+      "new_failure_records": 0,
+      "runtime_switch_audit_exit": 0,
+      "skips": 13,
+      "suite_exit": 1,
+      "tests": 1521
+    }
+  },
+  "schema": "macws.ipados-1641-presentation-report-check-evidence.v1",
+  "source_files": {
+    "misc/presentation_lifecycle_preview/README.md": {
+      "bytes": 8662,
+      "sha256": "ae1df2974e0f92d31b956dfe0713b94f5f14dd9a8e61087b574aa6fe438a320d"
+    },
+    "misc/presentation_lifecycle_preview/check_report.py": {
+      "bytes": 15358,
+      "sha256": "2b34fe1e337444cda6c582a072052c7828b775155ce86a4fca1c658bf7dfa391"
+    },
+    "misc/test_presentation_lifecycle_report.py": {
+      "bytes": 25460,
+      "sha256": "192a8047be14b03e55f39cd5ea9cb0c2388c9479e9fda02a2d92e9662fdf6b58"
+    }
+  },
+  "synthetic_exercise": {
+    "date": "2026-11-23",
+    "device_calls": 0,
+    "false_success_cli_exit": 2,
+    "false_success_input_sha256": "0e57215327a3512c940e3f8d06f3335ade4f71bea060479ca6924065421e6095",
+    "mutated_inputs": 7335,
+    "refusal": {
+      "authenticity_verified": false,
+      "completed_record_consistent": false,
+      "device_acceptance": false,
+      "human_review_required": true,
+      "original_freeze_fixed": false,
+      "reason": "confirmation_before_endpoints"
+    },
+    "refused": 6764,
+    "structurally_consistent_but_not_authenticated": 571,
+    "synthetic_only": true,
+    "unexpected_exceptions": 0
+  },
+  "unchanged_app_build_inputs": {
+    "misc/presentation_lifecycle_preview/Info.plist": {
+      "bytes": 1363,
+      "sha256": "729e21a8db99a8bf0f7deac30c5c5451d978433849c1f5839ad1b9a3ffb37491"
+    },
+    "misc/presentation_lifecycle_preview/MacWSPresentationCompare.xcodeproj/project.pbxproj": {
+      "bytes": 9188,
+      "sha256": "c50c3bdd235f033d42915907e6a37c97840b98cd3aa2c4765c9907ff1fdec1d4"
+    },
+    "misc/presentation_lifecycle_preview/MacWSPresentationCompare.xcodeproj/xcshareddata/xcschemes/MacWSPresentationCompare.xcscheme": {
+      "bytes": 2323,
+      "sha256": "9d53f9c4870803e3aba332dc0fe4e753533f4c6347cc5ce61490098df158cb9a"
+    },
+    "misc/presentation_lifecycle_preview/main.m": {
+      "bytes": 22330,
+      "sha256": "b75c5296347ef4c6a3d464ea667413dd3bd6a96d3c654f2d8b3a0062bbdba0e7"
+    }
+  }
+}
